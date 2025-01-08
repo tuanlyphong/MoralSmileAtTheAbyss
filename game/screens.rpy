@@ -370,7 +370,7 @@ screen main_menu():
     add "menu_animation" align (0.5, 0.5)
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    add "images/GameLogo.png" at fade_in
+    add "images/GameLogo.png" align (0, -0.2) at fade_in
     use navigation
 
 
