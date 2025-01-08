@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 241, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/name.rpy", line 68, in script
+    if  persistent.player_name.lowe() in [" "]:
+  File "game/name.rpy", line 68, in <module>
+    if  persistent.player_name.lowe() in [" "]:
+AttributeError: 'str' object has no attribute 'lowe'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 241, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/name.rpy", line 68, in script
+    if  persistent.player_name.lowe() in [" "]:
+  File "/home/phong/Downloads/renpy-8.3.3-sdk/renpy/ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
+  File "/home/phong/Downloads/renpy-8.3.3-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/phong/Downloads/renpy-8.3.3-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/name.rpy", line 68, in <module>
+    if  persistent.player_name.lowe() in [" "]:
+AttributeError: 'str' object has no attribute 'lowe'
+
+Linux-6.12.7-arch1-1-x86_64-with-glibc2.40 x86_64
+Ren'Py 8.3.3.24111502
+YUKA: color in void 1.0
+Sat Jan  4 22:11:29 2025
