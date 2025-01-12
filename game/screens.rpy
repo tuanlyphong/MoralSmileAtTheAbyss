@@ -104,7 +104,7 @@ style frame:
 screen say(who, what):
     style_prefix "say"
 
-    window id ("god" if who is None else "window") style "god":
+    window id ("god" if who == "God" else "window") style "god":
 
         if who is not None:
 

@@ -1,6 +1,8 @@
 ##background
+image Nightmare = "bg/nightmare.png"
 image FuyukaLogo = "FuyukaLogo.png"
-image FuRoom = "bg/FuRoom.png"
+image FuRoomSad = "bg/FuRoomSad.png"
+image FuRoomEvil = "bg/FuRoomEvil.png"
 image LaboratoryScene = "bg/LaboratoryScene.png"
 image CityScape = "bg/CityScape.png"
 image CityScapeAI = "bg/CityScapeAI.png"

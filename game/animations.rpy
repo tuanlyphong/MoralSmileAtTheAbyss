@@ -8,6 +8,10 @@ transform fly_in_bg:
     xoffset -1010  # Start with the background off-screen to the left
     linear 1.5 xoffset 0  # Animate to the original position (xoffset 0) over 1 second
 
+transform flash:
+    alpha 1.0
+    linear 0.1 alpha 0.0  # Quick fade-out of white flash
+
 transform fade_in:
     alpha 0.0
     linear 1 alpha 1.0  # Adjust 2.0 for a slower or faster fade-in

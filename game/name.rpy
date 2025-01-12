@@ -54,12 +54,12 @@ screen virtual_keyboard():
 # Label to ask for the player's name
 label naming:
     $ persistent.player_name = " "  # Reset the name
-    "Hi Stranger!"
-    "What should I call you?"
+    god "Hi Stranger!"
+    god "What should I call you?"
     while True:
         call screen virtual_keyboard
         if  persistent.player_name.lower() in [" "]:
-            "Are you sure you don't want to name yourself?"
+            god "Are you sure you don't want to name yourself?"
             menu:
                "yes":
                   "Don't you think a name is important?"
@@ -71,12 +71,12 @@ label naming:
                   pass
         elif persistent.player_name.lower() in [" fu"]:
             f "Hey!, That's my name."
-            "I'm sorry, perhap choosing another name"
+            god "I'm sorry, perhap choosing another name"
         elif persistent.player_name.lower() in [" yuka"]:
             f "Hey! You're not Yuka. There can only be one Yuka."
             y "Don't take it too seriously, Fu! People can have the same name. Maybe their name has a different meaning."
             y "Or maybe it's just a coincidence that they have the same name and meaning as mine. After all, [persistent.player_name] isn't that rare."
-            "Are you sure you want to be remembered as[persistent.player_name]?"
+            god "Are you sure you want to be remembered as[persistent.player_name]?"
             menu:
                "Yes":
                   f "I don't know why you'd want to call yourself[persistent.player_name]."
@@ -91,13 +91,13 @@ label naming:
                "no":
                   pass
         elif persistent.player_name.lower() in [" fuyuka"]:
-            "I'm sorry, but this name mean a lot to me"
+            god "I'm sorry, but this name mean a lot to me"
         else:
-            "Naming is very important..."
-            "It can last a lifetime, you know?"
-            "While it might not define one’s entire existence"
-            "It can shape their experiences"
-            "Are you sure that you want to be remembered as[persistent.player_name]?"
+            god "Naming is very important..."
+            god "It can last a lifetime, you know?"
+            god "While it might not define one’s entire existence"
+            god "It can shape their experiences"
+            god "Are you sure that you want to be remembered as[persistent.player_name]?"
             menu:
                 "Yes":
                     with Fade(1.5, 0, 0, color="#fff")
