@@ -1,6 +1,5 @@
 init python:
     import datetime
-
 ##persistent value
     if not hasattr(persistent, "named"):
        persistent.named = False
@@ -32,4 +31,5 @@ init python:
             return "Good afternoon"
         else:
             return "Good evening"
+    
 

@@ -147,6 +147,7 @@ style god:
     ysize gui.textbox_height
     background Image("gui/textboxgod.png", xalign=0.5, yalign=1.0)
 
+
 style normal:
     xalign 0.5
     xfill True
@@ -395,7 +396,6 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
@@ -404,6 +404,7 @@ screen main_menu():
     add "menu_animation" align (0.5, 0.5)
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
+    add "gui/menuanimate/menu.png" at fly_in_bg
     add "images/GameLogo.png" align (0, -0.2) at fade_in
     use navigation
 

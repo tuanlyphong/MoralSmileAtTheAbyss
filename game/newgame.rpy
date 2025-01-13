@@ -53,14 +53,14 @@ label start:
                 "No": 
                     return
         elif persistent.badend == 1 and persistent.happyend == 0 and persistent.trueend == 0:
-                god "[greeting],[persistent.player_name]! Did you enjoy your decisions' outcome?"
-                menu:
-                    "Yes":
-                        god "Great! It’s always fun messing up people's lives, isn’t it? Perhaps you want to enjoy torturing Fu more?"
-                        god "Have fun!"
-                    "No":
-                        god "Great! You can always start again; it’s just a game, after all. There will be no consequences!"
-                        god "Have fun!"
+            god "[greeting],[persistent.player_name]! Did you enjoy your decisions' outcome?"
+            menu:
+                "Yes":
+                    god "Great! It’s always fun messing up people's lives, isn’t it? Perhaps you want to enjoy torturing Fu more?"
+                    god "Have fun!"
+                "No":
+                    god "Great! You can always start again; it’s just a game, after all. There will be no consequences!"
+                    god "Have fun!"
             jump firstday
         elif persistent.happyend == 1 and persistent.badend == 0 and persistent.trueend == 0:
             god "[greeting],[persistent.player_name]! Did you enjoy your decisionsns' outcome?"
@@ -92,7 +92,18 @@ label start:
             """
             $ persistent.trueend = True
             jump firstday
+        
         elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 1:
-            god "Have fun!"
-            jump firstday
+            god """
+            [persistent.player_name], you’re actually enjoying this piece of media, aren’t you?
+
+            If you’ve struggled enough to find this dialogue, let me tell you—I like you as a person.
+            
+            Congratulations! You’ve earned the respect of someone who hates everything, even himself.
+            
+            Enjoy yourself, my friend. Together, we’ll face the horrors of life.
+
+            """
+            
+            jump credit
 

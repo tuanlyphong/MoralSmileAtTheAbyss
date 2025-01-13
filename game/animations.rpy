@@ -6,7 +6,7 @@ transform fly_in_bg:
     xalign 0.5  # Keep the background horizontally centered
     yalign 0.5  # Keep the background vertically centered
     xoffset -1010  # Start with the background off-screen to the left
-    linear 1.5 xoffset 0  # Animate to the original position (xoffset 0) over 1 second
+    linear 1 xoffset 0  # Animate to the original position (xoffset 0) over 1 second
 
 transform flash:
     alpha 1.0
@@ -30,7 +30,4 @@ image menu_animation = Animation(
     "gui/menuanimate/frame2.png", 0.2,  # About 25% open
 )
 
-image play_animation = Animation(
-    "gui/menuanimate/Start1.png", 0.1,
-    "gui/menuanimate/Start2.png", 0.1,
-)
+

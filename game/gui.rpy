@@ -197,7 +197,9 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## For example, you can uncomment the following line to set the width of a
 ## navigation button.
 
-# define gui.navigation_button_width = 250
+define gui.navigation_button_text_size = 40
+define gui.navigation_button_text_idle_color = '#000000'
+define gui.navigation_button_text_hover_color = '#ff0000'
 
 
 ## Choice Buttons ##############################################################
@@ -248,7 +250,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 60
+define gui.navigation_xpos = 80
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 15

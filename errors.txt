@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/firstnight.rpy", line 3: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    $quick_menu = False
-    ^
+File "game/screens.rpy", line 431: expected statement.
+    imagebutton:
+               ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Jan 13 13:06:46 2025
+Mon Jan 13 20:56:10 2025
