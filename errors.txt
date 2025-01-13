@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/newgame.rpy", line 27: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "Every day is the same—waking up with excruciating headaches and extreme nausea. Recently, things have got worse. The space around feels distorted, warped, and the voices are becoming more frequent."
+File "game/firstnight.rpy", line 3: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    $quick_menu = False
     ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sun Jan 12 19:16:49 2025
+Mon Jan 13 13:06:46 2025

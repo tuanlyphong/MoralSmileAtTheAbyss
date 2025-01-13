@@ -104,17 +104,23 @@ style frame:
 screen say(who, what):
     style_prefix "say"
 
-    window id ("god" if who == "God" else "window") style "god":
+    window:
+        id "window"
 
         if who is not None:
 
+            # Check for specific conditions for the namebox style
             window:
-                id "namebox"
-                style "namebox"
+                if who == "":
+                    style "nameboxgod"
+                elif who == " Yuka " or who == " Fu ":
+                    style "namebox0"
+                else:
+                    style "namebox"
+
                 text who id "who"
 
         text what id "what"
-
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
@@ -141,6 +147,13 @@ style god:
     ysize gui.textbox_height
     background Image("gui/textboxgod.png", xalign=0.5, yalign=1.0)
 
+style normal:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/textbox0.png", xalign=0.5, yalign=1.0)
 
 style window:
     xalign 0.5
@@ -159,6 +172,27 @@ style namebox:
 
     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
+
+style nameboxgod:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+
+    background Frame("gui/nameboxgod.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
+style namebox0:
+    xpos gui.name_xpos
+    xanchor gui.name_xalign
+    xsize gui.namebox_width
+    ypos gui.name_ypos
+    ysize gui.namebox_height
+
+    background Frame("gui/namebox0.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    padding gui.namebox_borders.padding
+
 
 style say_label:
     properties gui.text_properties("name", accent=True)

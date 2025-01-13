@@ -16,6 +16,13 @@ transform fade_in:
     alpha 0.0
     linear 1 alpha 1.0  # Adjust 2.0 for a slower or faster fade-in
 
+image room_animation:
+    "bg/FuRoomEvilLoop1.png"
+    1
+    "bg/FuRoomEvilLoop2.png"
+    1
+    repeat
+
 image menu_animation = Animation(
     "gui/menuanimate/frame1.png", 2,  # Fully open
     "gui/menuanimate/frame2.png", 0.2,  # About 25% closed

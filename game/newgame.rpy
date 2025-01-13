@@ -1,64 +1,98 @@
-image room_animation:
-    "bg/FuRoomEvilLoop1.png"
-    1
-    "bg/FuRoomEvilLoop2.png"
-    1
-    repeat
-
 label start:
-##if persistent.firstrun:
-  # Play the nightmare scene
-  stop music
-  $ quick_menu = False
-  #play sound "nightmare1.ogg"
-  scene Nightmare
-  #$ renpy.pause(17, hard = True)
-  scene FuRoomEvil with Fade(0.1, 0, 0, color="#fff")
-  $renpy.pause(0.5)
-  show room_animation
-  play music "breathing.ogg"
+    window hide
+    $ quick_menu = False
+    stop music
+    if persistent.firstrun:
+        $ greeting = get_greeting()
+        god "[greeting],[persistent.player_name]!"
+        god "Do you have fate in humanity?"
+        menu:
+            "No":
+                god """
+                Great! 
 
-  menu:
-      "Take the medication":
-                          stop music
-                          play sound "takepill.ogg"
-                          $renpy.pause(4, hard = True)
-                          show FuRoomSad
-                          """
-                          I can't remember the last time I slept peacefully.
+                You came to the right place. 
 
-                          It all started when I became fully aware of the world around me.
+                Here you can ruin someone's life without any consequences!
 
-                          Every night feels like a never-ending torment. No matter how hard I try, my body remains paralyzed, and I can't call out for help.
+                Have fun!
+                """
+            "Yes":
+                god """
+                Great!
 
-                          When it finally seems like the nightmare is over, I wake up with excruciating headaches and overwhelming nausea.
+                You came to the right place.
 
-                          I told my parents, and the doctor prescribed me a bunch of medications with strange names.
+                Here you can help someone’s messed-up life become better!
+                """
 
-                          They all ended in "-ine" or "-pram."
+        "Have fun!"
+        $ persistent.firstrun = False
+        jump firstnight
 
-                          Each one came with a slew of side effects.
+    elif persistent.firstrun == 0:
+        if persistent.badend == 0 and persistent.happyend == 0 and persistent.trueend == 0:
+            god """
+            Why, all of a sudden,[persistent.player_name]?
 
-                          Lately, they've given me something new, and I find myself enjoying it more than I should.
+            Already regret your choices? 
 
-                          {color=#FFA500}Morphine{/color}
+            Or perhaps...
 
-                          It numbs the pain effortlessly.
+            Did you forget to save the game? 
 
-                          But it's expensive, and they won't give me enough to satisfy my cravings, no matter how badly I need it.
-                          """
-      "Don’t take the medication":
-                          f "What were you thinking Fu, you have to take medicine to live properly, there is no choices"
-                          stop music
-                          play sound "takepill.ogg"
-                          $renpy.pause(4, hard = True)
-                          f "Every day is the same—waking up with excruciating headaches and extreme nausea."
-  
-##else:
-##stop music
-  # Mark that the player has played the game
-  $ persistent.played_before = False
-  $ persistent.named = False
-  $ persistent.firstrun = True
-return
+            Or worse...
+
+            Did you misclick???
+
+            Do you actually want to start a new game?
+            """
+            menu:
+                "Yes": 
+                    jump firstday
+                "No": 
+                    return
+        elif persistent.badend == 1 and persistent.happyend == 0 and persistent.trueend == 0:
+                god "[greeting],[persistent.player_name]! Did you enjoy your decisions' outcome?"
+                menu:
+                    "Yes":
+                        god "Great! It’s always fun messing up people's lives, isn’t it? Perhaps you want to enjoy torturing Fu more?"
+                        god "Have fun!"
+                    "No":
+                        god "Great! You can always start again; it’s just a game, after all. There will be no consequences!"
+                        god "Have fun!"
+            jump firstday
+        elif persistent.happyend == 1 and persistent.badend == 0 and persistent.trueend == 0:
+            god "[greeting],[persistent.player_name]! Did you enjoy your decisionsns' outcome?"
+            menu:
+                "Yes":
+                    god "Great! It’s always fun helping people, isn’t it? Perhaps you want to enjoy helping Fu more?"
+                "No":
+                    god "Great! You can always start again to explore different parts of the game. There will be no consequences! After all, it’s just a game."
+            jump firstday
+
+        elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 0:
+            god "Interesting,[persistent.player_name]. Don’t you have anything better to do?"
+            god """
+            Life is a game with infinite choices itself. 
+
+            You should consider entertaining yourself with various kinds of media since we have very limited time to live. 
+
+            Don’t let others decide or limit your decisions, or you’ll end up being a game character just like Fu.
+            """
+            f0 "You know that I’m based on you in real life? The only difference is I have Yuka and you do not."
+            god """
+            ...
+
+            What? You actually just want to play the game again?
+
+            I understand, but don’t be too obsessed with the game.
+
+            If you want to talk with me in person, perhap joining my discord, I’m all ear to hear your story.
+            """
+            $ persistent.trueend = True
+            jump firstday
+        elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 1:
+            god "Have fun!"
+            jump firstday
 

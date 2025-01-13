@@ -1,11 +1,17 @@
 init python:
+    import datetime
+
 ##persistent value
-    if not hasattr(persistent, "played_before"):
-       persistent.played_before = False
     if not hasattr(persistent, "named"):
        persistent.named = False
     if not hasattr(persistent, "firstrun"):
-       persistent.firstrun = False
+       persistent.firstrun = True
+    if not hasattr(persistent, "badend"):
+       persistent.badend = False
+    if not hasattr(persistent, "happyend"):
+       persistent.happyend = False
+    if not hasattr(persistent, "trueend"):
+       persistent.trueend = False       
 ##naming
     def append_letter(letter):
         if len(persistent.player_name) < 30:  # Max length of 30
@@ -17,4 +23,13 @@ init python:
         if len(persistent.player_name) > 1:
             persistent.player_name = persistent.player_name[:-1]
 
+    def get_greeting():
+        """Return the appropriate greeting based on the current time."""
+        current_hour = datetime.datetime.now().hour
+        if current_hour < 12:
+            return "Good morning"
+        elif current_hour < 18:
+            return "Good afternoon"
+        else:
+            return "Good evening"
 
