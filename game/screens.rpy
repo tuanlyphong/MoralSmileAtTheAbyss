@@ -396,6 +396,60 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
+
+# Phone icon and notification setup
+screen phone_icon():
+    if phone_notify == 0:
+        # Display the phone icon (no notification) as a button
+        imagebutton:
+            idle "images/phone_iconh.png"  # Image when the button is idle
+            hover "images/phone_icon.png"  # Image when the button is hovered
+            xpos 10
+            ypos 980
+            action Show("phone_screen")  # Show the phone screen when clicked
+    elif phone_notify == 1:
+        # Display the phone icon (with notification) as a button
+        imagebutton:
+            idle "phone_icon_notifh.png"  # Image when the button is idle
+            hover "phone_icon_notif.png"  # Image when the button is hovered
+            xpos 10
+            ypos 980
+            action Show("phone_screen")  # Show the phone screen when clicked
+
+screen phone_screen():
+    # Phone frame with the phone background
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xsize 421
+        ysize 720
+        background "images/phone_background.png"
+
+        # Message display area
+        frame:
+            xalign 0.5  # Center horizontally within the phone background
+            yalign 0.62  # Center vertically within the phone background
+            xsize 312
+            ysize 493
+            background "images/message_screen.png"
+            # Scrollable message container
+            viewport:
+                draggable True
+                mousewheel True
+
+                vbox:
+                    spacing 10
+                    for message in messages:
+                        text message size 20 color "#000000"  # Example message text styling
+
+        # Close button inside the phone screen at position (368, 56)
+        imagebutton:
+            idle "images/phonebutton.png"  # Idle image for the button
+            hover "images/phonebuttonh.png"  # Hover image for the button
+            xpos 330
+            ypos 56
+            action Hide("phone_screen")  # Close the phone when clicked on the button
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
@@ -406,6 +460,24 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     add "gui/menuanimate/menu.png" at fly_in_bg
     add "images/GameLogo.png" align (0, -0.2) at fade_in
+    # Phone notification setup
+    $ phone_notify = 1  # Change to 0 for no notification, 1 for notification animation
+    if phone_notify == 0:
+        # Display the phone icon (no notification) as a button
+        imagebutton:
+            idle "images/phone_iconh.png"  # Image when idle
+            hover "images/phone_icon.png"  # Image when hovered
+            xpos 10
+            ypos 980
+            action Show("phone_screen")  # Show the phone screen when clicked
+    elif phone_notify == 1:
+        # Display the phone icon (with notification) as a button
+        imagebutton:
+            idle "phone_icon_notifh"  # Image when idle
+            hover "phone_icon_notif"  # Image when hovered
+            xpos 10
+            ypos 980
+            action Show("phone_screen")  # Show the phone screen when clicked
     use navigation
 
 

@@ -1,3 +1,11 @@
+##phone
+# Define the phone icons
+image phone_icon = "images/phone_icon.png"  # Base phone icon (no notifications)
+
+# Animation for the phone icon with notifications
+image phone_icon_notif = Animation("images/phone_icon_notif1.png", 0.5, "images/phone_icon_notif2.png", 0.5)  # 0.5 seconds for each image
+image phone_icon_notifh = Animation("images/phone_icon_notifh1.png", 0.5, "images/phone_icon_notifh2.png", 0.5)  # 0.5 seconds for each image
+
 ##background
 image Nightmare = "bg/nightmare.png"
 image FuyukaLogo = "FuyukaLogo.png"

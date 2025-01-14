@@ -31,5 +31,46 @@ init python:
             return "Good afternoon"
         else:
             return "Good evening"
-    
+
+    messages = [
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+        "Hey, how are you?",
+        "I'm doing great! How about you?",
+        "Just working on my game. 😊",
+        "That's awesome! Keep it up!"
+
+    ]
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 431: expected statement.
-    imagebutton:
-               ^
+File "game/screens.rpy", line 427: 'alpha' is not a keyword argument or valid child of the frame statement.
+    alpha 0.0  
+         ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Jan 13 20:56:10 2025
+Tue Jan 14 22:56:17 2025

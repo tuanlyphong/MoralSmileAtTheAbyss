@@ -1,19 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 417, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 417, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 427, in execute
+  File "game/screens.rpy", line 419, in execute
+    screen phone_screen():
+  File "game/screens.rpy", line 419, in execute
+    screen phone_screen():
+  File "game/screens.rpy", line 420, in execute
     frame:
-  File "game/screens.rpy", line 432, in execute
-    textbutton "[get_current_time()]":
-  File "game/screens.rpy", line 432, in keywords
-    textbutton "[get_current_time()]":
-  File "game/screens.rpy", line 434, in <module>
-    action ShowScreen("time_dialogue_popup")  # Show the custom time dialogue popup
-NameError: name 'ShowScreen' is not defined
+  File "game/screens.rpy", line 428, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    viewport:
+  File "game/screens.rpy", line 440, in execute
+    vbox:
+  File "game/screens.rpy", line 442, in execute
+    for message in messages:
+  File "game/screens.rpy", line 442, in <module>
+    for message in messages:
+NameError: name 'messages' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -48,21 +52,25 @@ Full traceback:
     self.update()
   File "/home/phong/Downloads/renpy-8.3.3-sdk/renpy/display/screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 417, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 417, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 427, in execute
+  File "game/screens.rpy", line 419, in execute
+    screen phone_screen():
+  File "game/screens.rpy", line 419, in execute
+    screen phone_screen():
+  File "game/screens.rpy", line 420, in execute
     frame:
-  File "game/screens.rpy", line 432, in execute
-    textbutton "[get_current_time()]":
-  File "game/screens.rpy", line 432, in keywords
-    textbutton "[get_current_time()]":
-  File "game/screens.rpy", line 434, in <module>
-    action ShowScreen("time_dialogue_popup")  # Show the custom time dialogue popup
-NameError: name 'ShowScreen' is not defined
+  File "game/screens.rpy", line 428, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    viewport:
+  File "game/screens.rpy", line 440, in execute
+    vbox:
+  File "game/screens.rpy", line 442, in execute
+    for message in messages:
+  File "game/screens.rpy", line 442, in <module>
+    for message in messages:
+NameError: name 'messages' is not defined
 
 Linux-6.12.8-arch1-1-x86_64-with-glibc2.40 x86_64
 Ren'Py 8.3.3.24111502
 Moral - Abyss's Lullaby 1.0
-Mon Jan 13 19:52:36 2025
+Tue Jan 14 22:40:59 2025
