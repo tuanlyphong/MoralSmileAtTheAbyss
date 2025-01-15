@@ -18,6 +18,8 @@ label start:
                 Have fun!
                 """
             "Yes":
+                $ persistent.player = True
+
                 god """
                 Great!
 
@@ -28,12 +30,13 @@ label start:
 
         "Have fun!"
         $ persistent.firstrun = False
+        $ change_name_color()
         jump firstnight
 
     elif persistent.firstrun == 0:
         if persistent.badend == 0 and persistent.happyend == 0 and persistent.trueend == 0:
             god """
-            Why, all of a sudden,[persistent.player_name]?
+            Why, all of a sudden,[color={player_name_color}]{persistent.player_name}[/color]?
 
             Already regret your choices? 
 
@@ -53,17 +56,32 @@ label start:
                 "No": 
                     return
         elif persistent.badend == 1 and persistent.happyend == 0 and persistent.trueend == 0:
-            god "[greeting],[persistent.player_name]! Did you enjoy your decisions' outcome?"
+            $ change_name_color()
+            god "[greeting],[color={player_name_color}]{persistent.player_name}[/color]! Did you enjoy your decisions' outcome?"
             menu:
                 "Yes":
-                    god "Great! It’s always fun messing up people's lives, isn’t it? Perhaps you want to enjoy torturing Fu more?"
+                    god "Great! It’s always fun messing with people's lives, isn’t it? Perhaps you want to enjoy torturing Fu more?"
                     god "Have fun!"
                 "No":
-                    god "Great! You can always start again; it’s just a game, after all. There will be no consequences!"
-                    god "Have fun!"
+                    god "Aw, how come?"
+                    god "Do you regret your choices?"
+                    menu:
+                        "Yes":
+                            god "I see... You shouldn't have gone down this path then."
+                            god "Welp, we are human after all; can't live without hypocrisy."
+                            god "I'm joking,[color={player_name_color}]{persistent.player_name}[/color]."
+                            god "As I said, there are no consequences."
+                            god "Have fun!"
+                        "No":
+                            god "Oh..."
+                            god "Perhaps this game isn’t as good as you expected."
+                            god "Or maybe you're just tired of torturing Fu over and over again."
+                            god "Have fun!"
             jump firstday
+
         elif persistent.happyend == 1 and persistent.badend == 0 and persistent.trueend == 0:
-            god "[greeting],[persistent.player_name]! Did you enjoy your decisionsns' outcome?"
+            $ change_name_color()      
+            god "[greeting],[color={player_name_color}]{persistent.player_name}[/color]! Did you enjoy your decisionsns' outcome?"
             menu:
                 "Yes":
                     god "Great! It’s always fun helping people, isn’t it? Perhaps you want to enjoy helping Fu more?"
@@ -72,7 +90,8 @@ label start:
             jump firstday
 
         elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 0:
-            god "Interesting,[persistent.player_name]. Don’t you have anything better to do?"
+            $ change_name_color()        
+            god "Interesting,[color={player_name_color}]{persistent.player_name}[/color]. Don’t you have anything better to do?"
             god """
             Life is a game with infinite choices itself. 
 
@@ -94,11 +113,14 @@ label start:
             jump firstday
         
         elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 1:
+            $ change_name_color()
             god """
-            [persistent.player_name], you’re actually enjoying this piece of media, aren’t you?
+            [color={player_name_color}]{persistent.player_name}[/color], you’re actually enjoying this piece of media, aren’t you?
 
             If you’ve struggled enough to find this dialogue, let me tell you—I like you as a person.
             
+            It's fun watching you try all the options to reach the completion of such a meaningless game.
+
             Congratulations! You’ve earned the respect of someone who hates everything, even himself.
             
             Enjoy yourself, my friend. Together, we’ll face the horrors of life.

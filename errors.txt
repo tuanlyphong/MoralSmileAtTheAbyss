@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 427: 'alpha' is not a keyword argument or valid child of the frame statement.
-    alpha 0.0  
-         ^
+File "game/script.rpy", line 48: invalid syntax
+            if persistent.player == 0
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Tue Jan 14 22:56:17 2025
+Wed Jan 15 17:39:34 2025

@@ -19,7 +19,7 @@ screen virtual_keyboard():
 
         vbox:
             # Displaying the entered name
-            text "[persistent.player_name]" size 32 color "#B22222" align (0.5, 0.5)
+            text "[persistent.player_name]" size 32 color "#ffffff" align (0.5, 0.5)
 
             # QWERTY keyboard layout
             vbox spacing 5:
