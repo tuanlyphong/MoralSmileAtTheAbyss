@@ -199,7 +199,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 
 define gui.navigation_button_text_size = 40
 define gui.navigation_button_text_idle_color = '#000000'
-define gui.navigation_button_text_hover_color = '#ff0000'
+define gui.navigation_button_text_hover_color = '#DC143C'
 
 
 ## Choice Buttons ##############################################################

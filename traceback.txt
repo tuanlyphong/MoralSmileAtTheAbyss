@@ -5,19 +5,19 @@ While running game code:
     screen phone_screen():
   File "game/screens.rpy", line 419, in execute
     screen phone_screen():
-  File "game/screens.rpy", line 420, in execute
+  File "game/screens.rpy", line 421, in execute
     frame:
-  File "game/screens.rpy", line 428, in execute
+  File "game/screens.rpy", line 429, in execute
     frame:
   File "game/screens.rpy", line 436, in execute
-    viewport:
-  File "game/screens.rpy", line 440, in execute
+    hbox:
+  File "game/screens.rpy", line 445, in execute
     vbox:
-  File "game/screens.rpy", line 442, in execute
-    for message in messages:
-  File "game/screens.rpy", line 442, in <module>
-    for message in messages:
-NameError: name 'messages' is not defined
+  File "game/screens.rpy", line 446, in execute
+    text chat_partner["name"] size 22 color "#ffffff" bold True
+  File "game/screens.rpy", line 446, in <module>
+    text chat_partner["name"] size 22 color "#ffffff" bold True
+NameError: name 'chat_partner' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -56,21 +56,21 @@ Full traceback:
     screen phone_screen():
   File "game/screens.rpy", line 419, in execute
     screen phone_screen():
-  File "game/screens.rpy", line 420, in execute
+  File "game/screens.rpy", line 421, in execute
     frame:
-  File "game/screens.rpy", line 428, in execute
+  File "game/screens.rpy", line 429, in execute
     frame:
   File "game/screens.rpy", line 436, in execute
-    viewport:
-  File "game/screens.rpy", line 440, in execute
+    hbox:
+  File "game/screens.rpy", line 445, in execute
     vbox:
-  File "game/screens.rpy", line 442, in execute
-    for message in messages:
-  File "game/screens.rpy", line 442, in <module>
-    for message in messages:
-NameError: name 'messages' is not defined
+  File "game/screens.rpy", line 446, in execute
+    text chat_partner["name"] size 22 color "#ffffff" bold True
+  File "game/screens.rpy", line 446, in <module>
+    text chat_partner["name"] size 22 color "#ffffff" bold True
+NameError: name 'chat_partner' is not defined
 
-Linux-6.12.8-arch1-1-x86_64-with-glibc2.40 x86_64
+Linux-6.12.9-arch1-1-x86_64-with-glibc2.40 x86_64
 Ren'Py 8.3.3.24111502
 Moral - Abyss's Lullaby 1.0
-Tue Jan 14 22:40:59 2025
+Sat Jan 18 16:30:22 2025

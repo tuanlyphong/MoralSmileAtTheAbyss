@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 48: invalid syntax
-            if persistent.player == 0
+File "game/phone.rpy", line 85: keyword argument 'xmaximum' is incompatible with 'xsize'.
+    xmaximum 300  
+            ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Jan 15 17:39:34 2025
+Sat Jan 18 16:11:14 2025
