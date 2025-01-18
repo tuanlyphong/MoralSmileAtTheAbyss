@@ -1,4 +1,4 @@
-label start2:
+label start:
     window hide
     $ quick_menu = False
     stop music

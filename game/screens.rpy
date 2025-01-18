@@ -407,24 +407,22 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     add "gui/menuanimate/menu.png" at fly_in_bg
     add "images/GameLogo.png" align (0, -0.2) at fade_in
-    # Phone notification setup
-    $ phone_notify = 1  # Change to 0 for no notification, 1 for notification animation
-    if phone_notify == 0:
-        # Display the phone icon (no notification) as a button
-        imagebutton:
-            idle "images/phone_iconh.png"  # Image when idle
-            hover "images/phone_icon.png"  # Image when hovered
-            xpos 300
-            ypos 980
-            action Show("phone_screen")  # Show the phone screen when clicked
-    elif phone_notify == 1:
-        # Display the phone icon (with notification) as a button
-        imagebutton:
-            idle "phone_icon_notifh"  # Image when idle
-            hover "phone_icon_notif"  # Image when hovered
-            xpos 300
-            ypos 980
-            action Show("phone_screen")  # Show the phone screen when clicked
+    imagebutton:
+        idle "images/phone_iconh.png"  # Image when idle
+        hover "images/phone_icon.png"  # Image when hovered
+        xpos 28
+        ypos 900
+        action Show("phone_screen")  # Show the phone screen when clicked
+    
+    imagebutton:
+        idle "images/website_button.png"  # The button image when idle
+        hover "images/website_button_hover.png"  # The button image when hovered
+        xpos 0  # Adjust the position (X axis)
+        ypos 980  # Adjust the position (Y axis)
+        action OpenURL("https://fuyuka.netlify.app/")  # Open the website when clicked
+
+
+
     use navigation
 
 
