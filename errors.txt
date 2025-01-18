@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/phone.rpy", line 85: keyword argument 'xmaximum' is incompatible with 'xsize'.
-    xmaximum 300  
-            ^
+File "game/screens.rpy", line 410: 'Show' is not a keyword argument or valid child of the screen statement.
+    Show screen phone_icon_screen()
+        ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Jan 18 16:11:14 2025
+Sat Jan 18 18:34:11 2025
