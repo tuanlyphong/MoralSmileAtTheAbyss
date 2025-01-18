@@ -1,77 +1,76 @@
+##init python:
+##    import random
+##
+##    def shoot(current_turn, player_turn):
+##        probability = 2 / current_turn
+##        random_value = random.random()
+##        return random_value < probability
+##
+##    def random_family_member():
+##        family_members = ["mom", "dad", "grandpa", "grandma", "brother"]
+##        return random.choice(family_members)
+##
 ##label nightmare2:
 ##    god "[greeting], [persistent.player_name]!"
-##    fu " [persistent.player_name]?"
-##
+##    f " [persistent.player_name]?"
+##    window hide
 ##    god "Are you having fun?"
 ##
 ##    menu:
 ##        "Yes":
-##            god """
-##            Great! Perhaps I should provide even more fun with a minigame.
-##            """
+##            god "Great! Perhaps I should provide even more fun with a minigame."
 ##        "No":
-##            god """
-##            Aw, perhaps I could brighten you up with a minigame.
-##            """
-##        
-##    god """
-##    Let's play Russian Roulette! *gun reload sound*
-##    You and 5 other precious members.
-##    And of course, you get to choose your turn.
-##    """
-##    
-##    # Show the turn choices (1 to 6)
+##            god "Aw, perhaps I could brighten you up with a minigame."
+##
+##    god "Let's play Russian Roulette! *gun reload sound* You and 5 other precious members. And of course, you get to choose your turn."
+##
+##    # Choose player's turn
 ##    menu:
 ##        "Turn 1":
-##            # Add the corresponding action for turn 1
-##            pass
+##            $ persistent.player_turn = 1
 ##        "Turn 2":
-##            # Add the corresponding action for turn 2
-##            pass
+##            $ persistent.player_turn = 2
 ##        "Turn 3":
-##            # Add the corresponding action for turn 3
-##            pass
+##            $ persistent.player_turn = 3
 ##        "Turn 4":
-##            # Add the corresponding action for turn 4
-##            pass
+##            $ persistent.player_turn = 4
 ##        "Turn 5":
-##            # Add the corresponding action for turn 5
-##            pass
+##            $ persistent.player_turn = 5
 ##        "Turn 6":
-##            # Add the corresponding action for turn 6
-##            pass
+##            $ persistent.player_turn = 6
 ##
-##    god """
-##    Oh yeah, since I don't want the game to last forever,
-##    there will be no reloading after each turn.
-##    Have fun!
-##    """
+##    god "Oh yeah, since I don't want the game to last forever, there will be no reloading after each turn. Have fun!"
 ##
-##    # Game mechanic for when the player pulls the trigger
-##    # Player's heart rate increases as their turn gets closer
-##    # If shot → gunshot sound, if empty → clicking sound
-##    if turn_is_player:  # When it's the player's turn
-##        $ play_sound("gun_reloading")  # Play gun reload sound
-##        # Add code for heart rate increase and sound effects
+##    $ persistent.current_turn = 1
 ##
-##    # If others die:
-##    if others_die:
-##        god "Hahaha, congrats, you won!"
-##        show "censored_image.png"  # Show censor image
-##        fu "[random_family_member]"  # Random family member mention
+##    while persistent.current_turn <= 6:
+##        $ heartbeat(persistent.player_turn, persistent.current_turn)
 ##
-##    # If Fu dies:
-##    if fu_dies:
-##        show red_screen  # Red screen effect
+##        if not shoot(persistent.current_turn, persistent.player_turn):
+##            $ gunshot(0)
+##            $ persistent.current_turn += 1
 ##
-##    # If it's the 6th turn:
-##    if turn_is_6:
-##        god "Oh my, that was unlucky."
-##        god "Or was it well deserved?"
-##        god "Since you only think of yourself..."
+##        elif shoot(persistent.current_turn, persistent.player_turn) and persistent.current_turn != persistent.player_turn:
+##            $ family = random_family_member()
+##            $ gunshot(1)
+##            
+##            god "Hahaha, congrats, you won!"
+##            show "censored_image.png"
+##            fu "{family}?"
+##            break
 ##
-##    # If no one dies after all the turns:
-##    else:
-##        god "That was unlucky."
-##        god "Welp, no one will remember you anyway."
-#####
+##        elif shoot(persistent.current_turn, persistent.player_turn) and persistent.current_turn == persistent.player_turn:
+##            $ gunshot(1)
+##            show red_screen
+##
+##            if persistent.current_turn == 6:
+##                god "Oh my, that was unlucky."
+##                god "Or was it well deserved?"
+##                god "Since you only think of yourself..."
+##            else:
+##                god "That was unlucky."
+##                god "Welp, no one will remember you anyway."
+##            break
+##
+##    return
+##
