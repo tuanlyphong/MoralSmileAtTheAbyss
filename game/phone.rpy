@@ -6,6 +6,9 @@ init python:
         "icon": "images/chat_partner_icon.png"
     }
 
+    if persistent.messages is None:
+        persistent.messages = []  # Initialize as an empty list if not already set
+
     if not hasattr(persistent, "messages"):
         persistent.messages = []
 
@@ -69,7 +72,7 @@ screen phone_screen():
 
             hbox:
                 spacing 10
-                xalign 0
+                xalign 0.2
                 yalign 0.5
                 image chat_partner["icon"] size (50, 50)
 
@@ -133,4 +136,13 @@ screen phone_screen():
             hover "images/phone_call_icon_hover.png"
             action Function(reset_messages)
 
-
+        imagebutton:
+            idle "images/arrow_icon.png"
+            hover "images/arrow_icon_hover.png"
+            xpos 50
+            ypos 130
+            action [
+                Hide("phone_screen"),  # Hide the phone screen
+                Hide("phone_icon_screen"),  # Hide the phone icon screen
+                Function(reset_phone_notification)  # Reset the notification
+            ]

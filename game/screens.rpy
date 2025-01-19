@@ -413,16 +413,12 @@ screen main_menu():
         xpos 28
         ypos 900
         action Show("phone_screen")  # Show the phone screen when clicked
-    
     imagebutton:
         idle "images/website_button.png"  # The button image when idle
         hover "images/website_button_hover.png"  # The button image when hovered
         xpos 0  # Adjust the position (X axis)
         ypos 980  # Adjust the position (Y axis)
         action OpenURL("https://fuyuka.netlify.app/")  # Open the website when clicked
-
-
-
     use navigation
 
 

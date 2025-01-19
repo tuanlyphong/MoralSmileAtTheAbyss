@@ -145,13 +145,11 @@ default preferences.afm_time = 15
 
 define config.save_directory = "Fuyuka-1733288617"
 
-
 ## Icon ########################################################################
 ##
 ## The icon displayed on the taskbar or dock.
 
 define config.window_icon = "gui/window_icon.png"
-
 
 ## Build configuration #########################################################
 ##

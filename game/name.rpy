@@ -1,5 +1,5 @@
 default persistent.player_name = " "
-
+$ initialize_persistent_vars()
 style vkeyboard_button:
     idle_background "#000000"  # Color when the button is idle
     hover_background "#000000"  # Color when the button is hovered

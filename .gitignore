@@ -1,0 +1,25 @@
+# Ignore log, traceback, and error files
+log.txt
+traceback.txt
+errors.txt
+
+# Ignore game data generated files and folders
+*.rpyc
+*.pyo
+*.pyc
+
+# Ignore cache files
+game/cache/
+
+
+# Ignore GUI
+game/gui/
+
+
+# Ignore saves
+game/saves/
+
+
+# Ignore Ren'Py's saved settings
+game/persistent/
+

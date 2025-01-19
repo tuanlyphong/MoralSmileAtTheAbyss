@@ -1,19 +1,19 @@
 init python:
     import datetime
-##persistent value
-    if not hasattr(persistent, "named"):
-       persistent.named = False
-    if not hasattr(persistent, "firstrun"):
-       persistent.firstrun = True
-    if not hasattr(persistent, "badend"):
-       persistent.badend = False
-    if not hasattr(persistent, "happyend"):
-       persistent.happyend = False
-    if not hasattr(persistent, "trueend"):
-       persistent.trueend = False       
-    if not hasattr(persistent, "player"):
-       persistent.player = False       
+    if persistent.named is None:
+        persistent.named = False
 
+    if persistent.badend is None:
+        persistent.badend = False
+
+    if persistent.happyend is None:
+        persistent.happyend = False
+
+    if persistent.trueend is None:
+        persistent.trueend = False
+
+    if persistent.firstrun is None:
+        persistent.firstrun = True
 ##naming
     def append_letter(letter):
         if len(persistent.player_name) < 30:  # Max length of 30
@@ -35,21 +35,5 @@ init python:
         else:
             return "Good evening"
      
-    def change_name_color():
-        # Check ending states and set color accordingly
-        if persistent.badend == 1 and persistent.happyend == 0 and persistent.trueend == 0:
-            persistent.player_name_color = "#FF0000"  # Red color
-        elif persistent.happyend == 1 and persistent.badend == 0 and persistent.trueend == 0:
-            persistent.player_name_color = "#00FFFF"  # Cyan color
-        elif persistent.happyend == 1 and persistent.badend == 1 and persistent.trueend == 0:
-            persistent.player_name_color = "#FFFFFF"  # White color
-        elif persistent.happyend == 0 and persistent.badend == 0 and persistent.trueend == 0:
-            # Check persistent.player and set color accordingly
-            if persistent.player == 0:
-                persistent.player_name_color = "#FF0000"  # Red color
-            elif persistent.player == 1:
-                persistent.player_name_color = "#00FFFF"  # Cyan color
-            else:
-                persistent.player_name_color = "#FFFFFF"  # Default to White if no match
-
+    config.has_autosave = False
 

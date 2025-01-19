@@ -8,6 +8,7 @@ label firstday:
         "Take the medication":
             pass
         "Don’t take the medication":
+            $ quick_menu = True
             "There’s no way I can live like this. I have to take the medicine."
 
     stop music
@@ -17,6 +18,7 @@ label firstday:
     show FuRoomSad
     play music "Sorrow.ogg"
     window show
+    $ quick_menu = True
     """
     I can't remember the last time I slept peacefully.
 
