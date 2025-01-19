@@ -12,8 +12,6 @@ errors.txt
 game/cache/
 
 
-# Ignore GUI
-game/gui/
 
 
 # Ignore saves
