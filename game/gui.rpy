@@ -19,7 +19,6 @@ define config.check_conflicting_properties = True
 ## GUI Configuration Variables
 ################################################################################
 
-
 ## Colors ######################################################################
 ##
 ## The colors of text in the interface.
@@ -66,7 +65,7 @@ define gui.name_text_font = "Nunito-Regular.ttf"
 define gui.interface_text_font = "Nunito-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 40
 
 ## The size of character names.
 define gui.name_text_size = 40
@@ -131,10 +130,11 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_ypos = 80
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 1116
+define gui.dialogue_text_outlines = [ (1, "#c0c0c0", 0, 0) ] 
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -198,8 +198,9 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## navigation button.
 
 define gui.navigation_button_text_size = 40
-define gui.navigation_button_text_idle_color = '#000000'
-define gui.navigation_button_text_hover_color = '#DC143C'
+define gui.navigation_button_text_idle_color = '#ffffff'
+define gui.navigation_button_text_hover_color = '#c0c0c0'
+define gui.navigation_button_text_outlines = [ (1, "#000000", 0, 0) ] 
 
 
 ## Choice Buttons ##############################################################

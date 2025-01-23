@@ -24,13 +24,25 @@ label firstday:
 
     It all started when I became fully aware of the world around me.
 
-    Every night feels like a never-ending torment. No matter how hard I try, my body remains paralyzed, and I can't call out for help.
+    Every night feels like a never-ending torment. 
 
-    When it finally seems like the nightmare is over, I wake up with excruciating headaches and overwhelming nausea.
+    No matter how hard I try
+
+    My body remains paralyzed, and I can't call out for help.
+
+    When it finally seems like the nightmare is over 
+
+    I wake up with excruciating headaches and overwhelming nausea.
     """
 
     if persistent.badend:
-      "Recently, things have got worse. The space around feels distorted, warped, and the voices are becoming more frequent."
+      """
+      Recently, things have got worse. 
+      
+      The space around feels distorted, warped 
+      
+      And the voices are becoming more frequent."
+      """
     
     """
     I told my parents, and the doctor prescribed me a bunch of medications with strange names.
@@ -47,5 +59,7 @@ label firstday:
 
     But perhaps it's expensive, and they won't give me enough to satisfy my cravings, no matter how badly I need it.
     """
+
+    f "achoo"
     return
 

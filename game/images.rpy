@@ -104,4 +104,136 @@ image YukaWaving = "YukaWaving.png"
 image YukaWink = "YukaWink.png"
 image YukaWinkCatSmile = "YukaWinkCatSmile.png"
 
+## gallery ############################################################
+##
+## Used to display the gallery
+##
+## https://www.renpy.org/doc/html/screen_special.html#main-menu
+init python:
+    # Step 1. Create the gallery object.
+    g = Gallery()
+
+    # Step 2. Add buttons and images to the gallery.
+
+    # Background scenes
+    g.button("Nightmare")
+    g.image("bg/nightmare.png")
+    g.unlock("bg/nightmare.png")
+
+    g.button("FuRoomSad")
+    g.image("bg/FuRoomSad.png")
+    g.unlock("bg/FuRoomSad.png")
+
+    g.button("FuRoomEvil")
+    g.image("bg/FuRoomEvil.png")
+    g.unlock("bg/FuRoomEvil.png")
+
+    g.button("OutsideFuHouse")
+    g.image("bg/OutsideFuHouse.png")
+    g.unlock("bg/OutsideFuHouse.png")
+
+    g.button("AnimeScene")
+    g.image("bg/AnimeScene.png")
+    g.unlock("bg/AnimeScene.png")
+
+    g.button("ParkScene")
+    g.image("bg/ParkScene.png")
+    g.unlock("bg/ParkScene.png")
+
+    g.button("ShoppingScene")
+    g.image("bg/ShoppingScene.png")
+    g.unlock("bg/ShoppingScene.png")
+
+    g.button("ShoppingAIScene")
+    g.image("bg/ShoppingAIScene.png")
+    g.unlock("bg/ShoppingAIScene.png")
+
+    g.button("FestivalScene")
+    g.image("bg/FestivalScene.png")
+    g.unlock("bg/FestivalScene.png")
+
+    g.button("FestivalAIScene")
+    g.image("bg/FestivalAIScene.png")
+    g.unlock("bg/FestivalAIScene.png")
+
+    g.button("FireworkScene")
+    g.image("bg/FireworkScene.png")
+    g.unlock("bg/FireworkScene.png")
+
+    g.button("FireworkStartScene")
+    g.image("bg/FireworkStartScene.png")
+    g.unlock("bg/FireworkStartScene.png")
+
+    g.button("FireworkAIScene")
+    g.image("bg/FireworkAIScene.png")
+    g.unlock("bg/FireworkAIScene.png")
+
+    g.button("FireworkStartingAIScene")
+    g.image("bg/FireworkStartingAIScene.png")
+    g.unlock("bg/FireworkStartingAIScene.png")
+
+    g.button("HospitalScene")
+    g.image("bg/HospitalScene.png")
+    g.unlock("bg/HospitalScene.png")
+
+    # The transition used when switching images.
+    g.transition = dissolve
+
+screen gallery:
+
+    tag menu
+
+    # Background for the gallery
+    add "gui/main_menu.png"
+
+    # Header with category and pagination
+    vbox:
+        xalign 0.5
+        yalign 0.05
+        spacing 5
+
+        # Tabs for categories (CG, Music, Scene)
+        hbox:
+            spacing 20
+            textbutton "CG" action NullAction()
+            textbutton "Music" action NullAction()
+            textbutton "Scene" action NullAction()
+
+        # Pagination buttons
+        hbox:
+            spacing 10
+            for i in range(1, 5):  # Example: pages 1-4
+                textbutton f"{i * 20 - 19}-{i * 20}" action NullAction()
+
+        grid 4 5 spacing 20:
+
+            # Add numbered thumbnails with buttons
+            for idx, image in enumerate([
+                "bg/Nightmare.png", "bg/FuRoomSad.png", "bg/FuRoomEvil.png",
+                "bg/OutsideFuHouse.png", "bg/AnimeScene.png", "bg/ParkScene.png",
+                "bg/ShoppingScene.png", "bg/ShoppingAIScene.png", "bg/FestivalScene.png"
+            ]):
+                button:
+                    background None
+                    action Show("full_image", image=image)
+
+                    vbox:
+                        spacing 5
+                        text str(idx + 1) xalign 0.5  # Add the thumbnail number
+                        add im.Scale(image, 200, 120)  # Thumbnail
+
+    # Return button at the bottom
+    textbutton "Return" action Return() xalign 0.5 yalign 0.95
+
+# Screen to display the full image when a thumbnail is clicked
+screen full_image(image):
+    modal True  # Blocks interaction with the underlying screen
+
+    # Full image centered
+    add image:
+        xalign 0.5
+        yalign 0.5
+
+    # Close button
+    textbutton "Close" action Hide("full_image") xalign 0.5 yalign 0.95
 

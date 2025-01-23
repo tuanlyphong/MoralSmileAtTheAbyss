@@ -12,10 +12,6 @@ transform flash:
     alpha 1.0
     linear 0.1 alpha 0.0  # Quick fade-out of white flash
 
-transform fade_in:
-    alpha 0.0
-    linear 1 alpha 1.0  # Adjust 2.0 for a slower or faster fade-in
-
 image room_animation:
     "bg/FuRoomEvilLoop1.png"
     1
@@ -24,10 +20,9 @@ image room_animation:
     repeat
 
 image menu_animation = Animation(
-    "gui/menuanimate/frame1.png", 2,  # Fully open
-    "gui/menuanimate/frame2.png", 0.2,  # About 25% closed
+    "gui/menuanimate/frame2.png", 0.8,  # About 25% closed
     "gui/menuanimate/frame3.png", 0.2,  # Half-closed
-    "gui/menuanimate/frame2.png", 0.2,  # About 25% open
+    "gui/menuanimate/frame2.png", 0.8,  # About 25% open
 )
 
 
