@@ -187,18 +187,6 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     add "gui/menuanimate/menu.png"
     add "images/GameLogo.png" align (0.1, 0) at fade_in_with_delay(0.5, delay=1.3)
-    imagebutton:
-        idle "images/phone_iconh.png"  # Image when idle
-        hover "images/phone_icon.png"  # Image when hovered
-        xpos 28
-        ypos 900
-        action Show("phone_screen")  # Show the phone screen when clicked
-    imagebutton:
-        idle "images/website_button.png"  # The button image when idle
-        hover "images/website_button_hover.png"  # The button image when hovered
-        xpos 0  # Adjust the position (X axis)
-        ypos 980  # Adjust the position (Y axis)
-        action OpenURL("https://fuyuka.netlify.app/")  # Open the website when clicked
     use navigation
 
 

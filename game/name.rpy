@@ -1,11 +1,8 @@
 default persistent.player_name = " "
 $ initialize_persistent_vars()
+
 style vkeyboard_button:
-    idle_background "#000000"  # Color when the button is idle
-    hover_background "#000000"  # Color when the button is hovered
-    insensitive_background "#ffffff"  # Color when the button is disabled
     background None  # Transparent by default
-    color "#ffffff"  # Text color
     font "fonts/Nunito-Regular.ttf"  # Replace with your font path
     padding (10, 5)  # Adjust padding
     size 24  # Font size
@@ -13,10 +10,9 @@ style vkeyboard_button:
 
 screen virtual_keyboard():
     frame:
-        xysize (800, 400)  # Adjust size as needed
-        align (0.66, 0.66)  # Center the keyboard on the screen
-        background None  # No visible frame background
-
+        xysize (500, 300)  # Adjust size as needed
+        align (0.5, 0.5)  # Center the keyboard on the screen
+        background None
         vbox:
             # Displaying the entered name
             text "[persistent.player_name]" size 32 color "#ffffff" align (0.5, 0.5)

@@ -32,6 +32,7 @@ define config.version = "1.0"
 define gui.about = _p("""
 """)
 
+define config.default_fullscreen = True 
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,

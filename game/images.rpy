@@ -180,60 +180,52 @@ init python:
     g.transition = dissolve
 
 screen gallery:
-
     tag menu
+    use game_menu():
 
-    # Background for the gallery
-    add "gui/main_menu.png"
+        # The grid of gallery images
+        grid 3 3:  # 3 columns, 3 rows (you can adjust the grid size)
+            xalign 0.5
+            yalign 0.5
+            spacing gui.slot_spacing
 
-    # Header with category and pagination
-    vbox:
-        xalign 0.5
-        yalign 0.05
-        spacing 5
+            # Loop through images (replace with your actual image list)
+            for i in range(9):  # Adjust the range for the number of images you have
+                $ image_name = f"image_{i+1}.png"  # Replace with your image naming pattern or list
 
-        # Tabs for categories (CG, Music, Scene)
-        hbox:
-            spacing 20
-            textbutton "CG" action NullAction()
-            textbutton "Music" action NullAction()
-            textbutton "Scene" action NullAction()
-
-        # Pagination buttons
-        hbox:
-            spacing 10
-            for i in range(1, 5):  # Example: pages 1-4
-                textbutton f"{i * 20 - 19}-{i * 20}" action NullAction()
-
-        grid 4 5 spacing 20:
-
-            # Add numbered thumbnails with buttons
-            for idx, image in enumerate([
-                "bg/Nightmare.png", "bg/FuRoomSad.png", "bg/FuRoomEvil.png",
-                "bg/OutsideFuHouse.png", "bg/AnimeScene.png", "bg/ParkScene.png",
-                "bg/ShoppingScene.png", "bg/ShoppingAIScene.png", "bg/FestivalScene.png"
-            ]):
                 button:
-                    background None
-                    action Show("full_image", image=image)
+                    action Show("full_image", image=image_name)  # Show full image when clicked
 
                     vbox:
                         spacing 5
-                        text str(idx + 1) xalign 0.5  # Add the thumbnail number
-                        add im.Scale(image, 200, 120)  # Thumbnail
+                        text str(i + 1) xalign 0.5 style "slot_button_text"  # Thumbnail number
+                        add im.Scale(image_name, 200, 120)  # Thumbnail image (scaled)
 
-    # Return button at the bottom
-    textbutton "Return" action Return() xalign 0.5 yalign 0.95
+        # Pagination buttons to switch between gallery pages
+        hbox:
+            style_prefix "page"
+            xalign 0.5
+            yalign 1.0
+            spacing gui.page_spacing
 
-# Screen to display the full image when a thumbnail is clicked
+            textbutton _("<") action FilePagePrevious()  # Go to previous page
+            key "save_page_prev" action FilePagePrevious()
+
+            for page in range(1, 6):  # Example: pages 1-5, adjust as needed
+                textbutton f"{page}" action FilePage(page)  # Page number buttons
+
+            textbutton _(">") action FilePageNext()  # Go to next page
+            key "save_page_next" action FilePageNext()
+
+# Full image screen to show the clicked image
 screen full_image(image):
     modal True  # Blocks interaction with the underlying screen
 
-    # Full image centered
+    # Show the full-size image, centered
     add image:
         xalign 0.5
         yalign 0.5
 
-    # Close button
-    textbutton "Close" action Hide("full_image") xalign 0.5 yalign 0.95
+    # Close button for full image
+    textbutton _("Close") action Hide("full_image") xalign 0.5 yalign 0.95
 

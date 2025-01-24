@@ -37,4 +37,3 @@ init python:
             return "Good evening"
      
     config.has_autosave = False
-
