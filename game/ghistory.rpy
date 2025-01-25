@@ -13,7 +13,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+    use game_menu(scroll=("vpgrid" if gui.history_height else "viewport")):
 
         style_prefix "history"
 

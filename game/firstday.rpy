@@ -60,6 +60,6 @@ label firstday:
     But perhaps it's expensive, and they won't give me enough to satisfy my cravings, no matter how badly I need it.
     """
 
-    f "achoo"
+    f "But perhaps it's expensive, and they won't give me enough to satisfy my cravings, no matter how badly I need it."
     return
 

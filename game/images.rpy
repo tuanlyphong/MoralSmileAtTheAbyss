@@ -11,6 +11,8 @@ image Nightmare = "bg/nightmare.png"
 image FuyukaLogo = "FuyukaLogo.png"
 image FuRoomSad = "bg/FuRoomSad.png"
 image FuRoomEvil = "bg/FuRoomEvil.png"
+image FuRoomNormal = "bg/FuRoomNormal.png"
+
 image OutsideFuHouse = "bg/OutsideFuHouse.png"
 image AnimeScene = "bg/AnimeScene.png"
 image ParkScene = "bg/ParkScene.png"
