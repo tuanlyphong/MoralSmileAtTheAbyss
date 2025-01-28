@@ -1,4 +1,5 @@
-label start:
+label newgame:
+    
     window hide
     $ quick_menu = False
     stop music

@@ -1,15 +1,15 @@
 
 init python:
+
     import datetime
     if persistent.named is None:
         persistent.named = False
-
     if persistent.badend is None:
         persistent.badend = False
-
     if persistent.happyend is None:
         persistent.happyend = False
-
+    if persistent.content is None:
+        persistent.content = False
     if persistent.trueend is None:
         persistent.trueend = False
 
@@ -35,5 +35,4 @@ init python:
             return "Good afternoon"
         else:
             return "Good evening"
-     
-    config.has_autosave = False
+    hover_sound = "audio/C.ogg"    
