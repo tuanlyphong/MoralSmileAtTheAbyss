@@ -25,7 +25,7 @@ label start2:
     $ message_index = 0  # Start at the first message in the conversation
     
     # Show phone icon screen (and make sure player clicks it to proceed)
-    show screen phone_icon_screen with moveinbottom
+    show screen phone_icon_screen
 
     # Wait for the player to complete the phone interaction before proceeding
     while not phone_interaction_done:

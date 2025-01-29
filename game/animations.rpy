@@ -12,12 +12,6 @@ transform flash:
     alpha 1.0
     linear 0.1 alpha 0.0  # Quick fade-out of white flash
 
-image room_animation:
-    "bg/FuRoomEvilLoop1.png"
-    1
-    "bg/FuRoomEvilLoop2.png"
-    1
-    repeat
 
 image menu_animation = Animation(
     "gui/menuanimate/frame2.png", 0.8,  # About 25% closed

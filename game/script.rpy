@@ -1,6 +1,6 @@
 
 init python:
-
+    import os
     import datetime
     if persistent.named is None:
         persistent.named = False
@@ -15,16 +15,6 @@ init python:
 
     if persistent.firstrun is None:
         persistent.firstrun = True
-##naming
-    def append_letter(letter):
-        if len(persistent.player_name) < 30:  # Max length of 30
-            if len(persistent.player_name) == 1:
-                  persistent.player_name += letter.upper()  # First letter should be capitalized
-            else:
-                  persistent.player_name += letter.lower()  # Remaining letters should be lowercase
-    def backspace_name():
-        if len(persistent.player_name) > 1:
-            persistent.player_name = persistent.player_name[:-1]
 
     def get_greeting():
         """Return the appropriate greeting based on the current time."""
@@ -35,4 +25,8 @@ init python:
             return "Good afternoon"
         else:
             return "Good evening"
-    hover_sound = "audio/C.ogg"    
+    hover_sound = "audio/press.ogg"    
+
+    def delete_all_saves():
+            for savegame in renpy.list_saved_games(fast=True):
+                renpy.unlink_save(savegame)

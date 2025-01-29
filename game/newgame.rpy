@@ -1,8 +1,8 @@
-label newgame:
+label start:
     
     window hide
     $ quick_menu = False
-    stop music
+    play music "audio/void.ogg"
     if persistent.firstrun:
         $ greeting = get_greeting()
         god "[greeting],[persistent.player_name]!"

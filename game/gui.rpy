@@ -188,13 +188,15 @@ define gui.radio_button_borders = Borders(27, 6, 6, 6)
 define gui.check_button_borders = Borders(27, 6, 6, 6)
 
 define gui.confirm_button_text_xalign = 0.5
+define gui.confirm_button_text_idle_color = '#c0c0c0'
+define gui.confirm_button_text_hover_color = '#ffffff'
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
 define gui.quick_button_text_size = 21
-define gui.quick_button_text_idle_color = gui.idle_small_color
-define gui.quick_button_text_selected_color = gui.accent_color
+define gui.quick_button_text_idle_color = '#c0c0c0'
+define gui.quick_button_text_selected_color = '#ffffff'
 
 ## You can also add your own customizations, by adding properly-named variables.
 ## For example, you can uncomment the following line to set the width of a
@@ -210,16 +212,14 @@ define gui.navigation_button_text_outlines = [ (1, "#000000", 0, 0) ]
 ##
 ## Choice buttons are used in the in-game menus.
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 600
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
-define gui.choice_button_text_font = gui.text_font
+define gui.choice_button_text_font = "Nunito-Regular.ttf"
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#888888'
+define gui.choice_button_text_idle_color = '#c0c0c0'
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#8888887f'
 
 
 ## File Slot Buttons ###########################################################

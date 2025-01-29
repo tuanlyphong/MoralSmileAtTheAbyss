@@ -25,6 +25,42 @@ image FireworkStartScene = "bg/FireworkStartScene.png"
 image FestivalAIScene = "bg/FireworkAIScene.png"
 image FireworkStartingAIScene = "bg/FireworkStartingAIScene.png"
 image HospitalScene = "bg/HospitalScene.png"
+image room_animation:
+    "bg/FuRoomEvilLoop1.png"
+    0.2
+    "bg/FuRoomEvilLoop2.png"
+    0.1
+    "bg/FuRoomEvilLoop3.png"
+    0.2
+    "bg/FuRoomEvilLoop4.png"
+    0.3
+    "bg/FuRoomEvilLoop5.png"
+    0.1
+    "bg/FuRoomEvilLoop6.png"
+    0.2
+    "bg/FuRoomEvilLoop5.png"
+    0.3
+    "bg/FuRoomEvilLoop4.png"
+    0.2
+    "bg/FuRoomEvilLoop3.png"
+    0.1
+    "bg/FuRoomEvilLoop2.png"
+    repeat
+image Nightmare:
+    "bg/nightmare.png"
+    0.2
+    "bg/nightmare2.png"
+    0.2
+    "bg/nightmare3.png"
+    0.2
+    "bg/nightmare2.png"
+    0.2
+    "bg/nightmare.png"
+    0.2
+    "bg/nightmare3.png"
+    0.2
+    repeat
+
 ##Yuka
 image Yuka = "Yuka.png"
 image YukaAI = "YukaAI.png" 

@@ -1,7 +1,6 @@
 label firstday:
-    scene FuRoomEvil with Fade(0.1, 0, 0, color="#fff")
     $renpy.pause(0.5)
-    show room_animation
+    show room_animation with Fade(0.1,0,0, color = "#fff")
     play music "breathing.ogg"
 
     menu:
@@ -11,15 +10,15 @@ label firstday:
             $ quick_menu = True
             "There’s no way I can live like this. I have to take the medicine."
 
-    stop music
     $quick_menu = False
+    stop music
     play sound "takepill.ogg"
     scene black with Dissolve(2)
     show FuRoomSad with Dissolve(2)
     stop sound
-    play music "Sorrow.ogg"
+    play music "emotional_sad.ogg"
     $ quick_menu = True
-    """
+    e """
     I can't remember the last time I slept peacefully.
 
     It all started when I became fully aware of the world around me.
@@ -36,7 +35,7 @@ label firstday:
     """
 
     if persistent.badend:
-      """
+      e """
       Recently, things have got worse. 
       
       The space around feels distorted, warped 
@@ -44,7 +43,7 @@ label firstday:
       And the voices are becoming more frequent."
       """
     
-    """
+    e """
     I told my parents, and the doctor prescribed me a bunch of medications with strange names.
 
     They are all {color=#FF0000}antidepressants{/color}.
@@ -66,6 +65,7 @@ label firstday:
     
     # Simulate a phone notification to appear (trigger the notification)
     $ trigger_phone_notification()  # This sets phone_notify to True
+    stop music
     play sound "audio/notification_sound.ogg" 
 
     # Example conversation messages
@@ -83,8 +83,7 @@ label firstday:
     $ message_index = 0  # Start at the first message in the conversation
     
     # Show phone icon screen (and make sure player clicks it to proceed)
-    show screen phone_icon_screen with moveinbottom
-
+    show screen phone_icon_screen     
     # Wait for the player to complete the phone interaction before proceeding
     while not phone_interaction_done:
         $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
@@ -92,4 +91,7 @@ label firstday:
     f "Urggh..."
 
     return
+
+
+
 
