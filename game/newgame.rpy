@@ -1,4 +1,4 @@
-label start:
+label start3:
     
     window hide
     $ quick_menu = False

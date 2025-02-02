@@ -11,19 +11,30 @@ image room_animation_effect:
     pause(0.8)
     linear 0.5 alpha 0.6 xpos 0.8 ypos 4.0
     linear 6 zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
+image room_animation_effect2:
+    "room_animation"
+    zoom 1.3 xpos 0.5 ypos 1.0
+
+image room_sad_effect:
+    "FuRoomSad"
+    zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
+    linear 2 zoom 1 alpha 1 xpos 0.5 ypos 1.0
 
 label firstday:
     $renpy.pause(0.5)
 
-    show room_animation_effect # No transition needed, handled by ATL
+    show room_animation_effect
+    window hide  # Hide window so no dialogue is visible during animation
 
-    window hide
-
-    
     play music "breathing.ogg"
-    $renpy.pause(13)
 
-    f "Fucking hell"
+    # Pause to allow animation to play. The player can skip the animation by clicking.
+    $ renpy.pause(13.0)
+    show room_animation_effect2
+
+    window show  # Show window again after animation finishes
+
+    f "Fucking hell..."    
     menu:
         "Take the medication":
             pass
@@ -35,7 +46,7 @@ label firstday:
     stop music
     play sound "takepill.ogg"
     scene black with Dissolve(2)
-    show FuRoomSad with Dissolve(2)
+    show room_sad_effect with Dissolve(2)
     stop sound
     play music "emotional_sad.ogg"
     $ quick_menu = True
