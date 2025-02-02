@@ -1,8 +1,29 @@
+#decrease is move right,increase is move left
+#                 down,                  up
+#middle is xpos 0.5 ypos 1.0
+image room_animation_effect:
+    "room_animation"
+    alpha 0.2 zoom 7
+    xpos 0.5 ypos 4.5
+    linear 4 alpha 1 ypos 3.0
+    pause(1)
+    linear 1 alpha 0.3 xpos 1.2 ypos 5.5
+    pause(0.8)
+    linear 0.5 alpha 0.6 xpos 0.8 ypos 4.0
+    linear 6 zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
+
 label firstday:
     $renpy.pause(0.5)
-    show room_animation with Fade(0.1,0,0, color = "#fff")
-    play music "breathing.ogg"
 
+    show room_animation_effect # No transition needed, handled by ATL
+
+    window hide
+
+    
+    play music "breathing.ogg"
+    $renpy.pause(13)
+
+    f "Fucking hell"
     menu:
         "Take the medication":
             pass
