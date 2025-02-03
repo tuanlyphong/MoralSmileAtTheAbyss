@@ -7,6 +7,10 @@ image phone_icon_notif = Animation("images/phone_icon_notif1.png", 0.5, "images/
 image phone_icon_notifh = Animation("images/phone_icon_notifh1.png", 0.5, "images/phone_icon_notifh2.png", 0.5)  # 0.5 seconds for each image
 
 ##background
+image doorsad2 = "bg/doorsad2.png"
+image doorsad3 = "bg/doorsad3.png"
+image doormad = "bg/doormad.png"
+
 image Nightmare = "bg/nightmare.png"
 image FuyukaLogo = "FuyukaLogo.png"
 image FuRoomSad = "bg/FuRoomSad.png"

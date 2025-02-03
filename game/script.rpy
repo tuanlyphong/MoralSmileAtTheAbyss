@@ -12,7 +12,8 @@ init python:
         persistent.content = False
     if persistent.trueend is None:
         persistent.trueend = False
-
+    if persistent.nihilism is None:
+        persistent.nihilism = False
     if persistent.firstrun is None:
         persistent.firstrun = True
 
