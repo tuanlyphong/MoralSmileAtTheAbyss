@@ -5,15 +5,18 @@ image room_animation_effect:
     "room_animation"
     alpha 0.2 zoom 7
     xpos 0.5 ypos 4.5
-    linear 4 alpha 1 ypos 3.0
+    linear 2 ypos 3.0
+    linear 2 alpha 1
     pause(1)
-    linear 1 alpha 0.3 xpos 1.2 ypos 5.5
+    linear 0.5 alpha 0.2 
+    linear 0.5 xpos 1.2 ypos 5.5
+    linear 0.5 alpha 0.4
     pause(0.8)
-    linear 0.5 alpha 0.6 xpos 0.8 ypos 4.0
+    linear 0.25 alpha 0.2 
+
+    linear 0.25 xpos 0.8 ypos 4.0
+    linear 0.25 alpha 0.6
     linear 6 zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
-image room_animation_effect2:
-    "room_animation"
-    zoom 1.3 xpos 0.5 ypos 1.0
 
 image room_sad_effect:
     "FuRoomSad"
@@ -29,8 +32,7 @@ label firstday:
     play music "breathing.ogg"
 
     # Pause to allow animation to play. The player can skip the animation by clicking.
-    $ renpy.pause(13.0)
-    show room_animation_effect2
+    $ renpy.pause(13.0,hard = True)
 
     window show  # Show window again after animation finishes
 
@@ -121,8 +123,10 @@ label firstday:
         $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
     $ quick_menu =True
     f "Urggh..."
+    play sound "stepping.ogg"
+    hide FuRoomSad with Dissolve(1)
+    jump door
 
-    return
 
 
 

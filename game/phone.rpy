@@ -18,6 +18,8 @@ init python:
                 # Hide the phone screen after messages are done
                 renpy.hide_screen("phone_screen")  # Hide the phone screen
                 renpy.hide_screen("phone_icon_screen")  # Hide the phone icon screen           
+                renpy.sound.play("pickup.ogg")
+                
     if not hasattr(persistent, "current_messages") or persistent.current_messages is None:
         persistent.current_messages = []  # List to store current displayed messages
 
@@ -68,7 +70,7 @@ screen phone_icon_screen():
             action [
                 Show("phone_screen"),  # Custom transition with 2-second duration
                 Hide("phone_icon_screen"),  # Hide the phone icon screen
-                Hide("phone_icon_screen"),  # Hide the phone icon screen
+                Play("sound", "pickup.ogg"),
             ]
     else:
         # No phone icon if no notification

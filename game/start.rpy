@@ -1,35 +1,29 @@
+image door_effect:
+    "doorsad"
+    alpha 0
+    linear 1.5 zoom 1 alpha 1
 
-label start2:
-    stop music
-    window hide  # Hide the text window for a cleaner start screen
+label main_menu:
+
+    return
+
+label start:
+    jump door
+
+label door:
+    show door_effect
+    $ renpy.pause(2, hard=True)
     $ quick_menu = False
-    # Initialize the flag to control phone interaction flow
-    $ phone_interaction_done = False  # Set to False at the start of the interaction
-    
-    # Simulate a phone notification to appear (trigger the notification)
-    $ trigger_phone_notification()  # This sets phone_notify to True
-    play sound "audio/notification_sound.ogg" 
+    jump door_choice
 
-    # Example conversation messages
-    $ missed_calls = [
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "Like how long are you planning to sleep???"},
-        {"sender": "other", "content": "Wake up!,Dummy"},
-        {"sender": "other", "content": "{b}Missed video call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-    ]
-    $ persistent.current_messages = missed_calls  
+label door_choice:
+    menu:
+        "Open":
+            # Add logic for opening the door here
+            pass
+        "Do nothing":
+            $ renpy.pause(3, hard=True)  # Pause for 2 seconds
+            jump door_choice  # Repeat the choice without replaying the effect
 
-    $ messages = []
-    $ message_index = 0  # Start at the first message in the conversation
-    
-    # Show phone icon screen (and make sure player clicks it to proceed)
-    show screen phone_icon_screen
-
-    # Wait for the player to complete the phone interaction before proceeding
-    while not phone_interaction_done:
-        $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
-    f "Urggh..."
-    jump firstday
+    return
 
