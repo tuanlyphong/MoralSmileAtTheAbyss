@@ -7,14 +7,13 @@ image door_effect:
 
     "doorsad"
     alpha 0
-    linear 1.5 zoom 1 alpha 1
+    linear 3 zoom 1 alpha 1
 
 label door:
-
     $ quick_menu = False
     hide window
     stop music
-    show door_effect
+    show door_effect with Dissolve(1)
     $ renpy.pause(2, hard=True)
     if persistent.nihilism:
       jump door_choice2

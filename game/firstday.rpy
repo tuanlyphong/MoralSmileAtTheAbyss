@@ -146,7 +146,8 @@ label firstday:
     $ quick_menu =True
     f "Urggh..."
     play sound "stepping.ogg"
-    hide FuRoomSad with Dissolve(1)
+
+    hide room_sad_effect with Dissolve(1)
     jump door
 
 
