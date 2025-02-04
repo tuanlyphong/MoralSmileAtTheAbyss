@@ -1,6 +1,28 @@
-#decrease is move right,increase is move left
-#                 down,                  up
-#middle is xpos 0.5 ypos 1.0
+
+image room_animation:
+    "bg/FuRoomEvilLoop1.png"
+    0.2
+    "bg/FuRoomEvilLoop2.png"
+    0.1
+    "bg/FuRoomEvilLoop3.png"
+    0.2
+    "bg/FuRoomEvilLoop4.png"
+    0.3
+    "bg/FuRoomEvilLoop5.png"
+    0.1
+    "bg/FuRoomEvilLoop6.png"
+    0.2
+    "bg/FuRoomEvilLoop5.png"
+    0.3
+    "bg/FuRoomEvilLoop4.png"
+    0.2
+    "bg/FuRoomEvilLoop3.png"
+    0.1
+    "bg/FuRoomEvilLoop2.png"
+    repeat
+
+
+
 image room_animation_effect:
     "room_animation"
     alpha 0.2 zoom 7

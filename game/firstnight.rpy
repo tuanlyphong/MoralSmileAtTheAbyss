@@ -1,3 +1,21 @@
+image Nightmare:
+    "bg/nightmare.png"
+    0.2
+    "bg/nightmare2.png"
+    0.2
+    "bg/nightmare3.png"
+    0.2
+    "bg/nightmare2.png"
+    0.2
+    "bg/nightmare.png"
+    0.2
+    "bg/nightmare3.png"
+    0.2
+    repeat
+
+
+
+
 image nightmare_effect:
     "Nightmare"
     alpha 1 zoom 7

@@ -1,98 +1,52 @@
-image door_effect:
-    "doorsad"
-    alpha 0
-    linear 1.5 zoom 1 alpha 1
+image YukaSitPose = "YukaSitPose.png"
+image OutsideFuHouse = "bg/OutsideFuHouse.png"
+image OutsideFuHouse1 = "bg/OutsideFuHouse1.png"
+image OutsideFuHouse2 = "bg/OutsideFuHouse2.png"
+image OutsideFuHouse3 = "bg/OutsideFuHouse3.png"
 
+image YukaSitPoseBlush = "YukaSitPoseBlush.png"
+#decrease is move right,increase is move left
+#                 down,                  up
+#middle is xpos 0.5 ypos 1.0
+image Outside:
+    "OutsideFuHouse1"
+    5
+    "OutsideFuHouse2" with Dissolve(1)
+    1
+    
+image YukaSleep:
+    "Outside"
+    zoom 3 xpos 0.3 ypos 1.0
+    linear 6 xpos 0.22 ypos 2.8
 label main_menu:
 
     return
 
 label start:
-    jump door
+    stop music
+    jump outside
 
-label door:
+image YukaWake:
+    "OutsideFuHouse3"
+    zoom 3 xpos 0.22 ypos 2.8
+image Headache:
+    "OutsideFuHouse"
+    zoom 2
+label outside:
+    window hide
     $ quick_menu = False
-    hide window
-    stop music
-    show door_effect
-    $ renpy.pause(2, hard=True)
-    if persistent.nihilism:
-      jump door_choice2
-    else:
-      jump door_choice
-
-label door_choice:
-    menu:
-        "Open":
-            # Add logic for opening the door here
-            pass
-        "Do nothing":
-            $ renpy.pause(3, hard=True)  # Pause for 2 seconds
-            play music "nothing1.ogg"
-            jump nothing1  # Repeat the choice without replaying the effect
-
+    show YukaSleep
+    $renpy.pause(6, hard = True)  # This ensures everything stops for 6 seconds
+    window show
+    $ quick_menu = True
+    f "Good morning?"
+    y "Mornin-"
+    window hide
+    $quick_menu = False
+    show YukaWake with Dissolve(1)
+    $renpy.pause(1, hard = True)  # This ensures everything stops for 6 seconds
+    show OutsideFuHouse with vpunch
+    $quick_menu = True
+    y "HOW DARE YOU?!"
     return
 
-label door_choice2:
-    menu:
-        "Open":
-            # Add logic for opening the door here
-            pass
-    return
-
-label nothing1:
-    show doorsad2 with Fade(1, 0, 0, color="#000")
-    menu:
-        "Open":
-            # Add logic for opening the door here
-            pass
-        "Do nothing":
-            $ renpy.pause(2, hard=True)  # Pause for 2 seconds
-            jump nothing2 # Repeat the choice without replaying the effect
-    return
-label nothing2:
-    show doorsad3 with Fade(1, 0, 0, color="#000")
-
-    menu:
-        "Open":
-            # Add logic for opening the door here
-            pass
-        "Do nothing":
-            $ renpy.pause(1, hard=True)  # Pause for 2 seconds
-            play music "nothing2.ogg"
-            jump nothing3  # Repeat the choice without replaying the effect
-    return
-label nothing3:
-    show doormad with Fade(1, 0, 0, color="#000")
-    menu:
-      "Do nothing":
-          jump nihilism
-    return
-
-label nihilism:
-    stop music
-    $persistent.nihilism = True
-    scene black
-    play sound "audio/notification_sound.ogg" 
-    $renpy.pause(2)
-
-    play music "audio/void.ogg"
-    god """
-    Hmm... what a horrible ending.
-
-    I shouldn't have given you this much {color=#FFA500}power{/color}.
-
-    It'd be pretty lame if you kept choosing to do {color=#c0c0c0}nothing{/color} like this.
-
-    Or perhaps... you think everything is meaningless?
-
-    That nothing is worth doing?
-
-    ...
-
-    I see...
-
-    But isn't choosing to do nothing still an action?
-    """
-    show door_effect
-    jump door_choice2

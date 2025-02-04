@@ -1,23 +1,10 @@
-##phone
-# Define the phone icons
-image phone_icon = "images/phone_icon.png"  # Base phone icon (no notifications)
-
-# Animation for the phone icon with notifications
-image phone_icon_notif = Animation("images/phone_icon_notif1.png", 0.5, "images/phone_icon_notif2.png", 0.5)  # 0.5 seconds for each image
-image phone_icon_notifh = Animation("images/phone_icon_notifh1.png", 0.5, "images/phone_icon_notifh2.png", 0.5)  # 0.5 seconds for each image
 
 ##background
-image doorsad2 = "bg/doorsad2.png"
-image doorsad3 = "bg/doorsad3.png"
-image doormad = "bg/doormad.png"
-
 image Nightmare = "bg/nightmare.png"
 image FuyukaLogo = "FuyukaLogo.png"
 image FuRoomSad = "bg/FuRoomSad.png"
 image FuRoomEvil = "bg/FuRoomEvil.png"
 image FuRoomNormal = "bg/FuRoomNormal.png"
-image doorsad = "bg/doorsad.png"
-image OutsideFuHouse = "bg/OutsideFuHouse.png"
 image AnimeScene = "bg/AnimeScene.png"
 image ParkScene = "bg/ParkScene.png"
 image ShoppingScene = "bg/ShoppingScene.png"
@@ -29,41 +16,6 @@ image FireworkStartScene = "bg/FireworkStartScene.png"
 image FestivalAIScene = "bg/FireworkAIScene.png"
 image FireworkStartingAIScene = "bg/FireworkStartingAIScene.png"
 image HospitalScene = "bg/HospitalScene.png"
-image room_animation:
-    "bg/FuRoomEvilLoop1.png"
-    0.2
-    "bg/FuRoomEvilLoop2.png"
-    0.1
-    "bg/FuRoomEvilLoop3.png"
-    0.2
-    "bg/FuRoomEvilLoop4.png"
-    0.3
-    "bg/FuRoomEvilLoop5.png"
-    0.1
-    "bg/FuRoomEvilLoop6.png"
-    0.2
-    "bg/FuRoomEvilLoop5.png"
-    0.3
-    "bg/FuRoomEvilLoop4.png"
-    0.2
-    "bg/FuRoomEvilLoop3.png"
-    0.1
-    "bg/FuRoomEvilLoop2.png"
-    repeat
-image Nightmare:
-    "bg/nightmare.png"
-    0.2
-    "bg/nightmare2.png"
-    0.2
-    "bg/nightmare3.png"
-    0.2
-    "bg/nightmare2.png"
-    0.2
-    "bg/nightmare.png"
-    0.2
-    "bg/nightmare3.png"
-    0.2
-    repeat
 
 ##Yuka
 image Yuka = "Yuka.png"
@@ -127,8 +79,6 @@ image YukaSad = "YukaSad.png"
 image YukaSadGrin = "YukaSadGrin.png"
 image YukaSadSmile = "YukaSadSmile.png"
 image YukaSadTalking = "YukaSadTalking.png"
-image YukaSitPose = "YukaSitPose.png"
-image YukaSitPoseBlush = "YukaSitPoseBlush.png"
 image YukaSmile = "YukaSmile.png"
 image YukaStarePose = "YukaStarePose.png"
 image YukaSurprise1 = "YukaSurprise1.png"
