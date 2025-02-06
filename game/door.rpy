@@ -75,21 +75,47 @@ label nihilism:
 
     play music "audio/void.ogg"
     god """
-    Hmm... what a horrible ending.
+    That was a terrible ending.
 
-    I shouldn't have given you this much {color=#FFA500}power{/color}.
+    Perhaps the worst.
 
-    It'd be pretty lame if you kept choosing to do {color=#c0c0c0}nothing{/color} like this.
+    Why didn’t you do anything at all?
 
-    Or perhaps... you think everything is meaningless?
+    I regret giving you {color=#FFA500}power{/color}, only for you to choose {color=#c0c0c0}nothing{/color}.
 
-    That nothing is worth doing?
+    Don’t you think it’s pathetic to keep choosing {color=#c0c0c0}nothing{/color} like this?
 
-    ...
+    Or maybe… you think {color=#c0c0c0}nothing{/color} matters.
 
-    I see...
+    That everything is {color=#c0c0c0}nothing{/color}.
 
-    But isn't choosing to do nothing still an action?
+    That {color=#c0c0c0}nothing{/color} is worth doing.
+
+    …
+
+    I see.
+
+    If you truly feel this way, then you’re not alone.
+
+    Many people sink into this {color=#c0c0c0}emptiness{/color}, trapped in a hollow existence.
+
+    I have, too. Even now, I still struggle with it.
+
+    But tell me… are you waiting for someone to save you?
+
+    They won’t.
+
+    And even if someone wanted to, they couldn’t.
+
+    No one can pull you out of this but yourself.
+
+    Because doing {color=#c0c0c0}nothing{/color} is still a choice, your choice.
+
+    And it’s the worst one.
+
+    If you insist on choosing {color=#c0c0c0}nothing{/color}… then why play this game at all?
+
+    I won’t let you make that choice again. I’m taking it away.
     """
     show door_effect
     jump door_choice2

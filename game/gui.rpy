@@ -190,13 +190,14 @@ define gui.check_button_borders = Borders(27, 6, 6, 6)
 define gui.confirm_button_text_xalign = 0.5
 define gui.confirm_button_text_idle_color = '#c0c0c0'
 define gui.confirm_button_text_hover_color = '#ffffff'
+define gui.confirm_button_text_outlines = [ (0.5, "#000", 0, 0) ] 
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
 define gui.quick_button_text_size = 21
-define gui.quick_button_text_idle_color = '#c0c0c0'
-define gui.quick_button_text_selected_color = '#ffffff'
+define gui.quick_button_text_idle_color = '#fff'
+define gui.quick_button_text_selected_color = '#c0c0c0'
 
 ## You can also add your own customizations, by adding properly-named variables.
 ## For example, you can uncomment the following line to set the width of a
@@ -220,6 +221,7 @@ define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = '#c0c0c0'
 define gui.choice_button_text_hover_color = "#ffffff"
+define gui.choice_button_text_outlines = [ (1, "#000000", 0, 0) ] 
 
 
 ## File Slot Buttons ###########################################################
@@ -234,9 +236,9 @@ define gui.slot_button_height = 309
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
 define gui.slot_button_text_xalign = 0.5
-define gui.slot_button_text_idle_color = gui.idle_small_color
-define gui.slot_button_text_selected_idle_color = gui.selected_color
-define gui.slot_button_text_selected_hover_color = gui.hover_color
+define gui.slot_button_text_idle_color = "#000"
+define gui.slot_button_text_selected_idle_color = "#000"
+define gui.slot_button_text_selected_hover_color = "#000"
 
 ## The width and height of thumbnails used by the save slots.
 define config.thumbnail_width = 384
@@ -364,6 +366,7 @@ define gui.history_text_xpos = 255
 define gui.history_text_ypos = 3
 define gui.history_text_width = 1110
 define gui.history_text_xalign = 0.0
+define gui.history_text_color = '#000'
 
 ## NVL-Mode ####################################################################
 ##

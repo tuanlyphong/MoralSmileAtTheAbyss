@@ -109,6 +109,9 @@ image approach:
 image Close1:
     "OutsideFuHouse"
     zoom 1.5 ypos 1.5
+image Out:
+    "OutsideFuHouse"
+    zoom 1.0 ypos 1.0
 
 image Close2:
     "YukaEmba"
@@ -131,6 +134,11 @@ image YukaDumb:
     "FunnyLaugh" 
     pause 0.6
     "Smug"
+image YukaMock2:
+    "FunnySmile"
+    pause 0.4
+    "FunnyLaugh"
+    pause 0.4
 
 image YukaMock:
     "FunnyLaugh"
@@ -244,9 +252,13 @@ label fight:
     window hide
     $ quick_menu = False
     hide Back2
+    hide Close1
+    hide Close2
+    hide Back1
+    show Out
+
     show approach
     $renpy.pause(1, hard = True)
-
     $ quick_menu = True
     f "Urgh..."
     hide approach
@@ -329,12 +341,17 @@ label fight:
     """
     
     e """
-    "What the hell is she blabbering about?"
+    She absolutely caught me off guard, then proceeded to ramble on without giving me a {color=#FFA500}chance{/color} to speak.
 
-    "And why does she look so proud,"
+    She must be the type who speaks without filtering her thoughts.
 
-    "like her words make any sense at all?"
-    
+    And somehow, she manages to convey every single one of them through her expression at the same time.
+
+    Now, what in the world is she even going on about?
+
+    And why does she look so self-assured,
+
+    as if her words have any real substance?   
     """
     
     f """
@@ -353,17 +370,26 @@ label fight:
     
     """
     hide YukaDumb
+    show YukaMock2
+    y """
+
+    "I have a name"
+
+    
+    """
+    hide YukaMock
     show YukaMock
     y """
 
-    "And urchin live in the sea!"    
+    "And urchin live in the sea, don't you know?"    
+
     
     """
     hide YukaMock
     show YukaThugLife
     y """
 
-    "You are so lack of knowledge Fu"    
+    "You’re so lacking in knowledge, Fu."    
     
     """
 
@@ -371,10 +397,20 @@ label fight:
     show YukaMock
     y """
 
-    "Still have many things to learn"    
+    "How naive. You’ve got so much to learn, huh?"    
     
     """
 
+    e """
 
+    I don’t want to deal with this level of inanity. 
+
+    If this conversation drags on 
+
+    I’ll catch a case of absurdity and start assuming everyone’s a fool. 
+
+    Just like every idiot does.
+    
+    """
     return
 

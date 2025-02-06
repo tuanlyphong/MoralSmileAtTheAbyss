@@ -63,10 +63,25 @@ label firstday:
     $quick_menu = True
 
     f """
-    "{size=60}{b}ARGHHHHH!!!!{b}{/size}"
+    "{size=50}{b}ARGHHHH!!!!{/b}{/size}"
     """
+    hide room_animation_effect with Dissolve(0.5)
     play music "breathing.ogg"
-    "..."
+    e """
+    
+    ...
+    
+    What the fuck is wrong with me?
+
+    I didn't ask to be a prodigy
+    
+    It's not my fault
+
+    I can't think properly when these questions remained unanswered on my mind
+
+    I have never asked to be born 
+
+    """
    
     f """
     "Fuck..."
@@ -96,46 +111,41 @@ label firstday:
 
     It all started when I became fully aware of the world around me.
 
-    I understand those words that they have said to me
-    
-    I can't get them out of my mind
+    I understand the words they've said to me. They echo in my head, refusing to fade.
 
-    Every night feels like a never-ending torment. 
+    Every night feels like a never-ending torment.
 
-    No matter how hard I try
+    No matter how hard I try, my body remains {color=#FF0000}paralyzed{/color}. I can't call out for help.
 
-    My body remains paralyzed, and I can't call out for help.
-    
-
-    When it finally seems like the nightmare is over 
+    And when it finally seems like the nightmare is over...
 
     I wake up with a pounding headache and overwhelming nausea.
 
     Lately, things have only gotten worse.
 
-    The space around me feels distorted—warped.
+    The space around me warps and bends, like reality itself is unraveling.
 
-    I'm growing paranoid, hallucinating even when I'm awake.
+    I'm growing paranoid—hallucinating even when I'm awake.
 
-    And the voices... they're becoming more frequent.
-    """
+    And the voices… they won’t stop. They grow louder, more persistent.
 
-    
-    e """
-    I told them, and they prescribed me a bunch of medications with strange names.
+    I told them about it. They handed me bottles of pills with names I can’t even pronounce.
 
-    They are all {color=#FF0000}antidepressants{/color}.
+    But in the end, they’re all just antidepressants.
 
     Each one came with a slew of side effects.
 
-    Lately, they've given me something new, and I find myself enjoying it more than I should.
+    Lately, they've given me something new—something I enjoy more than I should.
 
     {color=#FFA500}Morphine{/color}.
 
-    It numbs the pain effortlessly.
+    It washes away the pain, smooth and effortless.
 
-    But perhaps it's expensive, and they won't give me enough to satisfy my cravings, no matter how badly I need it.
+    But maybe it’s too {color=#ff0000}expensive{/color}. They never give me enough.
+
+    No matter how badly I need it.
     """
+
     window hide  # Hide the text window for a cleaner start screen
     $ quick_menu = False
     # Initialize the flag to control phone interaction flow
@@ -166,8 +176,19 @@ label firstday:
     while not phone_interaction_done:
         $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
     $ quick_menu =True
-    f """
-    "Tch..."
+    e """
+    
+    Urgh...
+
+    She probably got tired of waiting and left for school.
+
+    If I don’t go, she’ll be mad.
+
+    And by mad, I don’t mean normal mad—I mean the obnoxious, annoying kind of mad.
+
+    I already have enough paranoid thoughts to deal with.
+
+    Handling a real one is beyond my mental limit.
     """
     $quick_menu = False
 

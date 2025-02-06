@@ -31,33 +31,71 @@ label firstnight:
 
     play music "nightmare1.ogg"
     $quick_menu = True
+
     all """
-    You shouldn't have been born
+    "You are our pride and joy, Fu."
 
-    You are such a burden
+    "Fu coming in first again, as expected!"
 
-    Why are you so stupid?
+    "Our class's hero."
 
-    He's a little bit slower than the other kids
+    "Fu! You can do it, Fu!"
 
-    It's all your fault
+    "That's my boy!"
 
-    Don't even try
+    "He’s so talented for his age!"
 
-    You will fail
+    "He’s going to do great things one day."
 
-    And you will always fail
+    "What happened to you?"
 
-    You are so useless
+    "You could have done this better."
 
-    Why do I even raise you? It would have been much better if I raised a pig instead of you    
-    
-    Why can't you do anything?
+    "Depressed?"
 
-    What the fuck is wrong with your brain?
-    
-    If you do that again, I'll beat you up
+    "What is that? Is this supposed to be a joke?"
+
+    "Who cares about the meaning of life? You need to make money."
+
+    "Look at him. Doesn’t even look people in the eyes anymore."
+
+    "You were supposed to be better."
+
+    "You let us down."
+
+    "You let yourself down."
+
+    "Why do I even raise you? It would have been better if I raised a pig."
+
+    "Fu is a little bit slow in class."
+
+    "How? Why are you like this?"
+
+    "I want to beat you the fuck up."
+
+    "We wasted our time and money on you."
+
+    "You ruined everything."
+
+    "What are you reading, philosophy? What is that supposed to mean?"
+
+    "We invest our hard-earned money in you, and you sit here reading worthless shit?"
+
+    "Just stop. You won’t get any better."
+
+    "Haha, loser. He was so arrogant before."
+
+    "Look at the tuition fee!"
+
+    "You are a fucking burden!"
+
+    "It’s all your fault!"
+
+    "How do you want us to suffer more?"
+
+    "Why are you even alive in the first place?"
     """ 
+
     hide nightmare_effect
     show paranoid with Fade(0.5, 0, 0, color="#fff")
     $renpy.pause(1)

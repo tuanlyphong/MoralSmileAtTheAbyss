@@ -18,15 +18,19 @@ screen quick_menu():
             # First column (buttons 1, 2)
             vbox:
                 spacing 10
-                textbutton _("History") action ShowMenu('history') hover_sound hover_sound
-                textbutton _("Save") action ShowMenu('save') hover_sound hover_sound
                 textbutton _("Q.Save") action QuickSave() hover_sound hover_sound
-                textbutton _("Q.Load") action QuickLoad() hover_sound hover_sound
+                textbutton _("Save") action ShowMenu('save') hover_sound hover_sound
+                textbutton _("Auto") action Preference("auto-forward", "toggle") hover_sound hover_sound
+               
+                textbutton _("History") action ShowMenu('history') hover_sound hover_sound
 
             # Second column (buttons 3, 4)
             vbox:
                 spacing 10
-                textbutton _("Auto") action Preference("auto-forward", "toggle") hover_sound hover_sound
+                textbutton _("Q.Load") action QuickLoad() hover_sound hover_sound
+
+                textbutton _("Load") action ShowMenu("load") hover_sound hover_sound  # Second button
+
                 textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True) hover_sound hover_sound
                 textbutton _("Prefs") action ShowMenu('preferences') hover_sound hover_sound
 

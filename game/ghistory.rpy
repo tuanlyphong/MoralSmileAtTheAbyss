@@ -34,7 +34,8 @@ screen history():
                         ## Take the color of the who text from the Character, if
                         ## set.
                         if "color" in h.who_args:
-                            text_color h.who_args["color"]
+                            text_color "#000"
+                            text_size 50
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:
@@ -53,7 +54,6 @@ style history_window is empty
 
 style history_name is gui_label
 style history_name_text is gui_label_text
-style history_text is gui_text
 
 style history_label is gui_label
 style history_label_text is gui_label_text
@@ -80,7 +80,7 @@ style history_text:
     min_width gui.history_text_width
     textalign gui.history_text_xalign
     layout ("subtitle" if gui.history_text_xalign else "tex")
-
+    color "#000000"
 style history_label:
     xfill True
 
