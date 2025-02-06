@@ -11,9 +11,9 @@ screen quick_menu():
 
         hbox:
             style_prefix "quick"
-            xalign 1.0  # Align to the right
-            yalign 1.0  # Align to the bottom
-            spacing 10  # Optional, adds space between buttons
+            xalign 0.96  # Align to the right
+            yalign 0.96  # Align to the bottom
+            spacing 8  # Optional, adds space between buttons
 
             # First column (buttons 1, 2)
             vbox:

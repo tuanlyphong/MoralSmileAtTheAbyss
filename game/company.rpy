@@ -1,4 +1,11 @@
 label splashscreen:
+    play sound "audio/fuyuka.ogg"
+    show FuyukaLogo at highcenter
+    with Dissolve(1.5)
+    hide FuyukaLogo
+    with Fade(1.5, 0, 0, color="#fff")
+    stop sound
+
     if not persistent.content:
         play music "audio/void.ogg"
         
@@ -12,13 +19,7 @@ label splashscreen:
             "Yes":
                 $ persistent.content = True
                 stop music
-                play sound "audio/fuyuka.ogg"
-                show FuyukaLogo at highcenter
-                with Dissolve(1.5)
-                hide FuyukaLogo
-                with Fade(1.5, 0, 0, color="#fff")
-                stop sound
-
+   
                 if persistent.named:
                     return
                 else:

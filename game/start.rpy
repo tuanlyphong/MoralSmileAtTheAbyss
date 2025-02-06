@@ -209,7 +209,7 @@ label outside:
     window show
     $ quick_menu = True
     play music "morning.ogg"
-    
+     
     f """
     
     "..."
@@ -320,7 +320,7 @@ label fight:
 
     "What are you?"
 
-    A street urchin or something?"
+    "A street urchin or something?"
     
     """
     show YukaFrown1 

@@ -63,7 +63,7 @@ label firstday:
     $quick_menu = True
 
     f """
-    "{size=50}{b}ARGHHHH!!!!{/b}{/size}"
+    "ARGHHHH!!!!"
     """
     hide room_animation_effect with Dissolve(0.5)
     play music "breathing.ogg"
