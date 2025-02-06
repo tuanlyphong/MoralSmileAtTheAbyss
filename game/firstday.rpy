@@ -1,33 +1,33 @@
 
 image room_animation:
-    "bg/FuRoomEvilLoop1.png"
-    0.2
-    "bg/FuRoomEvilLoop2.png"
-    0.1
-    "bg/FuRoomEvilLoop3.png"
-    0.2
-    "bg/FuRoomEvilLoop4.png"
-    0.3
-    "bg/FuRoomEvilLoop5.png"
-    0.1
-    "bg/FuRoomEvilLoop6.png"
-    0.2
-    "bg/FuRoomEvilLoop5.png"
-    0.3
-    "bg/FuRoomEvilLoop4.png"
-    0.2
-    "bg/FuRoomEvilLoop3.png"
-    0.1
-    "bg/FuRoomEvilLoop2.png"
+    "bg/FuRoomEvilLoop1.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop2.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop3.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop4.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop5.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop6.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop5.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop4.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop3.png" with Dissolve(2)
+    1.5
+    "bg/FuRoomEvilLoop2.png" with Dissolve(2)
     repeat
 
 
 
 image room_animation_effect:
     "room_animation"
-    alpha 0.2 zoom 7
+    alpha 0 zoom 7
     xpos 0.5 ypos 4.5
-    linear 2 ypos 3.0
+    linear 2 alpha 0.3 ypos 3.0
     linear 2 alpha 1
     pause(1)
     linear 0.5 alpha 0.2 
@@ -48,23 +48,39 @@ image room_sad_effect:
 label firstday:
     $renpy.pause(0.5)
 
-    show room_animation_effect
-    window hide  # Hide window so no dialogue is visible during animation
+    show room_animation_effect 
+    
+    play music "Hallucinate.ogg"
 
-    play music "breathing.ogg"
+    window hide  # Hide window so no dialogue is visible during animation
+    $quick_menu = False
+
 
     # Pause to allow animation to play. The player can skip the animation by clicking.
     $ renpy.pause(13.0,hard = True)
 
     window show  # Show window again after animation finishes
+    $quick_menu = True
 
-    f "Fucking hell..."    
+    f """
+    "{size=60}{b}ARGHHHHH!!!!{b}{/size}"
+    """
+    play music "breathing.ogg"
+    "..."
+   
+    f """
+    "Fuck..."
+    """
+
+    $quick_menu = False
+
+
     menu:
         "Take the medication":
             pass
         "Don’t take the medication":
             $ quick_menu = True
-            "There’s no way I can live like this. I have to take the medicine."
+            e "There’s no way I can live like this. I have to take the medicine."
 
     $quick_menu = False
     stop music
@@ -75,32 +91,38 @@ label firstday:
     play music "emotional_sad.ogg"
     $ quick_menu = True
     e """
+
     I can't remember the last time I slept peacefully.
 
     It all started when I became fully aware of the world around me.
+
+    I understand those words that they have said to me
+    
+    I can't get them out of my mind
 
     Every night feels like a never-ending torment. 
 
     No matter how hard I try
 
     My body remains paralyzed, and I can't call out for help.
+    
 
     When it finally seems like the nightmare is over 
 
-    I wake up with excruciating headaches and overwhelming nausea.
+    I wake up with a pounding headache and overwhelming nausea.
+
+    Lately, things have only gotten worse.
+
+    The space around me feels distorted—warped.
+
+    I'm growing paranoid, hallucinating even when I'm awake.
+
+    And the voices... they're becoming more frequent.
     """
 
-    if persistent.badend:
-      e """
-      Recently, things have got worse. 
-      
-      The space around feels distorted, warped 
-      
-      And the voices are becoming more frequent."
-      """
     
     e """
-    I told my parents, and the doctor prescribed me a bunch of medications with strange names.
+    I told them, and they prescribed me a bunch of medications with strange names.
 
     They are all {color=#FF0000}antidepressants{/color}.
 
@@ -144,9 +166,12 @@ label firstday:
     while not phone_interaction_done:
         $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
     $ quick_menu =True
-    f "Urggh..."
-    play sound "stepping.ogg"
+    f """
+    "Tch..."
+    """
+    $quick_menu = False
 
+    play sound "stepping.ogg"
     hide room_sad_effect with Dissolve(1)
     jump door
 

@@ -12,7 +12,6 @@ image door_effect:
 label door:
     $ quick_menu = False
     hide window
-    stop music
     show door_effect with Dissolve(1)
     $ renpy.pause(2, hard=True)
     if persistent.nihilism:
@@ -23,6 +22,8 @@ label door:
 label door_choice:
     menu:
         "Open":
+            stop music
+
             jump outside
         "Do nothing":
             $ renpy.pause(3, hard=True)  # Pause for 2 seconds
@@ -33,12 +34,14 @@ label door_choice:
 label door_choice2:
     menu:
         "Open":
+            stop music
             jump outside
 
 label nothing1:
     show doorsad2 with Fade(1, 0, 0, color="#000")
     menu:
         "Open":
+            stop music
             jump outside
         "Do nothing":
             $ renpy.pause(2, hard=True)  # Pause for 2 seconds
@@ -49,6 +52,7 @@ label nothing2:
 
     menu:
         "Open":
+            stop music
             jump outside
         "Do nothing":
             $ renpy.pause(1, hard=True)  # Pause for 2 seconds

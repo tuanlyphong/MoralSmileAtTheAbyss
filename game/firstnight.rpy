@@ -1,23 +1,16 @@
-image Nightmare:
-    "bg/nightmare.png"
-    0.2
-    "bg/nightmare2.png"
-    0.2
-    "bg/nightmare3.png"
-    0.2
-    "bg/nightmare2.png"
-    0.2
-    "bg/nightmare.png"
-    0.2
-    "bg/nightmare3.png"
-    0.2
+
+
+image Nightmarea:
+    "bg/nightmare.png" with Dissolve(2)
+    1.5
+    "bg/nightmare2.png" with Dissolve(2)
+    1.5
     repeat
 
 
 
-
 image nightmare_effect:
-    "Nightmare"
+    "Nightmarea"
     alpha 1 zoom 7
     xpos 1 ypos 4.5
     linear 2 ypos 3.0
@@ -35,9 +28,41 @@ label firstnight:
     stop music
     $quick_menu = False
     show nightmare_effect with Fade(0.2, 0, 0, color="#fff")
-    play sound "nightmare1.ogg"
-    $ renpy.pause(16,hard = True)
-    hide nightmare_effect with Fade(0.2, 0, 0, color="#fff")
-    stop sound
+
+    play music "nightmare1.ogg"
+    $quick_menu = True
+    all """
+    You shouldn't have been born
+
+    You are such a burden
+
+    Why are you so stupid?
+
+    He's a little bit slower than the other kids
+
+    It's all your fault
+
+    Don't even try
+
+    You will fail
+
+    And you will always fail
+
+    You are so useless
+
+    Why do I even raise you? It would have been much better if I raised a pig instead of you    
+    
+    Why can't you do anything?
+
+    What the fuck is wrong with your brain?
+    
+    If you do that again, I'll beat you up
+    """ 
+    hide nightmare_effect
+    show paranoid with Fade(0.5, 0, 0, color="#fff")
+    $renpy.pause(1)
+    hide paranoid with Fade(0.5, 0, 0, color="#000")
+
+    stop music
     jump firstday
 

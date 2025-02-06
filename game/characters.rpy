@@ -6,4 +6,5 @@ define god = Character("", window_style="god")
 define f0 = Character(" Fu ",window_style="window",who_color="#ffffff",ctc="ctc_animation", ctc_position="fixed")
 define y = Character("Yuka",window_style="window",who_color="#ffffff",ctc="ctc_animation", ctc_position="fixed")
 define e = Character(None, window_style="window", ctc="ctc_animation", ctc_position="fixed")
+define all =  Character("???",who_color="#fff", window_style="window")
 

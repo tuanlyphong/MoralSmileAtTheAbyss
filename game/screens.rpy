@@ -144,7 +144,7 @@ screen navigation():
 
         # Add buttons with sequential fade-in delays
         if main_menu:
-            textbutton _("Start") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
+            textbutton _("New") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
         else:
             textbutton _("Save") action ShowMenu("save") hover_sound hover_sound
 

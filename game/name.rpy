@@ -63,16 +63,15 @@ screen virtual_keyboard():
 # Label to ask for the player's name
 label naming:
     $ persistent.player_name = " "  # Reset the name
-    play music "audio/void.ogg"
     god "Hi Stranger!"
     god "What should I call you?"
     while True:
         call screen virtual_keyboard
         if  persistent.player_name.lower() in [" "]:
-            god "Are you sure you don't want to name yourself?"
+            god "Are you sure you don't want to {color=#ff0}name{/color} yourself?"
             menu:
                "yes":
-                  "Don't you think a name is important?"
+                  "Don't you think a {color=#ff0}name{/color}is important?"
                   with Fade(1.5, 0, 0, color="#fff")
                   $persistent.player_name = ""
                   $persistent.named = True
@@ -80,33 +79,46 @@ label naming:
                "no":
                   pass
         elif persistent.player_name.lower() in [" fu"]:
-            f0 "Hey!, That's my name."
-            god "I'm sorry, perhap choosing another name"
+            f0 "Hey!, That's my {color=#ff0}name{/color}."
+            god "I'm sorry, perhap choosing another {color=#ff0}name{/color}"
         elif persistent.player_name.lower() in [" yuka"]:
-            f0 "Hey! You're not Yuka. There can only be one Yuka."
-            y0 "Don't take it too seriously, Fu! People can have the same name. Maybe their name has a different meaning."
-            y0 "Or maybe it's just a coincidence that they have the same name and meaning as mine. After all,[persistent.player_name] isn't that rare."
+            f0 """
+            "Hey! You're not Yuka. There can only be one Yuka."
+            """
+
+            y0 """
+            "Don't take it too seriously, Fu! People can have the same {color=#ff0}name{/color}. Maybe their {color=#ff0}name{/color} has a different meaning."
+
+            "Or maybe it's just a coincidence that they have the same {color=#ff0}name{/color} and meaning as mine. After all,[persistent.player_name] isn't that rare."
+            """
             god "Are you sure you want to be remembered as[persistent.player_name]?"
             menu:
                "Yes":
-                  f0 "I don't know why you'd want to call yourself[persistent.player_name]."
-                  f0 "If you're just experimenting, naming yourself anything doesn't change how the story goes."
-                  f0 "But if your name really is[persistent.player_name], then that's totally okay."
-                  f0 "But if you're naming yourself[persistent.player_name] just to make me suffer even more..."
-                  f0 "Then you're truly the sickest among the players. Nobody is going to love you."
-                  f0 "Nobody."
+                  f0 """
+                  "I don't know why you'd want to call yourself[persistent.player_name]."
+
+                  "If you're just experimenting, naming yourself anything doesn't change how the story goes."
+
+                  "But if your {color=#ff0}name{/color} really is[persistent.player_name], then that's totally okay."
+
+                  "But if you're naming yourself[persistent.player_name] just to make me suffer even more..."
+
+                  "Then you're truly the sickest among the players. Nobody is going to love you."
+
+                  "Nobody."
+                  """
                   with Fade(1.5, 0, 0, color="#fff")
                   $persistent.named = True
                   jump start
                "no":
                   pass
         elif persistent.player_name.lower() in [" fuyuka"]:
-            god "I'm sorry, but this name mean a lot to me"
+            god "I'm sorry, but this {color=#ff0}name{/color} mean a lot to me"
         else:
             god "Naming is very important..."
             god "It can last a lifetime, you know?"
-            god "While it might not define one’s entire existence"
-            god "It can shape their experiences"
+            god "While it might not define one’s entire {color=#ff0000}existence{/color}"
+            god "It can shape their {color=#79D021}experiences{/color}"
             god "Are you sure that you want to be remembered as[persistent.player_name]?"
             menu:
                 "Yes":

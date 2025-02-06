@@ -1,4 +1,4 @@
-label start2:
+label start:
     
     window hide
     $ quick_menu = False
@@ -9,6 +9,7 @@ label start2:
         god "Do you have faith in humanity?"
         menu:
             "No":
+                stop music
                 god """
                 
                 Great! 
@@ -20,6 +21,8 @@ label start2:
                 Have fun!
                 """
             "Yes":
+                stop music
+
                 god """
                 
                 Great!
@@ -28,7 +31,7 @@ label start2:
                 
                 Here, you can help someone’s messed-up life become better!
                 
-                "Have fun!"
+                Have fun!
 
                 """
         $ persistent.firstrun = False
@@ -53,9 +56,11 @@ label start2:
             """
             menu:
                 "Yes":
+                    stop music
                     $ reset_messages()
                     jump firstday
-                "No": 
+                "No":
+                    stop music
                     return
         elif persistent.badend and not persistent.happyend and not persistent.trueend:
             god "[greeting],{color=#ff0000}[persistent.player_name]{/color}! Did you enjoy the outcome of your decisions?"
@@ -70,6 +75,7 @@ label start2:
                     Have fun!
                     """
                 "No":
+                    stop music
                     god """
                     
                     Aw, how come?
@@ -107,6 +113,7 @@ label start2:
             god "[greeting],[color=#00ffff]{persistent.player_name}[/color]! Did you enjoy the outcome of your decisions?"
             menu:
                 "Yes":
+                    stop music
                     god """
                     
                     Great! It’s always fun helping people, isn’t it? 
@@ -123,6 +130,8 @@ label start2:
             $ reset_messages()
             jump firstday
         elif persistent.happyend and persistent.badend and not persistent.trueend:
+            
+            stop music
             god """
             
             Interesting,[color=#ffffff]{persistent.player_name}[/color]. Don’t you have anything better to do?
@@ -133,7 +142,10 @@ label start2:
             
             Don’t let others decide or limit your decisions, or you’ll end up being a game character just like Fu.
             """
-            f0 "You know that I’m based on you in real life? The only difference is I have Yuka and you do not."
+            f0 """
+            "You know that I’m based on you in real life? The only difference is I have Yuka and you do not."
+            """
+
             god """
             
             ...
@@ -148,6 +160,9 @@ label start2:
             $ reset_messages()
             jump firstday
         elif persistent.happyend and persistent.badend and persistent.trueend:
+            
+            stop music
+
             god """
             
             [color=#ffffff]{persistent.player_name}[/color], you’re actually enjoying this piece of media, aren’t you?

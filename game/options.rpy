@@ -194,7 +194,7 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-
+    config.rollback_enabled = False
 
 ## A Google Play license key is required to perform in-app purchases. It can be
 ## found in the Google Play developer console, under "Monetize" > "Monetization

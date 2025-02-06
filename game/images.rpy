@@ -1,3 +1,5 @@
+##effect
+image paranoid = "bg/paranoid.png"
 
 ##background
 image Nightmare = "bg/nightmare.png"
@@ -18,6 +20,7 @@ image FireworkStartingAIScene = "bg/FireworkStartingAIScene.png"
 image HospitalScene = "bg/HospitalScene.png"
 
 ##Yuka
+
 image Yuka = "Yuka.png"
 image YukaAI = "YukaAI.png" 
 image YukaAIBlush = "YukaAIBlush.png"
@@ -25,7 +28,7 @@ image YukaAISleep = "YukaAISleep.png"
 image YukaAITalking = "YukaAITalking.png"
 image YukaAngry = "YukaAngry.png"
 image YukaAngryBlush = "YukaAngryBlush.png"
-image YukaAngrySmile = "YukaAngryBlushCatSmile.png"
+image YukaAngryBlushCatSmile = "YukaAngryBlushCatSmile.png"
 image YukaAngryBlushGrin = "YukaAngryBlushGrin.png"
 image YukaAngrySmile = "YukaAngrySmile.png"
 image YukaAngryTalking = "YukaAngryTalking.png"
