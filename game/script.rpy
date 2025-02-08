@@ -12,10 +12,12 @@ init python:
         persistent.content = False
     if persistent.trueend is None:
         persistent.trueend = False
-    if persistent.nihilism is None:
-        persistent.nihilism = False
     if persistent.firstrun is None:
         persistent.firstrun = True
+    if persistent.nihilism2 is None:
+        persistent.nihilism2 = False
+    if persistent.nihilism is None:
+        persistent.nihilism = False
 
     def get_greeting():
         """Return the appropriate greeting based on the current time."""

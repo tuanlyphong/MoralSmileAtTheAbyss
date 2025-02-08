@@ -76,13 +76,14 @@ label nothing3:
     show doormad with Fade(0.5, 0, 0, color="#ff0000")
     menu:
       "{color=#ff0000}Do nothing{/color}":
-          hide doormad
-          jump nihilism
+          $persistent.nihilism = True
+          $persistent.nihilism2 = True
+
+          $renpy.quit()
     return
 
 label nihilism:
     stop music
-    $persistent.nihilism = True
     play sound "audio/notification_sound.ogg" 
     $renpy.pause(2)
 
@@ -138,6 +139,7 @@ label nihilism:
 
     I won’t let you make that choice again. I’m taking it away.
     """
+    $persistent.nihilism2 = False
     show door_effect
     jump door_choice2
 
