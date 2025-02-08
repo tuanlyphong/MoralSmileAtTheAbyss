@@ -22,7 +22,9 @@ image room_animation:
     repeat
 
 
-
+image room_animationscare:
+    "room_animation"
+    zoom 1.1 xpos 0.5 ypos 1.0
 image room_animation_effect:
     "room_animation"
     alpha 0 zoom 7
@@ -38,12 +40,16 @@ image room_animation_effect:
 
     linear 0.25 xpos 0.8 ypos 4.0
     linear 0.25 alpha 0.6
-    linear 6 zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
+    linear 0.5 xpos 0.3 ypos 6.0
+    linear 1.0 zoom 3.0 alpha 1 xpos 0.5 ypos 1.0
 
 image room_sad_effect:
     "FuRoomSad"
     zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
     linear 2 zoom 1 alpha 1 xpos 0.5 ypos 1.0
+image room_sad_effectn:
+    "FuRoomSad"
+    zoom 1 xpos 0.5 ypos 1.0
 
 label firstday:
     $renpy.pause(0.5)
@@ -57,15 +63,16 @@ label firstday:
 
 
     # Pause to allow animation to play. The player can skip the animation by clicking.
-    $ renpy.pause(13.0,hard = True)
+    $ renpy.pause(9.0)
 
     window show  # Show window again after animation finishes
     $quick_menu = True
-
+    show room_animationscare with vpunch
+    hide room_animation_effect
     f """
     "ARGHHHH!!!!"
     """
-    hide room_animation_effect with Dissolve(0.5)
+    hide room_animationscare with Dissolve(0.5)
     play music "breathing.ogg"
     e """
     
@@ -91,17 +98,21 @@ label firstday:
 
 
     menu:
-        "Take the medication":
+        "Take the {color=#FFA500}Medication{/color}":
             pass
-        "Don’t take the medication":
+        "Don’t take the {color=#FFA500}Medication{/color}":
             $ quick_menu = True
-            e "There’s no way I can live like this. I have to take the medicine."
+            e "There’s no way I can live like this. I have to take the {color=#FFA500}Medicine{/color}."
 
     $quick_menu = False
     stop music
     play sound "takepill.ogg"
     scene black with Dissolve(2)
     show room_sad_effect with Dissolve(2)
+    $renpy.pause(1)
+    hide room_sad_effect
+    show room_sad_effectn
+  
     stop sound
     play music "emotional_sad.ogg"
     $ quick_menu = True
@@ -139,7 +150,7 @@ label firstday:
 
     {color=#FFA500}Morphine{/color}.
 
-    It washes away the pain, smooth and effortless.
+    It washes away the {color=#ff0000}Pain{/color}, smooth and effortless.
 
     But maybe it’s too {color=#ff0000}expensive{/color}. They never give me enough.
 
@@ -193,7 +204,7 @@ label firstday:
     $quick_menu = False
 
     play sound "stepping.ogg"
-    hide room_sad_effect with Dissolve(1)
+    hide room_sad_effectn with Dissolve(1)
     jump door
 
 

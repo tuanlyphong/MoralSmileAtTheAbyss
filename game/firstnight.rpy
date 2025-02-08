@@ -33,9 +33,9 @@ label firstnight:
     $quick_menu = True
 
     all """
-    "You are our pride and joy, Fu."
+    "You are our {color=#FFA500}Pride{/color} and {color=#FFA500}Joy{/color}, Fu."
 
-    "Fu coming in first again, as expected!"
+    "Fu coming in first again, as {color=#FFA500}expected{/color}!"
 
     "Our class's hero."
 
@@ -51,11 +51,15 @@ label firstnight:
 
     "You could have done this better."
 
-    "Depressed?"
+    "{color=#FF0000}Depression{/color}?"
 
     "What is that? Is this supposed to be a joke?"
 
-    "Who cares about the meaning of life? You need to make money."
+    "We asked you to fix him, and you fucking made up some disease?!"
+
+    "What a waste of {color=#FF0000}Money{/color}"
+
+    "Who cares about the meaning of life? You need to make {color=#FF0000}Money{/color}."
 
     "Look at him. Doesn’t even look people in the eyes anymore."
 
@@ -73,32 +77,31 @@ label firstnight:
 
     "I want to beat you the fuck up."
 
-    "We wasted our time and money on you."
+    "We wasted our time and {color=#FF0000}Money{/color} on you."
 
     "You ruined everything."
 
     "What are you reading, philosophy? What is that supposed to mean?"
 
-    "We invest our hard-earned money in you, and you sit here reading worthless shit?"
+    "We invest our hard-earned {color=#FF0000}Money{/color} in you, and you sit here reading worthless shit?"
 
     "Just stop. You won’t get any better."
 
     "Haha, loser. He was so arrogant before."
 
-    "Look at the tuition fee!"
+    "Look at the tuition {color=#FF0000}Fee{/color}!"
 
-    "You are a fucking burden!"
+    "You are a fucking {color=#FF0000}Burden{/color}!"
 
     "It’s all your fault!"
 
-    "How do you want us to suffer more?"
+    "How do you want us to {color=#FF0000}Suffer{/color} more?"
 
     "Why are you even alive in the first place?"
     """ 
 
     hide nightmare_effect
     show paranoid with Fade(0.5, 0, 0, color="#fff")
-    $renpy.pause(1)
     hide paranoid with Fade(0.5, 0, 0, color="#000")
 
     stop music

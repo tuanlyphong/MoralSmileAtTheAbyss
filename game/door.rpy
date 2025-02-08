@@ -26,7 +26,8 @@ label door_choice:
 
             jump outside
         "Do nothing":
-            $ renpy.pause(3, hard=True)  # Pause for 2 seconds
+            hide door_effect with Dissolve(1) 
+            $ renpy.pause(2)  # Pause for 2 seconds
             play music "nothing1.ogg"
             jump nothing1  # Repeat the choice without replaying the effect
 
@@ -38,70 +39,88 @@ label door_choice2:
             jump outside
 
 label nothing1:
-    show doorsad2 with Fade(1, 0, 0, color="#000")
+    show paranoid with Fade(0.5, 0, 0, color="#000")
+    hide paranoid with Fade(0.5, 0, 0, color="#fff")
+    show doorsad
+    show doorsad2 with Dissolve(0.5)
     menu:
         "Open":
             stop music
             jump outside
         "Do nothing":
+            hide door_effect with Dissolve(1)
             $ renpy.pause(2, hard=True)  # Pause for 2 seconds
             jump nothing2 # Repeat the choice without replaying the effect
     return
 label nothing2:
-    show doorsad3 with Fade(1, 0, 0, color="#000")
+    show paranoid with Fade(0.5, 0, 0, color="#000")
+    hide paranoid with Fade(0.5, 0, 0, color="#fff")
 
+    show doorsad3 with Dissolve(0.5) 
     menu:
         "Open":
             stop music
             jump outside
         "Do nothing":
+            hide doorsad2
+            hide doorsad
+            hide doorsad3 with Dissolve(1)
             $ renpy.pause(1, hard=True)  # Pause for 2 seconds
             play music "nothing2.ogg"
             jump nothing3  # Repeat the choice without replaying the effect
     return
 label nothing3:
-    show doormad with Fade(1, 0, 0, color="#000")
+    show paranoid with Fade(0.5, 0, 0, color="#000")
+    hide paranoid with Fade(0.5, 0, 0, color="#fff")
+
+    show doormad with Fade(0.5, 0, 0, color="#ff0000")
     menu:
-      "Do nothing":
+      "{color=#ff0000}Do nothing{/color}":
+          hide doormad
           jump nihilism
     return
 
 label nihilism:
     stop music
     $persistent.nihilism = True
-    scene black
     play sound "audio/notification_sound.ogg" 
     $renpy.pause(2)
 
     play music "audio/void.ogg"
+    
+    $renpy.pause(2)
     god """
-    That was a terrible ending.
 
-    Perhaps the worst.
+    That was...
+
+    A {color=#ff0000}Terrible{/color} ending.
+
+
+    Perhaps the {color=#ff0000}Worst{/color}.
 
     Why didn’t you do anything at all?
 
-    I regret giving you {color=#FFA500}power{/color}, only for you to choose {color=#c0c0c0}nothing{/color}.
+    I regret giving you {color=#FFA500}Power{/color}, only for you to choose {color=#c0c0c0}Nothing{/color}.
 
-    Don’t you think it’s pathetic to keep choosing {color=#c0c0c0}nothing{/color} like this?
+    Don’t you think it’s pathetic to keep choosing {color=#c0c0c0}Nothing{/color} like this?
 
-    Or maybe… you think {color=#c0c0c0}nothing{/color} matters.
+    Or maybe… you think {color=#c0c0c0}Nothing{/color} matters.
 
-    That everything is {color=#c0c0c0}nothing{/color}.
+    That everything is {color=#c0c0c0}Nothing{/color}.
 
-    That {color=#c0c0c0}nothing{/color} is worth doing.
+    That {color=#c0c0c0}Nothing{/color} is worth doing.
 
     …
 
     I see.
 
-    If you truly feel this way, then you’re not alone.
+    If you truly feel this way, then you’re not {color=#c0c0c0}Alone{/color}.
 
-    Many people sink into this {color=#c0c0c0}emptiness{/color}, trapped in a hollow existence.
+    Many people sink into this {color=#c0c0c0}Emptiness{/color}, trapped in a hollow {color=#ff0000}existence{/color}.
 
     I have, too. Even now, I still struggle with it.
 
-    But tell me… are you waiting for someone to save you?
+    But tell me… are you waiting for someone to {color=#FFA500}Save{/color} you?
 
     They won’t.
 
@@ -109,11 +128,13 @@ label nihilism:
 
     No one can pull you out of this but yourself.
 
-    Because doing {color=#c0c0c0}nothing{/color} is still a choice, your choice.
+    Doing {color=#c0c0c0}Nothing{/color} is a choice...
 
-    And it’s the worst one.
+    Your choice.
 
-    If you insist on choosing {color=#c0c0c0}nothing{/color}… then why play this game at all?
+    And it’s the {color=#ff0000}Worst{/color} one.
+
+    If you insist on choosing {color=#c0c0c0}Nothing{/color}… then why play this game at all?
 
     I won’t let you make that choice again. I’m taking it away.
     """

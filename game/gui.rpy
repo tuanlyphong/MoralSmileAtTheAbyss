@@ -62,7 +62,7 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "Nunito-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "Nunito-Regular.ttf"
+define gui.name_text_font = "GuavineDemoRegular-1jGgL.otf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "Nunito-Regular.ttf"
@@ -71,7 +71,7 @@ define gui.interface_text_font = "Nunito-Regular.ttf"
 define gui.text_size = 50
 
 ## The size of character names.
-define gui.name_text_size = 80
+define gui.name_text_size = 60
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33

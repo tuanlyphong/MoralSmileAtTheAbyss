@@ -97,11 +97,11 @@ label naming:
                   f0 """
                   "I don't know why you'd want to call yourself[persistent.player_name]."
 
-                  "If you're just experimenting, naming yourself anything doesn't change how the story goes."
+                  "If you're just experimenting, {color=#ff0}Naming{/color} yourself anything doesn't change how the story goes."
 
-                  "But if your {color=#ff0}name{/color} really is[persistent.player_name], then that's totally okay."
+                  "But if your {color=#ff0}Name{/color} really is[persistent.player_name], then that's totally okay."
 
-                  "But if you're naming yourself[persistent.player_name] just to make me suffer even more..."
+                  "But if you're naming yourself[persistent.player_name] just to make me {color=#FF0000}Suffer{/color} even more..."
 
                   "Then you're truly the sickest among the players. Nobody is going to love you."
 
@@ -113,7 +113,7 @@ label naming:
                "no":
                   pass
         elif persistent.player_name.lower() in [" fuyuka"]:
-            god "I'm sorry, but this {color=#ff0}name{/color} mean a lot to me"
+            god "I'm sorry, but this {color=#ff0}Name{/color} mean a lot to me"
         else:
             god "Naming is very important..."
             god "It can last a lifetime, you know?"

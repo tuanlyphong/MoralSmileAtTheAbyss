@@ -101,7 +101,7 @@ label start:
                             
                             Oh...
                             
-                            Perhaps this game isn’t as good as you expected.
+                            Perhaps this game isn’t as good as you {color=#FFA500}expected{/color}.
                             
                             Or maybe you're just tired of torturing Fu over and over again.
                             

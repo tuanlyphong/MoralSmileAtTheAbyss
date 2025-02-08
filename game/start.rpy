@@ -12,75 +12,76 @@ image YukaSitPoseBlush = "YukaSitPoseBlush.png"
 
 ###BASIC
 image Smug:
-    "YukaAngrySmile" with Dissolve(0.25)
+    "YukaAngrySmile"
     zoom 1.2 ypos 1.4
 
 image FunnyLaugh:
-    "YukaEyesClosedLaugh" with Dissolve(0.3)
+    "YukaEyesClosedLaugh"
     zoom 1.2 ypos 1.4
 
 image FunnySmile:
-    "YukaEyesClosedGrin" with Dissolve(0.22)
+    "YukaEyesClosedGrin"
     zoom 1.2 ypos 1.4
 
 image YukaAngry1:
-    "YukaAngry" with Dissolve(0.28)
+    "YukaAngry"
     zoom 1.2 ypos 1.4
 
 image YukaDere2:
-    "YukaDereTalking" with Dissolve(0.2)
+    "YukaDereTalking"
     zoom 1.2 ypos 1.4
 
 image YukaDere1:
-    "YukaDere" with Dissolve(0.27)
+    "YukaDere"
     zoom 1.2 ypos 1.4
 
 image YukaCSmile:
-    "YukaWinkCatSmile" with Dissolve(0.3)
+    "YukaWinkCatSmile"
     zoom 1.2 ypos 1.4
 
 image YukaNorm:
-    "Yuka" with Dissolve(0.23)
+    "Yuka"
     zoom 1.2 ypos 1.4
 
 image YukaNormClose:
-    "YukaEyesClose" with Dissolve(0.29)
+    "YukaEyesClose"
     zoom 1.2 ypos 1.4
 
 image YukaAngry2:
-    "YukaAngryTalking" with Dissolve(0.24)
+    "YukaAngryTalking"
     zoom 1.2 ypos 1.4
 
 image YukaGlare1:
-    "YukaGlare" with Dissolve(0.2)
+    "YukaGlare"
     zoom 1.2 ypos 1.4
 
 image YukaGlare2:
-    "YukaGlareFrown" with Dissolve(0.3)
+    "YukaGlareFrown"
     zoom 1.2 ypos 1.4
 
 image YukaFrown1:
-    "YukaFrown" with Dissolve(0.22)
+    "YukaFrown"
     zoom 1.2 ypos 1.4
 
 image YukaSurpriseBl:
-    "YukaSurprise2" with Dissolve(0.26)
+    "YukaSurprise2"
     zoom 1.2 ypos 1.4
 
 image YukaFrown2:
-    "YukaFrownTalking" with Dissolve(0.21)
+    "YukaFrownTalking"
     zoom 1.2 ypos 1.4
 
 image YukaNSmile:
-    "YukaSmile" with Dissolve(0.3)
+    "YukaSmile"
     zoom 1.2 ypos 1.4
+
 image YukaCSEC:
-    "YukaEyesClosedCatSmile" with Dissolve(0.24)
+    "YukaEyesClosedCatSmile"
     zoom 1.2 ypos 1.4
 
 #ADVANCE
 image Outside:
-    "OutsideFuHouse1"
+    "OutsideFuHouse1" with Dissolve(1)
     5
     "OutsideFuHouse2" with Dissolve(1)
     1
@@ -120,83 +121,89 @@ image Close2:
 image Back1:
     "OutsideFuHouse"
     zoom 1.5 ypos 1.5
-    linear 1.0 zoom 1.0 ypos 1.0
+    linear 0.5 zoom 1.0 ypos 1.0
 
 image Back2:
     "YukaAngryBlush"
     zoom 2.0 ypos 2.2
-    linear 1.0 zoom 1.0 ypos 1.2
+    linear 0.5 zoom 1.0 ypos 1.2
+image Back3:
+    "YukaAngry"
+    zoom 1.0 ypos 1.2
 
 #COMBINE
 image YukaDumb:
-    "FunnySmile"
+    "FunnySmile" with Dissolve(0.2)
     pause 0.5
-    "FunnyLaugh" 
+    "FunnyLaugh" with Dissolve(0.2)
     pause 0.6
-    "Smug"
+    "Smug" with Dissolve(0.2)
+
 image YukaMock2:
-    "FunnySmile"
+    "FunnySmile" with Dissolve(0.2)
     pause 0.4
-    "FunnyLaugh"
+    "FunnyLaugh" with Dissolve(0.2)
     pause 0.4
 
 image YukaMock:
-    "FunnyLaugh"
+    "FunnyLaugh" with Dissolve(0.2)
     pause 0.4
-    "FunnySmile"
+    "FunnySmile" with Dissolve(0.2)
     pause 0.4
+
 image YukaThugLife:
-    "YukaCSmile"
+    "YukaCSmile" with Dissolve(0.2)
     pause 0.5
-    "FunnyLaugh"
+    "FunnyLaugh" with Dissolve(0.2)
     pause 0.4
-    "YukaCSEC"
+    "YukaCSEC" with Dissolve(0.2)
+
 image YukaEmba:
-    "YukaAngryBlush"
+    "YukaAngryBlush" with Dissolve(0.2)
     pause 0.9
-    "YukaDere" 
+    "YukaDere" with Dissolve(0.2)
     pause 0.4
-    "YukaDereTalking"
+    "YukaDereTalking" with Dissolve(0.2)
     pause 0.3
-    "YukaDere"
+    "YukaDere" with Dissolve(0.2)
 
 image YukaNormA:
-    "YukaNorm" 
+    "YukaNorm" with Dissolve(0.2)
     pause 0.4
-    "YukaNormClose"
+    "YukaNormClose" with Dissolve(0.2)
     pause 0.4
-    "YukaNorm"
+    "YukaNorm" with Dissolve(0.2)
 
 image YukaGlareA:
-    "YukaGlare1" 
+    "YukaGlare1" with Dissolve(0.2)
     pause 0.5
-    "YukaGlare2"
+    "YukaGlare2" with Dissolve(0.2)
 
 image YukaATalk:
-    "YukaAngry1" 
-    pause 0.4
-    "YukaAngry2"
-    pause 0.5
     "YukaAngry1"
+    pause 0.4
+    "YukaAngry2" with Dissolve(0.2)
+    pause 0.5
+    "YukaAngry1" with Dissolve(0.2)
 
 image YukaFTalk:
-    "YukaFrown1" 
-    pause 0.4
-    "YukaFrown2"
-    pause 0.5
     "YukaFrown1"
+    pause 0.4
+    "YukaFrown2" with Dissolve(0.2)
+    pause 0.5
+    "YukaFrown1" with Dissolve(0.2)
 
 image YukaDTalk:
-    "YukaDere1" 
-    pause 0.3
-    "YukaDere2"
-    pause 0.6
     "YukaDere1"
+    pause 0.3
+    "YukaDere2" with Dissolve(0.2)
+    pause 0.6
+    "YukaDere1" with Dissolve(0.2)
 
 image YukaNormSmile:
-    "YukaNorm" 
+    "YukaNorm" with Dissolve(0.2)
     pause 0.4
-    "YukaNSmile"
+    "YukaNSmile" with Dissolve(0.2)
     pause 0.5
 
 label outside:
@@ -234,63 +241,71 @@ label outside:
 
 label fight:
     play sound "Boom.ogg"
-    
+    hide YukaWake
+    hide YukaSleep
     # Show Yuka close-up
-    show Close1
-    show Close2 with moveinbottom
+    show Close1 with Dissolve(1)
+    show Close2 with vpunch
     $renpy.pause(0.5,hard=True)
     $ quick_menu = True
     y """
     "How DARE you!"
     """
-    
-    
+    hide Close1 
+    hide Close2
     # Fu backs off
     show Back1
     show Back2
     e "Whoa!"
+    show Back3 with Dissolve(0.5)
     window hide
     $ quick_menu = False
     hide Back2
-    hide Close1
-    hide Close2
     hide Back1
     show Out
-
+    hide Back3
     show approach
     $renpy.pause(1, hard = True)
     $ quick_menu = True
     f "Urgh..."
+    show YukaDere1 with Dissolve(0.5)
     hide approach
     show YukaDTalk
+    hide YukaDere1
     y """
     "Mou!"
     """
+    show YukaAngry1 with Dissolve(0.2)
     hide YukaDTalk
     show YukaATalk
+    hide YukaAngry1
     y """
     "what took you so long?"
     """
+    show YukaFrown1 with Dissolve(0.2)
     hide YukaATalk
     show YukaFTalk
+    hide YukaFrown1
     y """
     "We have school today!"
     """ 
+    show YukaFrown1 with Dissolve(0.2)
     hide YukaFTalk
     show YukaFTalk
+    hide YukaFrown1
     y """
     "Are you planning to make us late?"
     """
+    show YukaGlare2 with Dissolve(0.2)
     hide YukaFTalk
-    show YukaGlare2
     f """
     "..."
     """
+    show YukaNormA with Dissolve(0.2)
     hide YukaGlare2
-    show YukaNormA
     $renpy.pause(1)
     hide YukaNormA with moveoutright
-    show YukaConcernP with moveinright  # Show Yuka on top
+    show YukaConcernP with hpunch
     y """
     "Fu?"
     """ 
@@ -298,7 +313,9 @@ label fight:
     "Are you even listening?"
     """ 
     hide YukaConcernP
-    show YukaConcernPSad
+
+    show YukaConcernPSad 
+
     y """
     "You look so pale—are you okay?"
     """
@@ -306,52 +323,74 @@ label fight:
     
     "..."
 
-    "B-Back off woman!"
-    
+    "Ku{size=40}huhuhuhuhu...{/size}"
+
+    "KuahAhahAHa!"
+
+    "I'm totally fine!."
+
+    "Actually, I could never feel any better in my entire life!!"
+
+    "NOW BACK OFF,WOMAN!"
     """
+    
     hide YukaConcernPSad
-    show YukaConcernPSurprise
+    show YukaConcernPSurprise with vpunch
     f """
-    "Don’t sit in front of the door like that"
+    "Why on earth would you sleep in front of the door like that???"
     """
     hide YukaConcernPSurprise with moveoutright
     show YukaSurpriseBl with moveinright
     f """
 
+    "Have you ever considered what people might think?"
+
     "What are you?"
 
-    "A street urchin or something?"
-    
+    "A street urchin or something?"    
+
     """
-    show YukaFrown1 
+    show YukaFrown1 with Dissolve(0.2) 
+    hide YukaSurpriseBl
     $renpy.pause(0.5)
     hide YukaFrown1
     show YukaFTalk
     y """
     
-    "I am NOT 'woman' or a street urchin!" 
-    
+    "Mou!,You startled me!,Fu!" 
+     
     """
+
     hide YukaFTalk
     show YukaDumb
     y """
+
+    "And for your information, I am neither a 'woman' nor a street urchin!"
     
-    "I’m Yuka!"
+    """
+    hide FunnySmile
+    show FunnySmile with Dissolve(0.2)
+    hide YukaDumb
+    show YukaDumb
+
+    y """
+    
+    "I have told you countless times, I’m {color=#43C1E6}Yuka{/color}!"
     
     """
     
     e """
-    She absolutely caught me off guard, then proceeded to ramble on without giving me a {color=#FFA500}chance{/color} to speak.
+    She startled me first, then proceeded to ramble on without giving me a {color=#FFA500}chance{/color} to speak.
 
-    She must be the type who speaks without filtering her thoughts.
+    Unquestionably, a typical type who speaks without filtering any thoughts.
 
-    And somehow, she manages to convey every single one of them through her expression at the same time.
+    It's impressive that her thoughts are all written on her face.
 
     Now, what in the world is she even going on about?
 
-    And why does she look so self-assured,
+    And why is she even looking at me with that smug face,like she defeated me in a competition?
 
-    as if her words have any real substance?   
+    It's probably a bad idea to ask what she has on her head,but I'm {color=#FFFF00}Curious{/color}.
     """
     
     f """
@@ -373,9 +412,8 @@ label fight:
     show YukaMock2
     y """
 
-    "I have a name"
+    "I have a {color=#ff0}Name{/color}"
 
-    
     """
     hide YukaMock
     show YukaMock
@@ -402,15 +440,24 @@ label fight:
     """
 
     e """
-
-    I don’t want to deal with this level of inanity. 
-
-    If this conversation drags on 
-
-    I’ll catch a case of absurdity and start assuming everyone’s a fool. 
-
-    Just like every idiot does.
     
+    I regret {color=#FFA500}expecting{/color} a proper answer.
+
+    All the effort I put in, just to receive ridiculous insults.
+
+    It's always like this. I always make bad decisions.
+
+    No matter how good it seems from the start, it all falls apart and ends in {color=#FF0000}Suffering{/color}.
+
+    I don’t want to deal with this level of inanity.
+
+    If this conversation drags on, I’ll catch a case of absurdity and start assuming everyone’s a fool.
+
+    Just like this idiot does.
+
+    For the purpose of minimizing {color=#FF0000}Lost{/color}, better change the subject.    
+
     """
+
     return
 
