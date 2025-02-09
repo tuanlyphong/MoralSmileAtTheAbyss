@@ -441,7 +441,7 @@ label fight:
 
     e """
     
-    I regret {color=#FFA500}expecting{/color} a proper answer.
+    I regret expecting a proper answer.
 
     All the effort I put in, just to receive ridiculous insults.
 
@@ -455,7 +455,7 @@ label fight:
 
     Just like this idiot does.
 
-    For the purpose of minimizing {color=#FF0000}Lost{/color}, better change the subject.    
+    For the purpose of minimizing lost, better change the subject.    
 
     """
 

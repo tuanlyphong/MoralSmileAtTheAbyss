@@ -55,7 +55,8 @@ label firstday:
     $renpy.pause(0.5)
 
     show room_animation_effect 
-    
+    $renpy.pause(0.5)
+   
     play music "Hallucinate.ogg"
 
     window hide  # Hide window so no dialogue is visible during animation
@@ -80,14 +81,9 @@ label firstday:
     
     What the fuck is wrong with me?
 
-    I didn't ask to be a prodigy
-    
     It's not my fault
 
-    I can't think properly when these questions remained unanswered on my mind
-
     I have never asked to be born 
-
     """
    
     f """
@@ -116,45 +112,48 @@ label firstday:
     stop sound
     play music "emotional_sad.ogg"
     $ quick_menu = True
+
     e """
 
     I can't remember the last time I slept peacefully.
 
-    It all started when I became fully aware of the world around me.
+    It all started when I became truly aware of the world around me.
 
-    I understand the words they've said to me. They echo in my head, refusing to fade.
+    The words they've said to me—they echo in my head, refusing to fade.
 
     Every night feels like a never-ending torment.
 
-    No matter how hard I try, my body remains {color=#FF0000}paralyzed{/color}. I can't call out for help.
+    No matter how hard I try, my body remains {color=#FF0000}paralyzed{/color}. I can’t move. I can’t call out for help.
 
     And when it finally seems like the nightmare is over...
 
-    I wake up with a pounding headache and overwhelming nausea.
+    I wake up to a pounding headache and overwhelming nausea.
 
     Lately, things have only gotten worse.
 
     The space around me warps and bends, like reality itself is unraveling.
 
-    I'm growing paranoid—hallucinating even when I'm awake.
+    I see things that aren’t there. I hear voices that won’t stop.
 
-    And the voices… they won’t stop. They grow louder, more persistent.
+    They grow louder. More persistent.
 
-    I told them about it. They handed me bottles of pills with names I can’t even pronounce.
+    Apparently, I’ve developed a case of psychotic depression.
+
+    This time, they didn’t just ignore it.
+
+    They agreed to pay for medicines with names I can’t even pronounce.
 
     But in the end, they’re all just antidepressants.
 
-    Each one came with a slew of side effects.
+    Each one comes with its own side effects.
 
-    Lately, they've given me something new—something I enjoy more than I should.
+    Lately, they’ve given me something new—something I enjoy more than I should.
 
     {color=#FFA500}Morphine{/color}.
 
-    It washes away the {color=#ff0000}Pain{/color}, smooth and effortless.
+    It washes away the {color=#FF0000}Pain{/color}, smooth and effortless.
 
-    But maybe it’s too {color=#ff0000}expensive{/color}. They never give me enough.
-
-    No matter how badly I need it.
+    I can’t imagine living a life without it.
     """
 
     window hide  # Hide the text window for a cleaner start screen

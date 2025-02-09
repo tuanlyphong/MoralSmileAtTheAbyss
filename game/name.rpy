@@ -13,49 +13,78 @@ init python:
 
 default persistent.player_name = " "
 $ initialize_persistent_vars()
+style vkeyboard_text:
+    font "fonts/Nunito-Regular.ttf"
+    size 35
+transform text_effect:
+    linear 0.6 alpha 0.5
+    linear 1.0 alpha 1
+    repeat
+
+transform text_effect2:
+    linear 0.8 alpha 0.5
+    linear 0.8 alpha 1
+    repeat
+
+transform text_effect3:
+    linear 1.0 alpha 0.5
+    linear 0.6 alpha 1
+    repeat
 
 style vkeyboard_button:
     background None  # Transparent by default
-    font "fonts/Nunito-Regular.ttf"  # Replace with your font path
     padding (10, 5)  # Adjust padding
-    size 24  # Font size
-    align (0.5, 0.5)  # Center the button text
 
 screen virtual_keyboard():
     frame:
         xysize (500, 300)  # Adjust size as needed
-        align (0.5, 0.5)  # Center the keyboard on the screen
+        align (0.5, 0.45)  # Center the keyboard on the screen
         background None
         vbox:
             # Displaying the entered name
-            text "[persistent.player_name]" size 32 color "#ffffff" align (0.5, 0.5)
+            text "[persistent.player_name]" size 40 color "#ffffff" align (0.5, 0.5)
 
             # QWERTY keyboard layout
             vbox spacing 5:
                 hbox spacing 5:
+                    at text_effect
+
                     for letter in "qwertyuiop":
                         textbutton letter:
+                            text_style "vkeyboard_text"  # Explicitly apply text style
+
                             style "vkeyboard_button"
                             action Function(append_letter, letter)
 
                 hbox spacing 5:
+                    at text_effect2
+
                     for letter in "asdfghjkl":
                         textbutton letter:
+                            text_style "vkeyboard_text"  # Explicitly apply text style
+
                             style "vkeyboard_button"
                             action Function(append_letter, letter)
 
                 hbox spacing 5:
+                    at text_effect3
+
                     for letter in "zxcvbnm":
                         textbutton letter:
+                            text_style "vkeyboard_text"  # Explicitly apply text style
+
                             style "vkeyboard_button"
                             action Function(append_letter, letter)
 
                 hbox spacing 20:
+                    
                     textbutton "Back":
+                        text_style "vkeyboard_text"  # Explicitly apply text style
                         style "vkeyboard_button"
                         action Function(backspace_name)
 
                     textbutton "Done":
+                        text_style "vkeyboard_text"  # Explicitly apply text style
                         style "vkeyboard_button"
                         action Return(True)
 
@@ -68,28 +97,28 @@ label naming:
     while True:
         call screen virtual_keyboard
         if  persistent.player_name.lower() in [" "]:
-            god "Are you sure you don't want to {color=#ff0}name{/color} yourself?"
+            god "Are you sure you don't want to {color=#ff0}Name{/color} yourself?"
             menu:
                "yes":
-                  "Don't you think a {color=#ff0}name{/color}is important?"
+                  "Don't you think a {color=#ff0}Name{/color}is important?"
                   with Fade(1.5, 0, 0, color="#fff")
-                  $persistent.player_name = ""
+                  $persistent.player_name = "Stranger"
                   $persistent.named = True
                   jump start
                "no":
                   pass
         elif persistent.player_name.lower() in [" fu"]:
-            f0 "Hey!, That's my {color=#ff0}name{/color}."
-            god "I'm sorry, perhap choosing another {color=#ff0}name{/color}"
+            f0 "Hey!, That's my {color=#ff0}Name{/color}."
+            god "I'm sorry, perhap choosing another {color=#ff0}Name{/color}"
         elif persistent.player_name.lower() in [" yuka"]:
             f0 """
             "Hey! You're not Yuka. There can only be one Yuka."
             """
 
             y0 """
-            "Don't take it too seriously, Fu! People can have the same {color=#ff0}name{/color}. Maybe their {color=#ff0}name{/color} has a different meaning."
+            "Don't take it too seriously, Fu! People can have the same {color=#ff0}Name{/color}. Maybe their {color=#ff0}Name{/color} has a different meaning."
 
-            "Or maybe it's just a coincidence that they have the same {color=#ff0}name{/color} and meaning as mine. After all,[persistent.player_name] isn't that rare."
+            "Or maybe it's just a coincidence that they have the same {color=#ff0}Name{/color} and meaning as mine. After all,[persistent.player_name] isn't that rare."
             """
             god "Are you sure you want to be remembered as[persistent.player_name]?"
             menu:
@@ -117,8 +146,8 @@ label naming:
         else:
             god "Naming is very important..."
             god "It can last a lifetime, you know?"
-            god "While it might not define one’s entire {color=#ff0000}existence{/color}"
-            god "It can shape their {color=#79D021}experiences{/color}"
+            god "While it might not define one’s entire {color=#ff0000}Existence{/color}"
+            god "It can shape their {color=#79D021}Experiences{/color}"
             god "Are you sure that you want to be remembered as[persistent.player_name]?"
             menu:
                 "Yes":

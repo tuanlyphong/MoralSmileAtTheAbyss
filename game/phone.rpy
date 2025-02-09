@@ -110,7 +110,7 @@ screen phone_screen():
                 image chat_partner["icon"] size (50, 50)
 
                 vbox:
-                    text chat_partner["name"] size 22 color "#ffffff" bold True
+                    text chat_partner["name"] size 22 color "#00ffff" bold True
                     text chat_partner["status"] size 16 color "#90EE90"
 
         frame:

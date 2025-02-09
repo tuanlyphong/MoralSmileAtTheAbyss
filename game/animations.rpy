@@ -18,5 +18,4 @@ image menu_animation = Animation(
     "gui/menuanimate/frame3.png", 0.2,  # Half-closed
     "gui/menuanimate/frame2.png", 0.8,  # About 25% open
 )
-image ctc_animation = Animation("gui/indicator1.png", 0.3, "gui/indicator2.png", 0.3, "gui/indicator3.png", 0.3, xpos=0.8, ypos=0.97, xanchor=1.0, yanchor=1.0)
 
