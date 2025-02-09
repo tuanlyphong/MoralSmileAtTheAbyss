@@ -35,7 +35,7 @@ label firstnight:
     all """
     "You are our {color=#FFA500}Pride{/color} and {color=#FFA500}Joy{/color}, Fu."
 
-    "Fu coming in first again, as {color=#FFA500}Expected{/color}!"
+    "Fu coming in first again, as expected!"
 
     "That's my boy!"
 
@@ -45,7 +45,7 @@ label firstnight:
 
     "Who cares about the meaning of life? You need to make {color=#FF0000}Money{/color}."
 
-    "{color=#FF0000}Depression{/color}?"
+    "Depression?"
 
     "What is that? Is this supposed to be a joke?"
 

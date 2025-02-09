@@ -123,7 +123,7 @@ label firstday:
 
     Every night feels like a never-ending torment.
 
-    No matter how hard I try, my body remains {color=#FF0000}paralyzed{/color}. I can’t move. I can’t call out for help.
+    No matter how hard I try, my body remains paralyzed. I can’t move. I can’t call out for help.
 
     And when it finally seems like the nightmare is over...
 
@@ -151,9 +151,10 @@ label firstday:
 
     {color=#FFA500}Morphine{/color}.
 
-    It washes away the {color=#FF0000}Pain{/color}, smooth and effortless.
+    It washes away the pain, smooth and effortless.
 
     I can’t imagine living a life without it.
+    
     """
 
     window hide  # Hide the text window for a cleaner start screen
@@ -199,7 +200,9 @@ label firstday:
     I already have enough paranoid thoughts to deal with.
 
     Handling a real one is beyond my mental limit.
+
     """
+
     $quick_menu = False
 
     play sound "stepping.ogg"
