@@ -1,4 +1,5 @@
 
+
 init python:
     import os
     import datetime
@@ -18,7 +19,6 @@ init python:
         persistent.nihilism2 = False
     if persistent.nihilism is None:
         persistent.nihilism = False
-
     def get_greeting():
         """Return the appropriate greeting based on the current time."""
         current_hour = datetime.datetime.now().hour
@@ -29,7 +29,6 @@ init python:
         else:
             return "Good evening"
     hover_sound = "audio/press.ogg"    
-
     def delete_all_saves():
             for savegame in renpy.list_saved_games(fast=True):
                 renpy.unlink_save(savegame)

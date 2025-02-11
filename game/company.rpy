@@ -6,7 +6,6 @@ label company:
     with Fade(1.5, 0, 0, color="#fff")
     stop sound
     if not persistent.content:
-        play music "audio/void.ogg"
         
         god """
         {color=#FFD500}Warning{/color}: This game contains references to {color=#FF0000}Suicide{/color}, {color=#FF0000}Trauma{/color}, and other distressing themes. It also includes {color=#FF0000}Flashing lights{/color}, {color=#FF0000}Gore{/color}, and intense scenes that may not be suitable for all players. Player discretion is advised.     

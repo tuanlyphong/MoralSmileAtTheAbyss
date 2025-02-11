@@ -80,6 +80,7 @@ label firstnight:
     """ 
 
     hide nightmare_effect
+    play sound "paranoid.ogg"
     show paranoid with Fade(0.5, 0, 0, color="#fff")
     hide paranoid with Fade(0.5, 0, 0, color="#000")
 

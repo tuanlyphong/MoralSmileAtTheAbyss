@@ -7,9 +7,12 @@ label start:
         $ greeting = get_greeting()
         god "[greeting],[persistent.player_name]!"
         god "Do you have faith in humanity?"
+        stop music
+
         menu:
             "No":
-                stop music
+                play music "audio/void.ogg"
+
                 god """
                 
                 Great! 
@@ -21,7 +24,7 @@ label start:
                 Have fun!
                 """
             "Yes":
-                stop music
+                play music "audio/void.ogg"
 
                 god """
                 
@@ -54,18 +57,22 @@ label start:
             
             Do you actually want to start a new game?
             """
+            stop music
+
             menu:
                 "Yes":
-                    stop music
                     $ reset_messages()
                     jump firstday
                 "No":
-                    stop music
                     return
         elif persistent.badend and not persistent.happyend and not persistent.trueend:
             god "[greeting],{color=#ff0000}[persistent.player_name]{/color}! Did you enjoy the outcome of your decisions?"
+            stop music
+
             menu:
                 "Yes":
+                    play music "audio/void.ogg"
+
                     god """
                     
                     Great! It’s always fun messing with people's lives, isn’t it? 
@@ -75,15 +82,20 @@ label start:
                     Have fun!
                     """
                 "No":
-                    stop music
+                    play music "audio/void.ogg"
+
                     god """
                     
                     Aw, how come?
                     
                     Do you regret your choices?
+
                     """
+                    stop music
                     menu:
                         "Yes":
+                            play music "audio/void.ogg"
+
                             god """
                             
                             I see... You shouldn't have gone down this path then.
@@ -97,11 +109,13 @@ label start:
                             Have fun!
                             """
                         "No":
+                            play music "audio/void.ogg"
+
                             god """
                             
                             Oh...
                             
-                            Perhaps this game isn’t as good as you {color=#FFA500}expected{/color}.
+                            Perhaps this game isn’t as good as you expected.
                             
                             Or maybe you're just tired of torturing Fu over and over again.
                             
