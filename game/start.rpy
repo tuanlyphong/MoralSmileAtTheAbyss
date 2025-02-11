@@ -1,4 +1,13 @@
+image worms1 = "bg/worms1.png"
+image worms2 = "bg/worms2.png"
+image worms3 = "bg/worms3.png"
+image paranoid2:
+   "worms1" with Fade(0.3, 0, 0, color="#fff")
+   "worms2" with Dissolve(0.2)
+   "worms3" with Fade(0.5, 0, 0, color="#000")
+
 image YukaSitPose = "YukaSitPose.png"
+
 image OutsideFuHouse = "bg/OutsideFuHouse.png"
 image OutsideFuHouse1 = "bg/OutsideFuHouse1.png"
 image OutsideFuHouse2 = "bg/OutsideFuHouse2.png"
@@ -223,19 +232,22 @@ label outside:
     jump fight  # Redirects to the fight scene
 
 label fight:
-    play sound "Boom.ogg"
 
     hide YukaWake
     hide YukaSleep
 
     # Show Yuka close-up
     show Close1 with Dissolve(1)
+    play sound "Boom.ogg"
+
     show Close2 with vpunch
+
     $ renpy.pause(0.5, hard=True)
     $ quick_menu = True
 
     y "How DARE you!"
-
+    stop sound
+    play music "fun.ogg"
     hide Close1 
     hide Close2
 
@@ -252,8 +264,10 @@ label fight:
     hide Back1
     show Out
     hide Back3
-
+    play sound "slowappoarch.ogg"
     show approach
+    $renpy.pause(1)
+    stop sound
     $ renpy.pause(1, hard=True)
     $ quick_menu = True
 
@@ -289,9 +303,11 @@ label fight:
     show YukaNormA with Dissolve(0.2)
     hide YukaGlare2
     pause 0.7  # Makes movement feel less sudden
-
+    play sound "move.ogg"
     hide YukaNormA with moveoutright
-    show YukaConcernP with hpunch
+    stop sound
+    play sound "tooclose.ogg"
+    show YukaConcernP with vpunch
     e "{size=60}!!!{/size}"
     y """
     "Fu?"
