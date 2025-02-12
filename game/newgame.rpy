@@ -62,7 +62,7 @@ label start:
             menu:
                 "Yes":
                     $ reset_messages()
-                    jump firstday
+                    jump firstnight
                 "No":
                     return
         elif persistent.badend and not persistent.happyend and not persistent.trueend:
@@ -122,7 +122,7 @@ label start:
                             Have fun!
                             """
             $ reset_messages()
-            jump firstday
+            jump firstnight
         elif persistent.happyend and not persistent.badend and not persistent.trueend:
             god "[greeting],[color=#00ffff]{persistent.player_name}[/color]! Did you enjoy the outcome of your decisions?"
             menu:
@@ -142,7 +142,7 @@ label start:
                     There will be no consequences! After all, it’s just a game.
                     """
             $ reset_messages()
-            jump firstday
+            jump firstnight
         elif persistent.happyend and persistent.badend and not persistent.trueend:
             
             stop music
@@ -172,7 +172,7 @@ label start:
             """
             $ persistent.trueend = True
             $ reset_messages()
-            jump firstday
+            jump firstnight
         elif persistent.happyend and persistent.badend and persistent.trueend:
             
             stop music
