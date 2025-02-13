@@ -126,6 +126,10 @@ image YukaConcernPT:
 image YukaNorm: 
   "Yuka" 
   zoom 1.2 ypos 1.4  # Neutral
+image YukaLaughN:
+  "YukaLaugh"
+  zoom 1.2 ypos 1.4  # Neutral
+
 image YukaNormA:  # Neutral with subtle movement
     "YukaNorm" with Dissolve(0.2)
     pause 0.4
@@ -135,10 +139,33 @@ image YukaNormA:  # Neutral with subtle movement
 image YukaNormClose: 
   "YukaEyesClose" 
   zoom 1.2 ypos 1.4  # Neutral with eyes closed
-
+image YukaEyesCloseS:
+  "YukaEyesCloseSmile"
+  zoom 1.2 ypos 1.4
 ### POSITIVE EMOTIONS
 
 # Playful / Teasing
+image YukaMock2:
+    "FunnySmile" with Dissolve(0.2)
+    pause 0.4
+    "FunnyLaugh" with Dissolve(0.2)
+    pause 0.4
+image YukaMock:
+    "FunnyLaugh" with Dissolve(0.2)
+    pause 0.4
+    "FunnySmile" with Dissolve(0.2)
+    pause 0.4
+image YukaMock3:
+    "YukaLaughN" with Dissolve(0.2)
+    pause 1.0
+    "FunnySmile" with Dissolve(0.2)
+    pause 0.4
+
+image YukaMock:
+    "FunnyLaugh" with Dissolve(0.2)
+    pause 0.4
+    "FunnySmile" with Dissolve(0.2)
+    pause 0.4
 image YukaThugLife:  # Cocky playful sequence
     "YukaCSmile" with Dissolve(0.2)
     pause 0.3
@@ -157,7 +184,9 @@ image YukaCSEC:
 image YukaCSmile: 
   "YukaWinkCatSmile" 
   zoom 1.2 ypos 1.4  # Wink cat smile
-
+image YukaWinkN:
+  "YukaWink"
+  zoom 1.2 ypos 1.4
 # Affection / Romantic / Dere
 image YukaDTalk:  # Dere Talking Animation
     "YukaDere1"
@@ -366,7 +395,7 @@ label fight:
     "Mou! You startled me!,Fu!" 
      
     """
-
+    show FunnySmile with Dissolve(0.2)
     hide YukaFTalk
     show YukaDumb
     y """
@@ -404,41 +433,61 @@ label fight:
     "What’s your point even supposed to be?"
 
     """ 
+    show YukaNorm with Dissolve(0.2)
+    hide FunnySmile
+    show YukaNormSmile 
+    hide YukaNorm
     hide YukaDumb
-    show YukaNormSmile
-    $renpy.pause(1)
+    $renpy.pause(2)
+    show FunnySmile with Dissolve(0.2) 
     hide YukaNormSmile
+    hide YukaDumb
     show YukaDumb
+    hide FunnySmile
+
     y """
 
     "The point is..."    
     
     """
+    show FunnyLaugh with Dissolve(0.2)
+    show YukaMock
+    hide FunnyLaugh
     hide YukaDumb
-    show YukaMock2
+
     y """
 
     "I have a name!"
 
     """
+    show FunnySmile with Dissolve(0.2)
+    show YukaMock2
+    hide FunnySmile
     hide YukaMock
-    show YukaMock
+
     y """
 
     "And urchin live in the sea, don't you know?"    
 
     
     """
-    hide YukaMock
+    show YukaCSmile with Dissolve(0.2)
+    hide YukaMock2
+    hide FunnyLaugh
     show YukaThugLife
+    hide YukaCSmile
     y """
 
     "You’re so lacking in knowledge, Fu."    
     
     """
-
+    show YukaLaughN with Dissolve(0.2)
     hide YukaThugLife
-    show YukaMock
+
+    show YukaMock3
+    hide YukaLaughN
+    show YukaEyesCloseS with Dissolve(0.2)
+    hide YukaMock3
     y """
 
     "How naive. You’ve got so much to learn, huh?"    

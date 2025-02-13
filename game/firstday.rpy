@@ -52,7 +52,7 @@ image room_sad_effectn:
     zoom 1 xpos 0.5 ypos 1.0
 
 label firstday:
-    $renpy.pause(0.5)
+    $renpy.pause(4)
 
     show room_animation_effect 
     $renpy.pause(0.5)
@@ -68,7 +68,9 @@ label firstday:
 
     window show  # Show window again after animation finishes
     $quick_menu = True
+    play sound "fall.ogg"
     show room_animationscare with vpunch
+    stop sound 
     hide room_animation_effect
     f """
     "ARGHHHH!!!!"
@@ -187,6 +189,7 @@ label firstday:
     while not phone_interaction_done:
         $ renpy.pause(0.1)  # Keep checking if the phone interaction is complete
     $ quick_menu =True
+    $ renpy.pause(1)
     e """
     
     Urgh...

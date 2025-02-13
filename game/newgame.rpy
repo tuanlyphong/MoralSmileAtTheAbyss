@@ -7,11 +7,9 @@ label start:
         $ greeting = get_greeting()
         god "[greeting],[persistent.player_name]!"
         god "Do you have faith in humanity?"
-        stop music
 
         menu:
             "No":
-                play music "audio/void.ogg"
 
                 god """
                 
@@ -24,7 +22,6 @@ label start:
                 Have fun!
                 """
             "Yes":
-                play music "audio/void.ogg"
 
                 god """
                 
@@ -57,7 +54,6 @@ label start:
             
             Do you actually want to start a new game?
             """
-            stop music
 
             menu:
                 "Yes":
@@ -67,11 +63,9 @@ label start:
                     return
         elif persistent.badend and not persistent.happyend and not persistent.trueend:
             god "[greeting],{color=#ff0000}[persistent.player_name]{/color}! Did you enjoy the outcome of your decisions?"
-            stop music
 
             menu:
                 "Yes":
-                    play music "audio/void.ogg"
 
                     god """
                     
@@ -82,7 +76,6 @@ label start:
                     Have fun!
                     """
                 "No":
-                    play music "audio/void.ogg"
 
                     god """
                     
@@ -94,7 +87,6 @@ label start:
                     stop music
                     menu:
                         "Yes":
-                            play music "audio/void.ogg"
 
                             god """
                             
@@ -109,7 +101,6 @@ label start:
                             Have fun!
                             """
                         "No":
-                            play music "audio/void.ogg"
 
                             god """
                             
@@ -175,7 +166,6 @@ label start:
             jump firstnight
         elif persistent.happyend and persistent.badend and persistent.trueend:
             
-            stop music
 
             god """
             
