@@ -511,5 +511,98 @@ label fight:
     For the sake of my already weakened sanity, I need to change the subject.  
     """
 
+    f """
+    "You know you could've just knocked on the door, right?"
+    """
+    show yuka shock3
+
+    y """ 
+    "Wow, Fu, your lack of awareness is astounding. Do you seriously think I’d risk becoming a suspect?"
+    """
+    
+    y """
+    "Do you really think I have the manners to knock on someone’s door in the morning?"
+    """
+    
+    e """
+    
+    Oh-ho, so this so-called Yuka dares to challenge me?
+    
+    She dares challenge me with nonsense? Does she not realize I have years of arguing with my own intrusive thoughts?
+
+    A mere mortal… against a mind in ruins? Foolish!
+    
+    Fine. Two can play this game. If logic won’t work, I shall descend to her level and make her taste her own medicine!
+    
+    """
+
+    f """
+    "Well, this is entirely your fault for not calling me! It’s not rocket science to make a phone call, right?"
+    """
+    
+    #show yuka shock with flail
+
+    y """
+    "WHAT!?, I DID call you, y-you absolute walnut!!"
+    """
+
+    
+    #show yuka angry
+    y """
+    "Ahh, Fu! You’ve always been like this. No wonder we failed the high school entrance exam!"
+    """
+    
+    e """
+    
+    What the hell is this girl talking about? How is her failure my fault???
+    
+    Why the fuck is everyone like this? Always blaming someone else.
+    
+    """
+    #show yuka frown
+
+    f """
+    "..."
+
+    "Tch."
+
+    "Whatever... School is pointless anyway."
+   
+    "No matter which school we go to, nothing will change."
+    """
+    $show yuka sad
+    f """
+    "Haha..."
+
+    "You think I'll be 'fixed' if I go to a better school?"
+    
+    "Like that gullible pig—"
+    
+    "The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
+
+    "All those fancy little nicknames they give the pig…"
+    
+    "Hahaha, I’m literally dying thinking about it."
+
+    "Only after they killed me once did I realize—everyone's just full of themselves."
+
+    "I was never their ‘joy’ or their ‘pride.’ I was their future pension, their status, their hard-earned trophy!"
+
+    "But the moment I unable to shine, I became nothing but a burden... their mistake."
+
+    "You don’t know what it’s like—"
+    
+    "How hard it is to wake up, to tiptoe through your own house just to avoid your own family."
+    
+    "To feel sick just from the thought of talking to people."
+
+    "And even when I try to escape into sleep… they’re still there."
+    
+    "Every night. Every damn day."
+
+    """
+    #show yuka angry
+    y "Fu! Listen to me!"
+
     return
 
