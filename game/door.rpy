@@ -115,7 +115,7 @@ label nihilism:
 
     I see.
 
-    If you truly feel this way, then you’re not {color=#c0c0c0}Alone{/color}.
+    If you truly feel this way, then you’re truly {color=#c0c0c0}Alone{/color}.
 
     Many people sink into this {color=#c0c0c0}Emptiness{/color}, trapped in a hollow {color=#ff0000}existence{/color}.
 

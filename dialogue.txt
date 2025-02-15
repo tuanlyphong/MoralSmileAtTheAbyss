@@ -1,0 +1,253 @@
+NIHILISM ENDING:
+That was...
+A {color=#ff0000}Terrible{/color} ending.
+Perhaps the {color=#ff0000}Worst{/color}.
+Why didn’t you do anything at all?
+I regret giving you {color=#FFA500}Power{/color}, only for you to choose {color=#c0c0c0}Nothing{/color}.
+Don’t you think it’s pathetic to keep choosing {color=#c0c0c0}Nothing{/color} like this?
+Or maybe… you think {color=#c0c0c0}Nothing{/color} matters.
+That everything is {color=#c0c0c0}Nothing{/color}.
+That {color=#c0c0c0}Nothing{/color} is worth doing.
+…
+I see.
+If you truly feel this way, then you’re truly {color=#c0c0c0}Alone{/color}.
+Many people sink into this {color=#c0c0c0}Emptiness{/color}, trapped in a hollow {color=#ff0000}existence{/color}.
+I have, too. Even now, I still struggle with it.
+But tell me… are you waiting for someone to {color=#FFA500}Save{/color} you?
+They won’t.
+And even if someone wanted to, they couldn’t.
+No one can pull you out of this but yourself.
+Doing {color=#c0c0c0}Nothing{/color} is a choice...
+Your choice.
+And it’s the {color=#ff0000}Worst{/color} one.
+If you insist on choosing {color=#c0c0c0}Nothing{/color}… then why play this game at all?
+I won’t let you make that choice again. I’m taking it away.
+
+FIRST MET:
+[greeting],[persistent.player_name]!
+Do you have faith in humanity?
+Great!
+You came to the right place.
+Here, you can ruin someone's life without any consequences!
+Have fun!
+Great!
+You came to the right place.
+Here, you can help someone’s messed-up life become better!
+Have fun!
+NOT FIRST MET:
+Why all of a sudden,[persistent.player_name]?
+Already regretting your choices?
+Or perhaps...
+Did you forget to save the game?
+Or worse...
+Did you misclick???
+Do you actually want to start a new game?
+BAD END:
+[greeting],{color=#ff0000}[persistent.player_name]{/color}! Did you enjoy the outcome of your decisions?
+Great! It’s always fun messing with people's lives, isn’t it?
+Perhaps you want to enjoy torturing Fu more?
+Have fun!
+Aw, how come?
+Do you regret your choices?
+I see... You shouldn't have gone down this path then.
+Welp, we are human after all; can't live without hypocrisy.
+I'm joking,[color=#ff0000]{persistent.player_name}[/color].
+As I said, there are no consequences.
+Have fun!
+Oh...
+Perhaps this game isn’t as good as you expected.
+Or maybe you're just tired of torturing Fu over and over again.
+Have fun!
+AFTER HAPPY END:
+[greeting],[color=#00ffff]{persistent.player_name}[/color]! Did you enjoy the outcome of your decisions?
+Great! It’s always fun helping people, isn’t it?
+Perhaps you want to enjoy helping Fu more?
+Great! You can always start again to explore different parts of the game.
+There will be no consequences! After all, it’s just a game.
+AFTER BOTH END:
+Interesting,[color=#ffffff]{persistent.player_name}[/color]. Don’t you have anything better to do?
+Life is a game with infinite choices itself.
+You should consider entertaining yourself with various kinds of media since we have very limited time to live.
+Don’t let others decide or limit your decisions, or you’ll end up being a game character just like Fu.
+"You know that I’m based on you in real life? The only difference is I have Yuka and you do not."
+...
+What? You actually just want to play the game again?
+I understand, but don’t be too obsessed with the game.
+If you want to talk with me in person, perhaps join my Discord. I’m all ears to hear your story.
+AFTER TRUE END:
+[color=#ffffff]{persistent.player_name}[/color], you’re actually enjoying this piece of media, aren’t you?
+If you’ve struggled enough to find this dialogue, let me tell you—I like you as a person.
+It's fun watching you try all the options to reach the completion of such a meaningless game.
+Congratulations! You’ve earned the respect of someone who hates everything, even himself.
+Enjoy yourself, my friend. Together, we’ll face the horrors of life.
+NAMING:
+Hi Stranger!
+What should I call you?
+Are you sure you don't want to {color=#ff0}Name{/color} yourself?
+Don't you think a {color=#ff0}Name{/color}is important?
+Hey!, That's my {color=#ff0}Name{/color}.
+I'm sorry, perhap choosing another {color=#ff0}Name{/color}
+"Hey! You're not Yuka. There can only be one Yuka."
+"Don't take it too seriously, Fu! People can have the same {color=#ff0}Name{/color}. Maybe their {color=#ff0}Name{/color} has a different meaning."
+"Or maybe it's just a coincidence that they have the same {color=#ff0}Name{/color} and meaning as mine. After all,[persistent.player_name] isn't that rare."
+Are you sure you want to be remembered as[persistent.player_name]?
+"I don't know why you'd want to call yourself[persistent.player_name]."
+"If you're just experimenting, {color=#ff0}Naming{/color} yourself anything doesn't change how the story goes."
+"But if your {color=#ff0}Name{/color} really is[persistent.player_name], then that's totally okay."
+"But if you're naming yourself[persistent.player_name] just to make me {color=#FF0000}Suffer{/color} even more..."
+"Then you're truly the sickest among the players. Nobody is going to love you."
+"Nobody."
+I'm sorry, but this {color=#ff0}Name{/color} mean a lot to me
+Naming is very important...
+It can last a lifetime, you know?
+While it might not define one’s entire {color=#ff0000}Existence{/color}
+It can shape their {color=#79D021}Experiences{/color}
+Are you sure that you want to be remembered as[persistent.player_name]?
+WARNING:
+{font=fonts/RobotoCondensed-Regular.ttf}{color=#FFD500}Warning{/color}: This game contains references to {color=#FF0000}Suicide{/color}, {color=#FF0000}Trauma{/color}, and other distressing themes. It also includes {color=#FF0000}Flashing lights{/color}, {color=#FF0000}Gore{/color}, and intense scenes that may not be suitable for all players. Player discretion is advised.{/font}
+{font=fonts/RobotoCondensed-Regular.ttf}Proceed?{/font}
+{font=fonts/RobotoCondensed-Regular.ttf}According to data from the Ministry of Health, approximately 40,000 people die by {color=#FF0000}Suicide{/color} in Vietnam each year—four times the number of fatal {color=#FF0000}traffic accidents{/color}.{/font} {font=fonts/RobotoCondensed-Regular.ttf}A significant proportion of them are {color=#FF0000}students{/color} and young people.{/font}
+{font=fonts/RobotoCondensed-Regular.ttf}Many still perceive these mental health conditions as signs of weakness or a lack of willpower, leading to stigma and discrimination against those who suffer from them.{/font}
+DAY1:
+"ARGHHHH!!!!"
+...
+What the fuck is wrong with me?
+It's not my fault
+I have never asked to be born
+"Fuck..."
+There’s no way I can live like this. I have to take the {color=#FFA500}Medicine{/color}.
+I can't remember the last time I slept peacefully.
+It all started when I became truly aware of the world around me.
+The words they've said to me—they echo in my head, refusing to fade.
+Every night feels like a never-ending torment.
+No matter how hard I try, my body remains paralyzed. I can’t move. I can’t call out for help.
+And when it finally seems like the nightmare is over...
+I wake up to a pounding headache and overwhelming nausea.
+Lately, things have only gotten worse.
+The space around me warps and bends, like reality itself is unraveling.
+I see things that aren’t there. I hear voices that won’t stop.
+They grow louder. More persistent.
+Apparently, I’ve developed a case of psychotic depression.
+This time, they didn’t just ignore it.
+They agreed to pay for medicines with names I can’t even pronounce.
+But in the end, they’re all just antidepressants.
+Each one comes with its own side effects.
+Lately, they’ve given me something new—something I enjoy more than I should.
+{color=#FFA500}Morphine{/color}.
+It washes away the pain, smooth and effortless.
+I can’t imagine living a life without it.
+Urgh...
+She probably got tired of waiting and left for school.
+If I don’t go, she’ll be mad.
+And by mad, I don’t mean normal mad—I mean the obnoxious, annoying kind of mad.
+I already have enough paranoid thoughts to deal with.
+Handling a real one is beyond my mental limit.
+MEET YUKA:
+...
+Good morning?
+Mmm...
+Mornin-
+How DARE you!
+Whoa!
+Urgh...
+Mou!
+What took you so long?
+We have school today!
+Are you planning to make us late?
+...
+{size=60}!!!{/size}
+"Fu?"
+"Are you even listening?"
+"You look so pale—are you okay?"
+"..."
+"Ku{size=40}huhuhuhuhu...{/size}"
+"KuahAhahAHa!"
+"I'm TOTALLY fine!."
+"Actually, I could never feel any BETTER in my entire life!!"
+"NOW BACK OFF,WOMAN!"
+"Wha—!?"
+"Why on earth would you sleep in front of the door like that???"
+"Have you ever considered what people might think?"
+"What are you?"
+"A street urchin or something?"
+"Mou! You startled me!,Fu!"
+"And for your information, I am neither a 'woman' nor a street urchin!"
+???
+"I have told you countless times—I’m {color=#43C1E6}Yuka{/color}!!!" {fast}{size=40}{color=#43C1E6}Yuka...{/color}{/size} {w=0.2}{size=30}{color=#43C1E6}Yuka...{/color}{/size} {w=0.2}{size=25}{color=#43C1E6}Yuka...{/color}{/size} {w=0.2}{size=20}{color=#43C1E6}{alpha=0.8}Yukaaaaa.....{/alpha}{/size}
+She yelled at me, then immediately launched into a rant without giving me a chance to recover from shock.
+Unquestionably, the type to talk first and think later.
+It’s honestly impressive how every thought she has is written all over her face.
+Now, what in the world is she even going on about?
+And why is she looking at me with that smug face, like she just won a debate against a goldfish?
+It’s probably a bad idea to ask what’s going on inside her head, but now I’m too curious to stop myself...
+"What’s your point even supposed to be?"
+"The point is..."
+"I have a name!"
+"And urchin live in the sea, don't you know?"
+"You’re so lacking in knowledge, Fu."
+"How naive. You’ve got so much to learn, huh?"
+I regret expecting a proper answer.
+All that effort, only to be met with ridiculous nonsense.
+It's always like this. I always make bad decisions.
+No matter how good something seems at first, it all crumbles and ends in {color=#FF0000}Suffering{/color}.
+If this conversation drags on any longer, I might actually catch her stupidity like a virus.
+Just like every idiot does.
+For the sake of my already weakened sanity, I need to go back to the main subject.
+"You know you could've just knocked on the door, right?"
+"Wow, Fu, your lack of awareness is astounding. Do you seriously think I’d risk becoming a suspect?"
+"Do you really think I have the manners to knock on someone’s door in the morning?"
+Oh-ho, so this so-called Yuka dares to challenge me?
+She dares challenge me with nonsense? Does she not realize I have years of arguing with my own intrusive thoughts?
+A mere mortal… against a mind in ruins? Foolish!
+Fine. Two can play this game. If logic won’t work, I shall descend to her level and make her taste her own medicine!
+"Well, this is entirely your fault for not calling me! It’s not rocket science to make a phone call, right?"
+"WHAT!?"
+"I DID call you!!!"
+" Y-you absolute walnut!!"
+Shit, she's losing it
+Listen, I'm Sor-
+"Ahh, Fu! You suddenly became like this. No wonder we failed the high school entrance exam!"
+What the hell is this girl talking about? How is her failure my fault???
+Why the fuck is everyone like this? Always complaining and blaming everything.
+"..."
+"Tch."
+"Whatever... School is pointless anyway."
+"No matter which school we go to, nothing will change."
+"Haha..."
+"You think such life can become worth living if I go to a better school?"
+"Like that gullible pig—"
+"The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
+"All those fancy little nicknames they give…"
+"Hahaha, I’m literally dying thinking about it."
+"Only after they killed me once did I realize—everyone's just full of themselves."
+"I was never their ‘joy’ or their ‘pride.’ I was their future pension, their status, their hard-earned trophy!"
+"But the moment I unable to shine, I became nothing but a burden... a mistake."
+"You don’t know what it’s like—"
+"How hard it is to wake up, to tiptoe through your own house just to avoid your own family."
+"To feel pain from the gut just from the thought of talking to people."
+"And even when I try to escape into sleep… they’re still haunting me."
+"Every night. Every damn day."
+Fu! Listen to me!
+NIGHT1:
+"You are our {color=#FFA500}Pride{/color} and {color=#FFA500}Joy{/color}, Fu."
+"Fu coming in first again, as expected!"
+"That's my boy!"
+"You're going to be a great man."
+"What happened to you?"
+"Who cares about the meaning of life? You need to make {color=#FF0000}Money{/color}."
+"Depression?"
+"What is that? Is this supposed to be a joke?"
+"We paid you to fix him, and you made up some disease?!"
+"What a fucking waste of {color=#FF0000}Money{/color}."
+"Look at him. Doesn’t even look people in the eyes anymore."
+"You were supposed to be better."
+"You let us down."
+"You let yourself down."
+"I want to beat you the fuck up."
+"We wasted our time and {color=#FF0000}Money{/color} on you."
+"You ruined everything."
+"What are you reading, *Beyond Good and Evil*? Isn’t it obvious? It’s {color=#FF0000}Money{/color}."
+"Why do I even raise you? It would have been better if I raised a pig."
+"You are a fucking {color=#FF0000}Burden{/color}!"
+"It’s all your fault!"
+"Why are you even {color=#FF0000}Alive{/color} in the first place?"
