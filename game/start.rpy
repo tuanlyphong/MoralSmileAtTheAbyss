@@ -514,7 +514,7 @@ label fight:
     f """
     "You know you could've just knocked on the door, right?"
     """
-    show yuka shock3
+    #show yuka shock3
 
     y """ 
     "Wow, Fu, your lack of awareness is astounding. Do you seriously think I’d risk becoming a suspect?"
@@ -574,13 +574,13 @@ label fight:
     f """
     "Haha..."
 
-    "You think I'll be 'fixed' if I go to a better school?"
+    "You think such life can become worth living if I go to a better school?"
     
     "Like that gullible pig—"
     
     "The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
 
-    "All those fancy little nicknames they give the pig…"
+    "All those fancy little nicknames they give…"
     
     "Hahaha, I’m literally dying thinking about it."
 
@@ -588,15 +588,15 @@ label fight:
 
     "I was never their ‘joy’ or their ‘pride.’ I was their future pension, their status, their hard-earned trophy!"
 
-    "But the moment I unable to shine, I became nothing but a burden... their mistake."
+    "But the moment I unable to shine, I became nothing but a burden... a mistake."
 
     "You don’t know what it’s like—"
     
     "How hard it is to wake up, to tiptoe through your own house just to avoid your own family."
     
-    "To feel sick just from the thought of talking to people."
+    "To feel pain from the gut just from the thought of talking to people."
 
-    "And even when I try to escape into sleep… they’re still there."
+    "And even when I try to escape into sleep… they’re still haunting me."
     
     "Every night. Every damn day."
 
