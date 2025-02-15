@@ -110,67 +110,6 @@ init python:
 
     # Step 2. Add buttons and images to the gallery.
 
-    # Background scenes
-    g.button("Nightmare")
-    g.image("bg/nightmare.png")
-    g.unlock("bg/nightmare.png")
-
-    g.button("FuRoomSad")
-    g.image("bg/FuRoomSad.png")
-    g.unlock("bg/FuRoomSad.png")
-
-    g.button("FuRoomEvil")
-    g.image("bg/FuRoomEvil.png")
-    g.unlock("bg/FuRoomEvil.png")
-
-    g.button("OutsideFuHouse")
-    g.image("bg/OutsideFuHouse.png")
-    g.unlock("bg/OutsideFuHouse.png")
-
-    g.button("AnimeScene")
-    g.image("bg/AnimeScene.png")
-    g.unlock("bg/AnimeScene.png")
-
-    g.button("ParkScene")
-    g.image("bg/ParkScene.png")
-    g.unlock("bg/ParkScene.png")
-
-    g.button("ShoppingScene")
-    g.image("bg/ShoppingScene.png")
-    g.unlock("bg/ShoppingScene.png")
-
-    g.button("ShoppingAIScene")
-    g.image("bg/ShoppingAIScene.png")
-    g.unlock("bg/ShoppingAIScene.png")
-
-    g.button("FestivalScene")
-    g.image("bg/FestivalScene.png")
-    g.unlock("bg/FestivalScene.png")
-
-    g.button("FestivalAIScene")
-    g.image("bg/FestivalAIScene.png")
-    g.unlock("bg/FestivalAIScene.png")
-
-    g.button("FireworkScene")
-    g.image("bg/FireworkScene.png")
-    g.unlock("bg/FireworkScene.png")
-
-    g.button("FireworkStartScene")
-    g.image("bg/FireworkStartScene.png")
-    g.unlock("bg/FireworkStartScene.png")
-
-    g.button("FireworkAIScene")
-    g.image("bg/FireworkAIScene.png")
-    g.unlock("bg/FireworkAIScene.png")
-
-    g.button("FireworkStartingAIScene")
-    g.image("bg/FireworkStartingAIScene.png")
-    g.unlock("bg/FireworkStartingAIScene.png")
-
-    g.button("HospitalScene")
-    g.image("bg/HospitalScene.png")
-    g.unlock("bg/HospitalScene.png")
-
     # The transition used when switching images.
     g.transition = dissolve
 
@@ -183,18 +122,19 @@ screen gallery:
             xalign 0.5
             yalign 0.5
             spacing gui.slot_spacing
-
+            vbox:
+              text "There is nothing..." color "#000"
             # Loop through images (replace with your actual image list)
-            for i in range(9):  # Adjust the range for the number of images you have
-                $ image_name = f"image_{i+1}.png"  # Replace with your image naming pattern or list
+           # for i in range(9):  # Adjust the range for the number of images you have
+           #     $ image_name = f"image_{i+1}.png"  # Replace with your image naming pattern or list
 
-                button:
-                    action Show("full_image", image=image_name)  # Show full image when clicked
+           #     button:
+           #         action Show("full_image", image=image_name)  # Show full image when clicked
 
-                    vbox:
-                        spacing 5
-                        text str(i + 1) xalign 0.5 style "slot_button_text"  # Thumbnail number
-                        add im.Scale(image_name, 200, 120)  # Thumbnail image (scaled)
+           #         vbox:
+           #             spacing 5
+           #             text str(i + 1) xalign 0.5 style "slot_button_text"  # Thumbnail number
+           #             add im.Scale(image_name, 200, 120)  # Thumbnail image (scaled)
 
         # Pagination buttons to switch between gallery pages
         hbox:

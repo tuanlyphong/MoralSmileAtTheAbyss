@@ -7,7 +7,8 @@ image paranoid2:
    "worms3" with Fade(0.5, 0, 0, color="#000")
 
 image YukaSitPose = "YukaSitPose.png"
-
+image YukaAngryHandCoverMouth ="YukaAngryHandCoverMouth.png"
+image YukaSurpriseHandCoverMouth ="YukaSurpriseHandCoverMouth.png"
 image OutsideFuHouse = "bg/OutsideFuHouse.png"
 image OutsideFuHouse1 = "bg/OutsideFuHouse1.png"
 image OutsideFuHouse2 = "bg/OutsideFuHouse2.png"
@@ -17,10 +18,99 @@ image YukaSitPoseBlush = "YukaSitPoseBlush.png"
 #decrease is move right,increase is move left
 #                 down,                  up
 #middle is xpos 0.5 ypos 1.0
-
+image YukaSnap = "YukaSnap.png"
+image YukaSnapTalking = "YukaSnapTalking.png"
+image YukaSnapEyesClosedTalking = "YukaSnapEyesClosedTalking.png"
+image YukaRegret = "YukaRegret.png"
+image YukaSnapEyesClosedTalking = "YukaSnapEyesClosedTalking.png"
 image YukaConcernPoseTalking = "YukaConcernPoseTalking.png"
 image YukaConcernPoseSadTalking = "YukaConcernPoseSadTalking.png"
+image YukaAngryBlushFrustrated ="YukaAngryBlushFrustrated.png" 
+image YukaAngryBlushYell ="YukaAngryBlushYell.png"
+#POSE
+image YukaR:
+  "YukaRegret"
+  zoom 1.2 ypos 1.4  
+ 
+image YukaS1:
+  "YukaSad"
+  zoom 1.2 ypos 1.4  
 
+image YukaS2:
+  "YukaSad"
+  zoom 1.2 ypos 1.4  
+
+image YukaS3:
+  "YukaSad"
+  zoom 1.2 ypos 1.4  
+image YukaSadA:
+  "YukaS1" with Dissolve(0.1)
+  pause 0.1
+  "YukaS2" with Dissolve(0.1)
+  pause 0.1
+  "YukaS3" with Dissolve(0.1)
+  pause 0.1
+
+
+image YukaAngryBY:
+  "YukaAngryBlushYell"
+  zoom 1.2 ypos 1.4  
+image YukaAngryBF:
+  "YukaAngryBlushFrustrated"
+  zoom 1.2 ypos 1.4  
+image YukaAngryBN:
+  "YukaAngryBlush"
+  zoom 1.2 ypos 1.4  
+image YukaSnapN:
+  "YukaSnap"
+  zoom 1.2 ypos 1.4  
+image YukaSnapT:
+  "YukaSnapTalking"
+  zoom 1.2 ypos 1.4  
+image YukaSnapECT:
+  "YukaSnapEyesClosedTalking"
+  zoom 1.2 ypos 1.4  
+image YukaSnapL:
+  "YukaSnapT" with Dissolve(0.2)
+  pause 0.3
+  "YukaSnapECT" with Dissolve(0.2)
+  pause 0.2
+  "YukaSnapN" with Dissolve(0.2)
+  pause 0.2
+image YukaSnapA:
+  "YukaSnapN" with Dissolve(0.2)
+  pause 0.4
+  "YukaSnapT" with Dissolve(0.2)
+  pause 0.3
+  "YukaSnapN" with Dissolve(0.2)
+  pause 0.2
+
+image YukaExAngry:
+  "YukaAngryBN" with Dissolve(0.2) 
+  pause 0.3
+  "YukaAngryBF" with Dissolve(0.2)
+  pause 0.3
+  "YukaAngryBY" with Dissolve(0.2)
+  pause 0.3
+  "YukaAngryBN" with Dissolve(0.2)
+image YukaAngryY:
+  "YukaAngryHandCoverMouth"
+  zoom 1.2 ypos 1.4  # Glare
+
+image YukaAHCM:
+  "YukaAngryHandCoverMouth"
+  zoom 1.2 ypos 1.4  # Glare
+image YukaSHCM:
+  "YukaSurpriseHandCoverMouth"
+  zoom 1.2 ypos 1.4  # Glare
+image YukaSurpriseN:
+  "YukaSurprise1"
+  zoom 1.2 ypos 1.4
+image YukaSurpriseA:
+  "YukaSurpriseN" with Dissolve(0.2)
+  pause 0.3
+  "YukaSHCM" with Dissolve(0.2)
+  pause 0.3
 #ADVANCE
 image Outside:
     "OutsideFuHouse1" with Dissolve(1)
@@ -92,6 +182,19 @@ image YukaFrown2:
 image YukaSurpriseBl: 
   "YukaSurprise2" 
   zoom 1.2 ypos 1.4  # Surprised Blush
+
+image YukaSurpriseBlG: 
+  "YukaSurprise3" 
+  zoom 1.2 ypos 1.4  # Surprised Blush Grin
+
+image YukaSurpriseRaise:
+  "YukaSurpriseN" with Dissolve(0.2)
+  pause 0.3
+  "YukaSurpriseBl" with Dissolve(0.2)
+  pause 0.2
+  "YukaSurpriseBlG" with Dissolve(0.2)
+  pause 0.1
+
 image YukaConcernPSurprise: 
   "YukaConcernPoseSurprise" 
   zoom 1.4 xpos 0.7 ypos 1.3 
@@ -145,6 +248,13 @@ image YukaEyesCloseS:
 ### POSITIVE EMOTIONS
 
 # Playful / Teasing
+image YukaBSmile:
+  "YukaBlushSmile"
+  zoom 1.2 ypos 1.4
+image YukaB:
+  "YukaBlush"
+  zoom 1.2 ypos 1.4
+
 image YukaMock2:
     "FunnySmile" with Dissolve(0.2)
     pause 0.4
@@ -504,22 +614,35 @@ label fight:
 
     No matter how good something seems at first, it all crumbles and ends in {color=#FF0000}Suffering{/color}.
 
+    """
+    show YukaBSmile with Dissolve(0.2)
+    hide YukaEyesCloseS
+
+    e """
     If this conversation drags on any longer, I might actually catch her stupidity like a virus.
 
     Just like every idiot does.
 
-    For the sake of my already weakened sanity, I need to change the subject.  
+    For the sake of my already weakened sanity, I need to go back to the main subject.  
     """
+
+    show YukaB with Dissolve(0.2)
+    hide YukaBSmile
 
     f """
     "You know you could've just knocked on the door, right?"
     """
+    show YukaSurpriseN with Dissolve(0.2)
+    hide YukaB
+    show YukaSurpriseA
+    hide YukaSurpriseN
     #show yuka shock3
 
     y """ 
     "Wow, Fu, your lack of awareness is astounding. Do you seriously think I’d risk becoming a suspect?"
     """
-    
+    show YukaAHCM with Dissolve(0.2)  
+    hide YukaSurpriseA
     y """
     "Do you really think I have the manners to knock on someone’s door in the morning?"
     """
@@ -536,30 +659,58 @@ label fight:
     
     """
 
+
     f """
     "Well, this is entirely your fault for not calling me! It’s not rocket science to make a phone call, right?"
     """
-    
-    #show yuka shock with flail
-
+    show YukaSurpriseN with Dissolve(0.2)
+    show YukaSurpriseRaise
+    hide YukaSurpriseN
+    hide YukaAHCM
     y """
-    "WHAT!?, I DID call you, y-you absolute walnut!!"
+    
+    "WHAT!?"
+    
     """
-
-    
-    #show yuka angry
+    show YukaAngryBN with Dissolve(0.2) 
+    hide YukaSurpriseRaise
+    show YukaExAngry
+    hide YukaAngryBN
     y """
-    "Ahh, Fu! You’ve always been like this. No wonder we failed the high school entrance exam!"
+
+    "I DID call you!!!"
+
+    """
+    show YukaSnapN with Dissolve(0.2)
+    hide YukaExAngry
+    show YukaSnapA
+    hide YukaSnapN
+    y """
+    
+    " Y-you absolute walnut!!"
+    
+    """
+    e "Shit, she's losing it"
+    f "Listen, I'm Sor-"
+    #show yuka angry
+    show YukaSnapT with Dissolve(0.2)
+    hide YukaSnapA
+    show YukaSnapL
+    hide YukaSnapT
+    y """
+    "Ahh, Fu! You suddenly became like this. No wonder we failed the high school entrance exam!"
     """
     
     e """
     
     What the hell is this girl talking about? How is her failure my fault???
     
-    Why the fuck is everyone like this? Always blaming someone else.
+    Why the fuck is everyone like this? Always complaining and blaming everything.
     
     """
-    #show yuka frown
+
+    show YukaAngryBN with Dissolve(0.2)
+    hide YukaSnapL
 
     f """
     "..."
@@ -570,7 +721,10 @@ label fight:
    
     "No matter which school we go to, nothing will change."
     """
-    $show yuka sad
+
+    show YukaFrown1 with Dissolve(0.2)
+    hide YukaAngryBN
+
     f """
     "Haha..."
 
@@ -579,7 +733,12 @@ label fight:
     "Like that gullible pig—"
     
     "The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
-
+    """
+    show YukaS1 with Dissolve(0.2)
+    hide YukaFrown1
+    show YukaSadA
+    hide YukaS1
+    f """
     "All those fancy little nicknames they give…"
     
     "Hahaha, I’m literally dying thinking about it."
@@ -591,7 +750,10 @@ label fight:
     "But the moment I unable to shine, I became nothing but a burden... a mistake."
 
     "You don’t know what it’s like—"
-    
+    """
+    show YukaR with Dissolve(0.2)
+    hide YukaSadA
+    f """
     "How hard it is to wake up, to tiptoe through your own house just to avoid your own family."
     
     "To feel pain from the gut just from the thought of talking to people."
@@ -601,7 +763,8 @@ label fight:
     "Every night. Every damn day."
 
     """
-    #show yuka angry
+    show YukaAngryBY with Dissolve(0.2)
+    hide YukaR
     y "Fu! Listen to me!"
 
     return
