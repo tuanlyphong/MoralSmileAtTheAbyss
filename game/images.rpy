@@ -129,7 +129,7 @@ screen gallery:
             yalign 0.5
             spacing gui.slot_spacing
             vbox:
-              text "There is nothing..." color "#000"
+              text "There is nothing... It's a demo after all" color "#000"
             # Loop through images (replace with your actual image list)
            # for i in range(9):  # Adjust the range for the number of images you have
            #     $ image_name = f"image_{i+1}.png"  # Replace with your image naming pattern or list

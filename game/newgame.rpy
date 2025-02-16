@@ -148,7 +148,7 @@ label start:
             Don’t let others decide or limit your decisions, or you’ll end up being a game character just like Fu.
             """
             f0 """
-            "You know that I’m based on you in real life? The only difference is I have Yuka and you do not."
+            "Stop harass your own character, P."
             """
 
             god """
