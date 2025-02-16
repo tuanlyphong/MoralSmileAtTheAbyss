@@ -5,7 +5,21 @@ image paranoid2:
    "worms1" with Fade(0.3, 0, 0, color="#fff")
    "worms2" with Dissolve(0.2)
    "worms3" with Fade(0.5, 0, 0, color="#000")
+image DownFall1 ="bg/DownFall1.png"
+image DownFall2 ="bg/DownFall2.png"
+image DownFall3 ="bg/DownFall3.png"
+image DownFall4 ="bg/DownFall4.png"
 
+
+image DownFallA:
+      "DownFall1" with Dissolve(0.2)
+      pause 0.3
+      "DownFall2" with Dissolve(0.2)
+      pause 0.3
+      "DownFall3" with Dissolve(0.2)
+      pause 0.3
+      "DownFall4" with Dissolve(0.2)
+      pause 0.3
 image YukaSitPose = "YukaSitPose.png"
 image YukaAngryHandCoverMouth ="YukaAngryHandCoverMouth.png"
 image YukaSurpriseHandCoverMouth ="YukaSurpriseHandCoverMouth.png"
@@ -27,21 +41,44 @@ image YukaConcernPoseTalking = "YukaConcernPoseTalking.png"
 image YukaConcernPoseSadTalking = "YukaConcernPoseSadTalking.png"
 image YukaAngryBlushFrustrated ="YukaAngryBlushFrustrated.png" 
 image YukaAngryBlushYell ="YukaAngryBlushYell.png"
+image YukaRegretDull = "YukaRegretDull.png"
+image YukaRD:
+    "YukaRegretDull"
+    zoom 1.2 ypos 1.4  
+   
 #POSE
 image YukaR:
   "YukaRegret"
   zoom 1.2 ypos 1.4  
- 
+image YukaSD1:
+  "YukaSadDull1"
+  zoom 1.2 ypos 1.4  
+
+image YukaSD2:
+  "YukaSadDull2"
+  zoom 1.2 ypos 1.4  
+
+image YukaSD3:
+  "YukaSadDull3"
+  zoom 1.2 ypos 1.4  
+image YukaSadDA:
+  "YukaSD1" with Dissolve(0.1)
+  pause 0.1
+  "YukaSD2" with Dissolve(0.1)
+  pause 0.1
+  "YukaSD3" with Dissolve(0.1)
+  pause 0.1
+
 image YukaS1:
   "YukaSad"
   zoom 1.2 ypos 1.4  
 
 image YukaS2:
-  "YukaSad"
+  "YukaSad2"
   zoom 1.2 ypos 1.4  
 
 image YukaS3:
-  "YukaSad"
+  "YukaSad3"
   zoom 1.2 ypos 1.4  
 image YukaSadA:
   "YukaS1" with Dissolve(0.1)
@@ -177,7 +214,9 @@ image YukaFrown1:
 image YukaFrown2: 
   "YukaFrownTalking" 
   zoom 1.2 ypos 1.4  # Frown while talking
-
+image YukaFrownD:
+  "YukaFrownDull"
+  zoom 1.2 ypos 1.4
 # Surprise / Embarrassment
 image YukaSurpriseBl: 
   "YukaSurprise2" 
@@ -724,6 +763,19 @@ label fight:
 
     show YukaFrown1 with Dissolve(0.2)
     hide YukaAngryBN
+    #show background change
+    show DownFall1 behind YukaFrown1 with Dissolve(0.2)
+    $renpy.pause(0.2)
+    show DownFallA behind YukaFrown1
+    hide DownFall1
+    show YukaFrownD with Dissolve(0.5)
+    hide YukaFrown1
+
+    $renpy.pause(1.0)
+
+    hide Out
+    show DownFall4 behind YukaFrownD
+    hide DownFallA
 
     f """
     "Haha..."
@@ -734,10 +786,10 @@ label fight:
     
     "The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
     """
-    show YukaS1 with Dissolve(0.2)
-    hide YukaFrown1
-    show YukaSadA
-    hide YukaS1
+    show YukaSD1 with Dissolve(0.2)
+    hide YukaFrownD
+    show YukaSadDA
+    hide YukaSD1
     f """
     "All those fancy little nicknames they give…"
     
@@ -751,8 +803,8 @@ label fight:
 
     "You don’t know what it’s like—"
     """
-    show YukaR with Dissolve(0.2)
-    hide YukaSadA
+    show YukaRD with Dissolve(0.2)
+    hide YukaSadDA
     f """
     "How hard it is to wake up, to tiptoe through your own house just to avoid your own family."
     
@@ -763,6 +815,12 @@ label fight:
     "Every night. Every damn day."
 
     """
+    scene black with Dissolve(0.2)
+    menu:
+        "Try to {color = #00ffff}Calm{/color}":
+          f"..."
+        "{color = #ff0000}Wrath{/color}":
+          f"..."
     show YukaAngryBY with Dissolve(0.2)
     hide YukaR
     y "Fu! Listen to me!"
