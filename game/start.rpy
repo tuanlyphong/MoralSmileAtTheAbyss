@@ -782,9 +782,9 @@ label fight:
 
     "You think such life can become worth living if I go to a better school?"
     
-    "Like that gullible pig—"
+    "Like a gullible pig—"
     
-    "The one who swallows whatever they’re fed, just to get their throat slit the moment they stop growing."
+    ""The one who swallows whatever they're fed, only to have their throat slit the moment they stop growing or become disobedient.""
     """
     show YukaSD1 with Dissolve(0.2)
     hide YukaFrownD
