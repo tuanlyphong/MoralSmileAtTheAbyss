@@ -28,6 +28,7 @@ image OutsideFuHouse1 = "bg/OutsideFuHouse1.png"
 image OutsideFuHouse2 = "bg/OutsideFuHouse2.png"
 image OutsideFuHouse3 = "bg/OutsideFuHouse3.png"
 image YukaConcernPoseSurprise = "YukaConcernPoseSurprise.png"
+image YukaAngryBlushYellSlap = "YukaAngryBlushYellSlap.png"
 image YukaSitPoseBlush = "YukaSitPoseBlush.png"
 #decrease is move right,increase is move left
 #                 down,                  up
@@ -42,10 +43,21 @@ image YukaConcernPoseSadTalking = "YukaConcernPoseSadTalking.png"
 image YukaAngryBlushFrustrated ="YukaAngryBlushFrustrated.png" 
 image YukaAngryBlushYell ="YukaAngryBlushYell.png"
 image YukaRegretDull = "YukaRegretDull.png"
+image YukaSadx1 = "YukaSadx1.png"
+image YukaSadx2 = "YukaSadx2.png"
+image YukaCalm = "YukaCalm.png"
+image YukaC:
+    "YukaCalm"
+    zoom 1.2 ypos 1.4
+
 image YukaRD:
     "YukaRegretDull"
     zoom 1.2 ypos 1.4  
-   
+image YukaAngryBYA:
+    "YukaAngryBY" with Dissolve(0.2)
+    pause 0.1
+    "YukaAngryBN" with Dissolve(0.2)
+    pause 0.1
 #POSE
 image YukaR:
   "YukaRegret"
@@ -57,7 +69,18 @@ image YukaSD1:
 image YukaSD2:
   "YukaSadDull2"
   zoom 1.2 ypos 1.4  
-
+image YukaSadEx1:
+  "YukaSadx1"
+  zoom 1.2 ypos 1.4  
+ 
+image YukaSadEx2:
+  "YukaSadx2"
+  zoom 1.2 ypos 1.4  
+image YukaSadExA:
+  "YukaSadEx1" with Dissolve(0.2)
+  pause 0.1
+  "YukaSadEx2" with Dissolve(0.2)
+  pause 0.1
 image YukaSD3:
   "YukaSadDull3"
   zoom 1.2 ypos 1.4  
@@ -87,6 +110,10 @@ image YukaSadA:
   pause 0.1
   "YukaS3" with Dissolve(0.1)
   pause 0.1
+
+image YukaAngryBYS:
+  "YukaAngryBlushYellSlap"
+  zoom 1.2 ypos 1.4  
 
 
 image YukaAngryBY:
@@ -784,7 +811,7 @@ label fight:
     
     "Like a gullible pig—"
     
-    ""The one who swallows whatever they're fed, only to have their throat slit the moment they stop growing or become disobedient.""
+    "The one who swallows whatever they're fed, only to have their throat slit the moment they stop growing or become disobedient."
     """
     show YukaSD1 with Dissolve(0.2)
     hide YukaFrownD
@@ -816,14 +843,152 @@ label fight:
 
     """
     scene black with Dissolve(0.2)
+    $quick_menu = False
     menu:
-        "Try to {color = #00ffff}Calm{/color}":
-          f"..."
-        "{color = #ff0000}Wrath{/color}":
-          f"..."
-    show YukaAngryBY with Dissolve(0.2)
-    hide YukaR
-    y "Fu! Listen to me!"
+        "Try to {color=#00ffff}Calm{/color}":
+          e "..."
+          $renpy.pause(3)
+          jump optimistic
 
-    return
+        "Forfeit to {color=#ff0000}Wrath{/color}":
+          e "{color=#ff0000}Kill yourself{/color}"
+          jump pessimistic
+
+label optimistic:
+  $quick_menu = True
+  show Out behind YukaAngryBYS with vpunch
+  show YukaAngryBY
+  hide YukaAngryBYS
+
+  show YukaAngryBYA
+  hide YukaAngryBY
+  y """
+  "Fu! Listen to me!"
+  """
+  show YukaC
+  hide YukaAngryBYA
+
+  $renpy.pause(3)
+  f """
+  ...
+  """
+
+  y """
+  "Why do you always focus on the negative things?"
+  """
+  
+  y """
+  "Don’t deceive yourself like that. You know your parents never got the chance to go to school, and they regret it."
+  """
+  
+  y """
+  "But you are their hope. They sacrificed so much for you, whether they wanted to or not…"
+  """
+  
+  y """
+  "You’ve always been the smart, outgoing one. I admired you. I don’t know what happen during that summer."
+  """
+  
+  y """
+  "But because of that, when people stopped talking to you, I got the chance to talk to you… to be your friend."
+  """
+  
+  y """
+  "Remember the first thing you said when we first met?"
+  """
+  
+  y """
+  "We are born to suffer. Doesn’t matter more or less, we all suffer. There is no true freedom in life—we are chained by our body and our mind. It’s better never to have been."
+  """
+  
+  y """
+  "I don’t fully remember your words, and at the time, I didn’t understand a single thing you were saying. After all, Yuka’s head isn’t that great."
+  """
+  
+  y """
+  "But as I grew up, I started to find meaning in it."
+  """
+  
+  y """
+  "We were all innocent when we were born, but as we live, our minds and bodies begin to control us. We end up doing things we don’t really want to do."
+  """
+  
+  y """
+  "We cling to the idea of doing the ‘right’ thing. But maybe the line between right and wrong becomes blurrier the more we grow up."
+  """
+  
+  y """
+  "Sometimes, doing the ‘right’ thing leaves no impact, while doing the ‘wrong’ thing might actually be more right than right."
+  """
+  
+  y """
+  "Mah! Thinking about it is so frustrating that people end up not wanting to choose at all. They just… do nothing."
+  """
+  
+  y """
+  "But since we already exist, it doesn’t matter if we’re right or wrong. What matters is whether we make a choice or not. We can choose to accept the absurdity of life."
+  """
+  
+  y """
+  "And by 'accept,' I mean to forgive life itself. Yuka believes there is one true freedom—the freedom to forgive."
+  """
+  
+  y """
+  "Fu… Life is full of dilemmas, but instead of staying home, isn’t it better to go to school?"
+  """
+  
+  f "…"
+  
+  y """
+  "Besides, if you didn’t go to school, we never would have become friends. And befriending someone as intelligent as me is a blessing!"
+  """
+  
+  y """
+  "I can help you overcome your anger issues."
+  """
+  
+  e """
+  This girl, calling herself intelligent… Just how delusional is she?
+  
+  And I don’t think my condition can be summarized as just ‘anger issues.’
+  """
+  
+  y """
+  "Mou! You can’t just leave me winking like this! Say something, Fu!"
+  """
+  
+  f """
+  "…Thank you, I guess."
+  """
+  
+  f """
+  "Besides, even though being friends with a beautiful childhood friend like Yuka is a dilemma… it’s better than having no friends at all."
+  """
+  
+  y """
+  "Mah!"
+  """
+  
+  y """
+  "Don’t praise me like that! It’s not like it makes me happy or anything…"
+  """
+  
+  e """
+  I still can’t tell if she’s smart or not… but her words are worth considering.
+  """
+  
+  y """
+  "Stop overthinking things. Let’s go to school, okay?"
+  """
+  
+  f """
+  "…Okay."
+  """
+  
+  return
+
+  return
+label pessimistic:
+  return
+
 

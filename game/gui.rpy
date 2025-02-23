@@ -62,7 +62,7 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "Nunito-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "GuavineDemoRegular-1jGgL.otf"
+define gui.name_text_font = "Poppins-Bold.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "Nunito-Regular.ttf"
