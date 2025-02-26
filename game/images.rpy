@@ -20,7 +20,8 @@ image FireworkStartingAIScene = "bg/FireworkStartingAIScene.png"
 image HospitalScene = "bg/HospitalScene.png"
 
 ##Yuka
-
+image YukaPonder = "YukaPonder.png"
+image YukaPonderTalking= "YukaPonderTalking.png"
 image Yuka = "Yuka.png"
 image YukaAI = "YukaAI.png" 
 image YukaAIBlush = "YukaAIBlush.png"
@@ -104,6 +105,10 @@ image YukaTerePoseBlush = "YukaTerePoseBlush.png"
 image YukaWaving = "YukaWaving.png"
 image YukaWink = "YukaWink.png"
 image YukaWinkCatSmile = "YukaWinkCatSmile.png"
+image YukaConfused = "YukaConfused.png"
+image YukaConfusedTalking = "YukaConfusedTalking.png"
+image YukaInsecure = "YukaInsecure.png"
+image YukaInsecureTalking = "YukaInsecureTalking.png"
 
 ## gallery ############################################################
 ##

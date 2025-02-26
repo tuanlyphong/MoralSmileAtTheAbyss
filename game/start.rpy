@@ -46,8 +46,12 @@ image YukaRegretDull = "YukaRegretDull.png"
 image YukaSadx1 = "YukaSadx1.png"
 image YukaSadx2 = "YukaSadx2.png"
 image YukaCalm = "YukaCalm.png"
+image YukaSadEyesClosed = "YukaSadEyesClosed.png"
 image YukaC:
     "YukaCalm"
+    zoom 1.2 ypos 1.4
+image YukaSadEC:
+    "YukaSadEyesClosed" 
     zoom 1.2 ypos 1.4
 
 image YukaRD:
@@ -65,6 +69,58 @@ image YukaR:
 image YukaSD1:
   "YukaSadDull1"
   zoom 1.2 ypos 1.4  
+image YukaSadT:
+  "YukaSadTalking"
+  zoom 1.2 ypos 1.4  
+image YukaSadS:
+  "YukaSadSmile"
+  zoom 1.2 ypos 1.4  
+image YukaSadTGS:
+  "YukaSadT" with Dissolve(0.2)
+  pause 0.1
+  "YukaSadG" with Dissolve(0.2)
+  pause 1.0 
+  "YukaSadS" with Dissolve(0.2)
+  pause 1.0 
+image YukaSadG:
+  "YukaSadGrin"
+  zoom 1.2 ypos 1.4
+image YukaSadTS:
+  "YukaSadT" with Dissolve(0.2)
+  pause 0.1
+  "YukaSadS" with Dissolve(0.2)
+  pause 0.1 
+image YukaSadTN:
+  "YukaSadT" with Dissolve(0.2)
+  pause 0.1
+  "YukaS1" with Dissolve(0.2)
+  pause 0.2 
+image YukaBL:
+  "YukaBlushLaugh" 
+  zoom 1.2 ypos 1.4
+image YukaBLT:
+  "YukaB" with Dissolve(0.2)
+  pause 0.5
+  "YukaBL" with Dissolve(0.2)
+  pause 0.5
+  "YukaB" with Dissolve(0.2)
+  pause 1.0
+image YukaAIS:
+  "YukaAISleep"
+  zoom 1.2 ypos 1.4
+image YukaAIT:
+  "YukaAITalking"
+  zoom 1.2 ypos 1.4
+image YukaAIN:
+  "YukaAI"
+  zoom 1.2 ypos 1.4
+image YukaAISTN:
+  "YukaAIS" with Dissolve(0.2)
+  pause 0.5
+  "YukaAIN" with Dissolve(0.2)
+  pause 0.3
+  "YukaAIT" with Dissolve(0.2)
+  pause 0.3
 
 image YukaSD2:
   "YukaSadDull2"
@@ -81,6 +137,9 @@ image YukaSadExA:
   pause 0.1
   "YukaSadEx2" with Dissolve(0.2)
   pause 0.1
+  "YukaSadEx1" with Dissolve(0.2)
+  pause 0.1
+
 image YukaSD3:
   "YukaSadDull3"
   zoom 1.2 ypos 1.4  
@@ -148,6 +207,30 @@ image YukaSnapA:
   pause 0.3
   "YukaSnapN" with Dissolve(0.2)
   pause 0.2
+image YukaCf:
+  "YukaConfused"
+  zoom 1.2 ypos 1.4
+image YukaCfT:
+  "YukaConfusedTalking"
+  zoom 1.2 ypos 1.4
+image YukaCfTA:
+  "YukaCf" with Dissolve(0.2)
+  pause 0.2
+  "YukaCfT" with Dissolve(0.2)
+  pause 0.2
+image YukaI:
+  "YukaInsecure" 
+  zoom 1.2 ypos 1.4
+image YukaIT:
+  "YukaInsecureTalking"
+  zoom 1.2 ypos 1.4
+image YukaITA:
+  "YukaI" with Dissolve(0.2)
+  pause 0.3
+  "YukaIT" with Dissolve(0.2)
+  pause 0.3
+  "YukaI" with Dissolve(0.2)
+  pause 0.3
 
 image YukaExAngry:
   "YukaAngryBN" with Dissolve(0.2) 
@@ -160,6 +243,19 @@ image YukaExAngry:
 image YukaAngryY:
   "YukaAngryHandCoverMouth"
   zoom 1.2 ypos 1.4  # Glare
+image YukaP:
+  "YukaPonder"
+  zoom 1.2 ypos 1.4
+image YukaPT:
+  "YukaPonderTalking"
+  zoom 1.2 ypos 1.4
+image YukaPTA:
+  "YukaP" with Dissolve(0.2)
+  pause 0.3
+  "YukaPT" with Dissolve(0.2)
+  pause 0.3
+  "YukaP" with Dissolve(0.2)
+  pause 0.3
 
 image YukaAHCM:
   "YukaAngryHandCoverMouth"
@@ -523,7 +619,7 @@ label fight:
     hide YukaConcernP
 
     show YukaConcernPSadZ
-
+    play sound "slowappoarch.ogg"
     y """
     "You look so pale—are you okay?"
     """
@@ -541,7 +637,7 @@ label fight:
 
     "NOW BACK OFF,WOMAN!"
     """
-    
+    play sound "smack.ogg"
     hide YukaConcernPSadZ
     show YukaConcernPSurprise with vpunch
     y """
@@ -766,7 +862,7 @@ label fight:
     y """
     "Ahh, Fu! You suddenly became like this. No wonder we failed the high school entrance exam!"
     """
-    
+    stop music    
     e """
     
     What the hell is this girl talking about? How is her failure my fault???
@@ -780,7 +876,9 @@ label fight:
 
     f """
     "..."
-
+    """
+    play music "Fu.ogg"
+    f """
     "Tch."
 
     "Whatever... School is pointless anyway."
@@ -844,6 +942,8 @@ label fight:
     """
     scene black with Dissolve(0.2)
     $quick_menu = False
+    stop music
+    play sound "worm1.ogg"
     menu:
         "Try to {color=#00ffff}Calm{/color}":
           e "..."
@@ -856,15 +956,19 @@ label fight:
 
 label optimistic:
   $quick_menu = True
+  stop music
+  show YukaAngryBYS
   show Out behind YukaAngryBYS with vpunch
   show YukaAngryBY
   hide YukaAngryBYS
 
   show YukaAngryBYA
   hide YukaAngryBY
+  play sound "smack.ogg"
   y """
   "Fu! Listen to me!"
   """
+  play music "fun2.ogg"
   show YukaC
   hide YukaAngryBYA
 
@@ -872,47 +976,127 @@ label optimistic:
   f """
   ...
   """
+  show YukaSadEx1 with Dissolve(0.1)
+  hide YukaC
+  show YukaSadExA
 
+  hide YukaSadEx1
   y """
   "Why do you always focus on the negative things?"
   """
-  
+  show YukaSadEx1 with Dissolve(0.1)
+  hide YukaSadExA
+  show YukaSadExA
+  hide YukaSadEx1
+ 
   y """
   "Don’t deceive yourself like that. You know your parents never got the chance to go to school, and they regret it."
   """
-  
+  hide YukaSadExA
+  show YukaSadT 
+  show YukaSadTS
+  hide YukaSadT
+
   y """
   "But you are their hope. They sacrificed so much for you, whether they wanted to or not…"
   """
+  show YukaFrown1 with Dissolve(0.2)
+  hide YukaSadTS
+  show YukaFTalk
+  hide YukaFrown1
+  y """
+  "You’ve always been the smart, outgoing one. I admired you."
+  """
+  show YukaSadEC with Dissolve(0.2)
+  hide YukaFTalk
+  $renpy.pause(0.4)
+  show YukaSadTN
+  hide YukaSadEC
+  y """
+  "I don’t know what happen during that summer."
+  """
+  show YukaSadTGS
+  hide YukaSadTN
+  y """
+  "But when people stopped talking to you, I finally had the courage to talk to you… to be your friend."
+  """
+  show YukaB with Dissolve(0.2)
+  hide YukaSadTGS
+  show YukaBLT
+  hide YukaB
+  y """
+  "Remember the first thing you said to me?"
+  """
+  show YukaAngry1 with Dissolve(0.2)
+  hide YukaBLT
+  
+  f """
+  "..."
+  """
+  show YukaAIN with Dissolve(0.2)
+  hide YukaAngry1
+  show YukaAISTN
+  hide YukaAIN
   
   y """
-  "You’ve always been the smart, outgoing one. I admired you. I don’t know what happen during that summer."
+  "We are born to suffer. Doesn’t matter more or less, we all suffer."
+  """
+  show YukaAIN with Dissolve(0.2)
+  hide YukaAISTN
+  show YukaAISTN
+  hide YukaAIN
+
+  y """
+  "There is no true freedom in life—we are chained by our body and our mind."
   """
   
+  show YukaAIN with Dissolve(0.2)
+  hide YukaAISTN
+  show YukaAISTN
+  hide YukaAIN
+
   y """
-  "But because of that, when people stopped talking to you, I got the chance to talk to you… to be your friend."
+  "It’s better never to have been."
   """
   
+  show FunnySmile with Dissolve(0.2)
+  hide YukaAISTN
+  e "Just kill me already..."
+
+  show YukaP with Dissolve(0.2)
+  hide FunnySmile
+  show YukaPTA
+  hide YukaP 
+
   y """
-  "Remember the first thing you said when we first met?"
+  "I don’t fully remember your words..."
   """
   
+  show YukaCf
+  hide YukaPTA
+  show YukaCfTA
+  hide YukaCf
+
   y """
-  "We are born to suffer. Doesn’t matter more or less, we all suffer. There is no true freedom in life—we are chained by our body and our mind. It’s better never to have been."
+  "I didn’t really get it back then."
   """
-  
+  show YukaI
+  hide YukaCfTA
+  show YukaITA
+  hide YukaI
+
   y """
-  "I don’t fully remember your words, and at the time, I didn’t understand a single thing you were saying. After all, Yuka’s head isn’t that great."
+  "After all, Yuka’s head isn’t that great."
   """
   
   y """
   "But as I grew up, I started to find meaning in it."
   """
-  
+
   y """
   "We were all innocent when we were born, but as we live, our minds and bodies begin to control us. We end up doing things we don’t really want to do."
   """
-  
+
   y """
   "We cling to the idea of doing the ‘right’ thing. But maybe the line between right and wrong becomes blurrier the more we grow up."
   """

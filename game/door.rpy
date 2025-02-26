@@ -33,6 +33,7 @@ label door_choice:
 
 
 label door_choice2:
+    stop music
     menu:
         "Open":
             stop music
