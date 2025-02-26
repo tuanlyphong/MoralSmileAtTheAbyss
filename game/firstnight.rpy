@@ -78,6 +78,7 @@ label firstnight:
     "Why are you even {color=#FF0000}Alive{/color} in the first place?"
 
     """ 
+    $quick_menu = False
 
     hide nightmare_effect
     play sound "paranoid.ogg"
