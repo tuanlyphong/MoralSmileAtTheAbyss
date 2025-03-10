@@ -512,15 +512,16 @@ label outside:
     hide door_effect with Fade(0.5, 0, 0, color="#fff") 
     show YukaSleep with Dissolve(1)
 
-    $ renpy.pause(4, hard=True)  # Reduced from 6 seconds for better pacing
+    $ renpy.pause(4)  # Reduced from 6 seconds for better pacing
     window show
     $ quick_menu = True
     play music "morning.ogg"
      
     f "..."
+    y "Mmm..."
+
     f "Good morning?"
 
-    y "Mmm..."
     y "Mornin-"
 
     window hide
@@ -538,12 +539,11 @@ label fight:
     hide YukaSleep
 
     # Show Yuka close-up
-    show Close1 with Dissolve(1)
+    show Close1 with Dissolve(0.5)
     play sound "Boom.ogg"
 
     show Close2 with vpunch
 
-    $ renpy.pause(0.5, hard=True)
     $ quick_menu = True
 
     y "How DARE you!"
@@ -868,7 +868,8 @@ label fight:
     What the hell is this girl talking about? How is her failure my fault???
     
     Why the fuck is everyone like this? Always complaining and blaming everything.
-    
+
+    I have never asked to become like this 
     """
 
     show YukaAngryBN with Dissolve(0.2)
