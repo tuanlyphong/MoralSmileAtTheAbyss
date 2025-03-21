@@ -22,6 +22,9 @@ image HospitalScene = "bg/HospitalScene.png"
 ##Yuka
 image YukaPonder = "YukaPonder.png"
 image YukaPonderTalking= "YukaPonderTalking.png"
+image YukaPonderEyesClosed= "YukaPonderEyesClosed.png"
+image YukaPonderTalkingEyesClosed= "YukaPonderTalkingEyesClosed.png"
+
 image Yuka = "Yuka.png"
 image YukaAI = "YukaAI.png" 
 image YukaAIBlush = "YukaAIBlush.png"
@@ -109,7 +112,12 @@ image YukaConfused = "YukaConfused.png"
 image YukaConfusedTalking = "YukaConfusedTalking.png"
 image YukaInsecure = "YukaInsecure.png"
 image YukaInsecureTalking = "YukaInsecureTalking.png"
-
+image YukaProud = "YukaProud.png" 
+image YukaProudTalking = "YukaProudTalking.png"
+image YukaOffer = "YukaOffer.png"
+image YukaPunch = "YukaPunch.png"
+image cg1 = "cg/GrabYukaHand.png"
+image cg2 = "cg/ProudCG.png"
 ## gallery ############################################################
 ##
 ## Used to display the gallery

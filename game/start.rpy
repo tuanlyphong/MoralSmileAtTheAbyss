@@ -53,6 +53,19 @@ image YukaC:
 image YukaSadEC:
     "YukaSadEyesClosed" 
     zoom 1.2 ypos 1.4
+image YukaProudN:
+    "YukaProud"
+    zoom 1.2 ypos 1.4 
+image YukaProudT:
+    "YukaProudTalking"
+    zoom 1.2 ypos 1.4
+image YukaProudA:
+    "YukaProudN" with Dissolve(0.2)
+    pause 0.3
+    "YukaProudT" with Dissolve(0.2)
+    pause 0.3 
+    "YukaProudN" with Dissolve(0.2)
+    pause 0.3
 
 image YukaRD:
     "YukaRegretDull"
@@ -164,11 +177,11 @@ image YukaS3:
   zoom 1.2 ypos 1.4  
 image YukaSadA:
   "YukaS1" with Dissolve(0.1)
-  pause 0.1
+  pause 0.2
   "YukaS2" with Dissolve(0.1)
-  pause 0.1
+  pause 0.2
   "YukaS3" with Dissolve(0.1)
-  pause 0.1
+  pause 0.2
 
 image YukaAngryBYS:
   "YukaAngryBlushYellSlap"
@@ -246,6 +259,19 @@ image YukaAngryY:
 image YukaP:
   "YukaPonder"
   zoom 1.2 ypos 1.4
+image YukaPEC:
+  "YukaPonderEyesClosed"
+  zoom 1.2 ypos 1.4
+image YukaPTEC:
+  "YukaPonderTalkingEyesClosed"
+  zoom 1.2 ypos 1.4
+image YukaPTA2:
+  "YukaPT" with Dissolve(0.2)
+  pause 0.3
+  "YukaPTEC" with Dissolve(0.2)
+  pause 0.3
+  "YukaPEC" with Dissolve(0.2)
+  pause 0.3
 image YukaPT:
   "YukaPonderTalking"
   zoom 1.2 ypos 1.4
@@ -348,7 +374,14 @@ image YukaSurpriseBl:
 image YukaSurpriseBlG: 
   "YukaSurprise3" 
   zoom 1.2 ypos 1.4  # Surprised Blush Grin
-
+image YukaABG:
+  "YukaAngryBlushGrin"
+  zoom 1.2 ypos 1.4
+image DontPraise:
+  "YukaSurpriseBlG" with Dissolve(0.2)
+  pause 0.2
+  "YukaABG" with Dissolve(0.2)
+  pause 0.3
 image YukaSurpriseRaise:
   "YukaSurpriseN" with Dissolve(0.2)
   pause 0.3
@@ -356,7 +389,15 @@ image YukaSurpriseRaise:
   pause 0.2
   "YukaSurpriseBlG" with Dissolve(0.2)
   pause 0.1
-
+image YukaOfferHand:
+  "YukaOffer" 
+  zoom 1.2 ypos 1.4
+image YukaPunchN:
+  "YukaPunch"
+  zoom 1.2 ypos 1.4
+image UltraHappy:
+  "YukaAngryBlushCatSmile"
+  zoom 1.2 ypos 1.4
 image YukaConcernPSurprise: 
   "YukaConcernPoseSurprise" 
   zoom 1.4 xpos 0.7 ypos 1.3 
@@ -1089,79 +1130,166 @@ label optimistic:
   y """
   "After all, Yuka’s head isn’t that great."
   """
-  
+  hide YukaITA
+  show YukaBL
+  show YukaBLT
+  hide yukaBL
   y """
   "But as I grew up, I started to find meaning in it."
   """
+  show YukaBL with Dissolve(0.2)
+  hide YukaBLT
+  show YukaBLT
+  hide YukaBL
+  y """
+  "We were all innocent when we were born, but as we live, our minds and bodies begin to control us."
+  """
+  
+  show YukaSadEC with Dissolve(0.2)
+  hide YukaBLT
+  $renpy.pause(0.2)
+  show YukaSadTN
+  hide YukaSadEC
 
   y """
-  "We were all innocent when we were born, but as we live, our minds and bodies begin to control us. We end up doing things we don’t really want to do."
+  "We end up doing things we don’t really want to do."
   """
+  show YukaSadEC with Dissolve(0.2)
+  hide YukaSadTN
+  show YukaSadTN
+  hide YukaSadEC
 
   y """
   "We cling to the idea of doing the ‘right’ thing. But maybe the line between right and wrong becomes blurrier the more we grow up."
   """
   
+  show YukaS1 with Dissolve(0.2)
+  hide YukaSadTN
+  show YukaSadA
+  hide YukaS1
   y """
   "Sometimes, doing the ‘right’ thing leaves no impact, while doing the ‘wrong’ thing might actually be more right than right."
   """
-  
+  show YukaSadEx1 with Dissolve(0.2) 
+  hide YukaSadA 
+  show YukaSadExA
+  hide YukaSadEx1
   y """
   "Mah! Thinking about it is so frustrating that people end up not wanting to choose at all. They just… do nothing."
   """
-  
+  show FunnySmile with Dissolve(0.2)
+  hide YukaSadExA
+  show YukaDumb
+  hide FunnySmile
   y """
-  "But since we already exist, it doesn’t matter if we’re right or wrong. What matters is whether we make a choice or not. We can choose to accept the absurdity of life."
+  "But since we already exist, it doesn’t matter if we’re right or wrong."
   """
-  
+  show FunnySmile with Dissolve(0.2)
+  hide YukaDumb
+  show YukaDumb
+  hide FunnySmile
+  y """
+  "What matters is whether we make a choice or not."
+  """
+  show FunnySmile with Dissolve(0.2)
+  hide YukaDumb
+  show YukaDumb
+  hide FunnySmile
+  y """
+  " We can choose to accept the absurdity of life." 
+  """
+  show YukaCSmile with Dissolve(0.2)
+  hide YukaDumb
+  show YukaThugLife
+  hide YukaCSmile
   y """
   "And by 'accept,' I mean to forgive life itself. Yuka believes there is one true freedom—the freedom to forgive."
   """
-  
+  show YukaSadT with Dissolve(0.2)
+  hide YukaThugLife
+  show YukaSadTGS
+  hide YukaSadT
   y """
   "Fu… Life is full of dilemmas, but instead of staying home, isn’t it better to go to school?"
   """
-  
+  show YukaS1 with Dissolve(0.2)
+  hide YukaSadTGS
   f "…"
-  
+  show YukaPT with Dissolve(0.2)
+  hide YukaS1
+  show YukaPTA2
+  hide YukaPT
   y """
-  "Besides, if you didn’t go to school, we never would have become friends. And befriending someone as intelligent as me is a blessing!"
+  "Besides, if you didn’t go to school, we never would have become friends. 
   """
-  
+  show YukaProudN with Dissolve(0.2)
+  hide YukaPTA2
+  show YukaProudA
+  hide YukaProudN
+  y """
+  "And befriending someone as intelligent as me is a blessing!"
+  """
+  show YukaCSmile with Dissolve(0.2)
+  hide YukaProudA
+  show YukaThugLife
+  hide YukaCSmile
+ 
   y """
   "I can help you overcome your anger issues."
   """
-  
+  show YukaNorm with Dissolve(0.2)
+  hide YukaThugLife
+  show YukaCSmile with Dissolve(0.2)
+  hide YukaNorm
   e """
   This girl, calling herself intelligent… Just how delusional is she?
   
   And I don’t think my condition can be summarized as just ‘anger issues.’
   """
-  
+  show YukaAngry1 with Dissolve(0.2)
+  hide YukaCSmile
+  show YukaATalk with Dissolve(0.2)
+  hide YukaAngry1
   y """
   "Mou! You can’t just leave me winking like this! Say something, Fu!"
   """
-  
+  show YukaNorm with Dissolve(0.2) 
+  hide YukaATalk
   f """
   "…Thank you, I guess."
   """
-  
+  show FunnySmile with Dissolve(0.2)
+  hide YukaNorm
   f """
-  "Besides, even though being friends with a beautiful childhood friend like Yuka is a dilemma… it’s better than having no friends at all."
+  "Besides, even though being friends with a beautiful childhood friend like Yuka is a dilemma…"
   """
-  
+  show YukaSurpriseN with Dissolve(0.2)
+  hide FunnySmile
+  f """
+
+  "it’s better than having no friends at all."
+
+  """
+  show YukaSurpriseBl with Dissolve(0.2)
+  hide YukaSurpriseN
   y """
   "Mah!"
   """
-  
+  show YukaSurpriseBlG with Dissolve(0.2)   
+  hide YukaSurpriseBl
+  show DontPraise
+  hide YukaSurpriseBlG
+ 
   y """
   "Don’t praise me like that! It’s not like it makes me happy or anything…"
   """
-  
+  show UltraHappy with Dissolve(0.2)  
+  hide DontPraise
   e """
   I still can’t tell if she’s smart or not… but her words are worth considering.
   """
-  
+  show Smug with Dissolve(0.2)  
+  hide UltraHappy
   y """
   "Stop overthinking things. Let’s go to school, okay?"
   """
@@ -1169,10 +1297,63 @@ label optimistic:
   f """
   "…Okay."
   """
-  
-  return
+  show YukaOfferHand with Dissolve(0.2)
+  hide Smug
+  y """
+  "Mou, come on, we are gonna be late."
+  """
+  hide YukaOfferHand
+  show YukaPunchN with vpunch
+  play sound "smack.ogg"
 
-  return
+  y """
+  "Why would you offer me your bag? You stupid tsundere!."
+  """
+  scene cg1 with Fade(0.3, 0, 0, color="#fff")
+  play sound "move.ogg"
+  f """
+  "Fine!, let's go then."
+  """
+  
+  e """
+
+  She has already embarrassing me by sleeping in front of the house
+  
+  procceed messing with my head and hit me a couple time along with it.
+
+  I don't want to get in any further headache,
+
+  the best move here is just throw the tantrum and do whatever she want.
+
+  I blindly grabbed one of her hand and drag her to school in a rush.
+  """
+  play music "hangout.ogg"  
+  scene cg2 with Fade(0.3, 0, 0, color="#fff")
+ 
+  e """
+  
+  Most students went to school 
+
+  so it's not likely I will be caught going school late 
+
+  hand in hand with a girl.
+  
+  I tell her to go in first by saying lady first.
+
+  Fortunately, She happily goes in
+
+  which actually helps me get out of the trouble of being mistaken as a part of a delinquent couple.
+
+  I can already imagine her putting on this ridiculous expression for the whole day. 
+
+  This is the reason why I don’t like to take the L even if I just pretend to. 
+
+  People tend to think they are in control and standing on top of the world after they achive something. 
+
+  I hate it so much to think that in the past I’m one of them. 
+  """
+  
+  jump happyending
 label pessimistic:
   return
 
