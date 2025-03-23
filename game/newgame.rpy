@@ -3,6 +3,7 @@ label start:
     window hide
     $ quick_menu = False
     play music "audio/void.ogg"
+    $renpy.pause(3)
     if persistent.firstrun:
         $ greeting = get_greeting()
         god "[greeting],[persistent.player_name]!"

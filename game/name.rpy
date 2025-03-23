@@ -92,6 +92,7 @@ screen virtual_keyboard():
 # Label to ask for the player's name
 label naming:
     $ persistent.player_name = " "  # Reset the name
+    $renpy.pause(3)
     god "Hi Stranger!"
     god "What should I call you?"
     while True:

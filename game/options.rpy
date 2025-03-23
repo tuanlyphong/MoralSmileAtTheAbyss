@@ -38,7 +38,7 @@ define config.default_fullscreen = True
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Moral - Abyss's Lullaby"
+define build.name = "MoralAbyssLullaby"
 
 
 ## Sounds and music ############################################################
