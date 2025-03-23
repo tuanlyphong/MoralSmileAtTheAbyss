@@ -1450,7 +1450,7 @@ label pessimistic:
   $ quick_menu = True
 
   all """
-  "{color=#ff0000} "Ψɧ@†? ₣น, ¥◎น—"{/color}"
+  {color=#ff0000} "Ψɧ@†? ₣น, ¥◎น—"{/color}
   """
   
   f """
