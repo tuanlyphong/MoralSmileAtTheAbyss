@@ -116,8 +116,10 @@ image YukaProud = "YukaProud.png"
 image YukaProudTalking = "YukaProudTalking.png"
 image YukaOffer = "YukaOffer.png"
 image YukaPunch = "YukaPunch.png"
-image cg1 = "cg/GrabYukaHand.png"
-image cg2 = "cg/ProudCG.png"
+image cg1 = "cg/cg1.png"
+image cg2 = "cg/cg2.png"
+
+
 ## gallery ############################################################
 ##
 ## Used to display the gallery
@@ -126,35 +128,45 @@ image cg2 = "cg/ProudCG.png"
 init python:
     # Step 1. Create the gallery object.
     g = Gallery()
+    g.button("cg1")
+    g.image("cg1")
 
+    g.button("cg2")
+    g.image("cg2")
     # Step 2. Add buttons and images to the gallery.
+    g.button("cg3")
+    g.image("cg3")
 
     # The transition used when switching images.
     g.transition = dissolve
 
 screen gallery:
     tag menu
-    use game_menu():
+    use game_menu()
 
-        # The grid of gallery images
-        grid 3 3:  # 3 columns, 3 rows (you can adjust the grid size)
+    vbox:
+        xalign 0.5
+        yalign 0.5
+        spacing 20
+
+        hbox:
             xalign 0.5
             yalign 0.5
             spacing gui.slot_spacing
-            vbox:
-              text "There is nothing... It's a demo after all" color "#000"
-            # Loop through images (replace with your actual image list)
-           # for i in range(9):  # Adjust the range for the number of images you have
-           #     $ image_name = f"image_{i+1}.png"  # Replace with your image naming pattern or list
 
-           #     button:
-           #         action Show("full_image", image=image_name)  # Show full image when clicked
+            for img_name in ["cg1", "cg2", "cg3"]:
+                if getattr(persistent, img_name, False):  # Check if CG is unlocked
+                    button:
+                        action Show("full_image", image="cg/" + img_name + ".png")
+                        xalign 0.5
+                        yalign 0.5
 
-           #         vbox:
-           #             spacing 5
-           #             text str(i + 1) xalign 0.5 style "slot_button_text"  # Thumbnail number
-           #             add im.Scale(image_name, 200, 120)  # Thumbnail image (scaled)
-
+                        vbox:
+                            spacing 5
+                            add im.Scale("cg/" + img_name + ".png", 300, 180)  # Thumbnail image
+                else:
+                    # Show a locked placeholder if CG is not unlocked
+                    add "chat_partner_icon.png" xalign 0.5 yalign 0.5
         # Pagination buttons to switch between gallery pages
         hbox:
             style_prefix "page"
@@ -165,7 +177,7 @@ screen gallery:
             textbutton _("<") action FilePagePrevious()  # Go to previous page
             key "save_page_prev" action FilePagePrevious()
 
-            for page in range(1, 6):  # Example: pages 1-5, adjust as needed
+            for page in range(1, 1):  # Example: pages 1-5, adjust as needed
                 textbutton f"{page}" action FilePage(page)  # Page number buttons
 
             textbutton _(">") action FilePageNext()  # Go to next page
@@ -182,4 +194,3 @@ screen full_image(image):
 
     # Close button for full image
     textbutton _("Close") action Hide("full_image") xalign 0.5 yalign 0.95
-

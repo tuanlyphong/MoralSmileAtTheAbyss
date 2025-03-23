@@ -1,15 +1,92 @@
 image worms1 = "bg/worms1.png"
 image worms2 = "bg/worms2.png"
 image worms3 = "bg/worms3.png"
+image life = "cg/cg3.png"
+image YukaTearingA:
+    zoom 1.2 ypos 1.4
+    "YukaTearing.png"
+    pause 1.0
+    "YukaTearing1.png" with Dissolve(0.4)
+    pause 0.8
+    "YukaTearingTalking1.png" with Dissolve(0.4)
+    pause 0.6
+    "YukaTearingTalking2.png" with Dissolve(0.4)
+    pause 0.4
+    "YukaTearing1.png" with Dissolve(0.4)
+    pause 0.3
+image YukaCryingA:
+    zoom 1.2 ypos 1.4
+    "YukaCry.png"
+    pause 0.15
+    "YukaCry2.png"
+    pause 0.15
+    "YukaCry3.png"
+    pause 0.15
+   
+image yukaloop:
+    zoom 1.2 ypos 1.4
+    "frame0000.png"
+    pause 0.083  # 1/12 sec
+    "frame0001.png"
+    pause 0.083
+    "frame0002.png"
+    pause 0.083
+    "frame0003.png"
+    pause 0.083
+    "frame0004.png"
+    pause 0.083
+    "frame0005.png"
+    pause 0.083
+    "frame0006.png"
+    pause 0.083
+    "frame0007.png"
+    pause 0.083
+    "frame0008.png"
+    pause 0.083
+    "frame0009.png"
+    pause 0.083
+    "frame0010.png"
+    pause 0.083
+    "frame0011.png"
+    pause 0.083
+    "frame0012.png"
+    pause 0.083
+    "frame0013.png"
+    pause 0.083
+    "frame0014.png"
+    pause 0.083
+    "frame0015.png"
+    pause 0.083
+    repeat
+
 image paranoid2:
-   "worms1" with Fade(0.3, 0, 0, color="#fff")
-   "worms2" with Dissolve(0.2)
-   "worms3" with Fade(0.5, 0, 0, color="#000")
+
+   "worms1" with Fade(0.2, 0, 0, color="#fff")
+   pause 0.2
+   "worms2"
+   "worms3" with Fade(0.2, 0, 0, color="#000")
+   pause 0.2
 image DownFall1 ="bg/DownFall1.png"
 image DownFall2 ="bg/DownFall2.png"
 image DownFall3 ="bg/DownFall3.png"
 image DownFall4 ="bg/DownFall4.png"
 
+image OutsideFuHouseMad = "bg/OutsideFuHouseMad.png"
+image OutsideFuHouseMadA:
+    "OutsideFuHouseMad"
+    alpha 0 zoom 7
+    xpos 0.5 ypos 4.5
+    linear 0.3 alpha 0.3 ypos 3.0
+    linear 0.2 alpha 1
+    linear 0.2 alpha 0.2 
+    linear 0.2 xpos 1.2 ypos 5.5
+    linear 0.2 alpha 0.4
+    linear 0.15 alpha 0.2 
+
+    linear 0.15 xpos 0.8 ypos 4.0
+    linear 0.15 alpha 0.6
+    linear 0.2 xpos 0.3 ypos 6.0
+    linear 0.4 zoom 1.0 alpha 1 xpos 0.5 ypos 1.0
 
 image DownFallA:
       "DownFall1" with Dissolve(0.2)
@@ -993,7 +1070,9 @@ label fight:
           jump optimistic
 
         "Forfeit to {color=#ff0000}Wrath{/color}":
-          e "{color=#ff0000}Kill yourself{/color}"
+          all """
+          {color=#ff0000}"KILL YOURSELF!!!"{/color}
+          """
           jump pessimistic
 
 label optimistic:
@@ -1310,6 +1389,7 @@ label optimistic:
   "Why would you offer me your bag? You stupid tsundere!."
   """
   scene cg1 with Fade(0.3, 0, 0, color="#fff")
+  $ persistent.cg1 = True
   play sound "move.ogg"
   f """
   "Fine!, let's go then."
@@ -1329,7 +1409,7 @@ label optimistic:
   """
   play music "hangout.ogg"  
   scene cg2 with Fade(0.3, 0, 0, color="#fff")
- 
+  $ persistent.cg2 = True
   e """
   
   Most students went to school 
@@ -1353,8 +1433,123 @@ label optimistic:
   I hate it so much to think that in the past I’m one of them. 
   """
   
+  scene black with Dissolve(3)
+  $renpy.pause(1.5)
+  stop music
   jump happyending
 label pessimistic:
-  return
+  play sound "worm.ogg"
+  show worms1 with Fade(0.3, 0, 0, color="#fff")
+  show paranoid2  
+  $renpy.pause(0.5)
+  hide paranoid2
+  play sound "skybreak.ogg"
+  show yukaloop
+  play music "Wrath.ogg"
+  show OutsideFuHouseMadA behind yukaloop
+  $ quick_menu = True
+
+  all """
+  "{color=#ff0000} "Ψɧ@†? ₣น, ¥◎น—"{/color}"
+  """
+  
+  f """
+  " GET THE FUCK AWAY FROM ME!"
+  
+  " DON’T TOUCH ME!"
+  """
+  
+  show YukaTearingA 
+  hide yukaloop with Dissolve(0.25)
+  $renpy.pause(1.2)
+  stop music
+
+  e "Fuck,no..."
+  hide YukaTearingA
+  show YukaCryingA
+  y "..."
+  $ quick_menu = False
+
+  scene black with Dissolve(0.2)
+  play sound "runaway.ogg"
+  y "You better go to school or I’m gonna beat you up!"
+  $renpy.pause(13)
+  stop sound
+  $ quick_menu = True
+
+  play music "suffer.ogg"
+  scene DownFall2 with Dissolve(0.3)
+  f "You don’t understand me, every single morning, like waking up in hell.." 
+  scene cg3 with Fade(0.3, 0, 0, color="#fff")
+  $ persistent.cg3 = True
+  f """
+  House price is unreasonably high
+
+  If I work my entire life I still coundln’t afford one...
+
+  Living with 5 other people in such a narrow space 
+
+  No private room at this age…
+  """
+  
+  $renpy.pause(5)
+  e"""
+
+  Why do I have to be so selfish… 
+  
+  Children out there been missing 
+  
+  Perphaps being killed in most unimaginable ways 
+  
+  Everyone...
+  
+  Doesn’t matter race, age, gender 
+  
+  Suffer more than I can imagine 
+  
+  And I’m standing here wining… 
+  
+  ...
+
+  I’m so worthless...
+  
+  Why in such a world contains only suffering 
+  
+  Why people still forced to exist…
+  """
+
+  $renpy.pause(5)
+  e"""
+  Why we are all born to addicted to something… 
+  
+  Addiction never been a good state
+  """
+
+  $renpy.pause(5)
+
+  e"""
+  I better go to school and apology
+
+  After all relationships exist to pass pain to others. 
+  
+  I can endure my pain
+  
+  And perhaps the pain of others
+  
+  But I don't want to pass it on.
+
+  """
+  
+  $renpy.pause(3)
+  
+  e """
+  Today will be the last day...
+
+  Welp, I'm out of medication anyway...
+  """
+  scene black with Dissolve(3)
+  $renpy.pause(1.5)
+  stop music
+  jump badending
 
 
