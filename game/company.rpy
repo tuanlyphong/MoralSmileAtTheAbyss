@@ -18,10 +18,7 @@ label company:
                 $ persistent.content = True
                 stop music
                 god """
-                {font=fonts/RobotoCondensed-Regular.ttf}According to data from the Ministry of Health, approximately 40,000 people die by {color=#FF0000}Suicide{/color} in Vietnam each year—four times the number of fatal {color=#FF0000}traffic accidents{/color}.{/font}
-                {font=fonts/RobotoCondensed-Regular.ttf}A significant proportion of them are {color=#FF0000}students{/color} and young people.{/font}
-
-                {font=fonts/RobotoCondensed-Regular.ttf}Many still perceive these mental health conditions as signs of weakness or a lack of willpower, leading to stigma and discrimination against those who suffer from them.{/font}
+                {font=fonts/RobotoCondensed-Regular.ttf}More than 700 000 people die by {color=#FF0000}Suicide{/color} every year, which is one person every 40 seconds
                 """
                 if persistent.named:
                     return

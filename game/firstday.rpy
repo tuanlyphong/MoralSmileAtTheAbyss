@@ -168,16 +168,25 @@ label firstday:
     $ trigger_phone_notification()  # This sets phone_notify to True
     stop music
     play sound "audio/notification_sound.ogg" 
+    if _preferences.language == "vietnamese":
+        $ missed_calls = [
+            {"sender": "other", "content": "{b}Cuộc gọi nhỡ{/b}\n{alpha=0.5}Nhấn để gọi lại{/alpha}"},
+            {"sender": "other", "content": "{b}Cuộc gọi nhỡ{/b}\n{alpha=0.5}Nhấn để gọi lại{/alpha}"},
+            {"sender": "other", "content": "{b}Cuộc gọi nhỡ{/b}\n{alpha=0.5}Nhấn để gọi lại{/alpha}"},
+            {"sender": "other", "content": "Định ngủ đến bao giờ vậy???"},
+            {"sender": "other", "content": "Dậy mau, đồ đần!"},
+            {"sender": "other", "content": "{b}Cuộc gọi video nhỡ{/b}\n{alpha=0.5}Nhấn để gọi lại{/alpha}"},
+        ]
 
-    # Example conversation messages
-    $ missed_calls = [
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-        {"sender": "other", "content": "Like how long are you planning to sleep???"},
-        {"sender": "other", "content": "Wake up!,Dummy"},
-        {"sender": "other", "content": "{b}Missed video call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
-    ]
+    else: 
+        $ missed_calls = [
+            {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
+            {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
+            {"sender": "other", "content": "{b}Missed audio call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
+            {"sender": "other", "content": "Like how long are you planning to sleep???"},
+            {"sender": "other", "content": "Wake up!,Dummy"},
+            {"sender": "other", "content": "{b}Missed video call{/b}\n{alpha=0.5}Tap to call back{/alpha}"},
+        ]
     $ persistent.current_messages = missed_calls  
 
     $ messages = []
