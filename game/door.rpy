@@ -84,6 +84,7 @@ label nothing3:
     return
 
 label nihilism:
+    $quick_menu = False
     stop music
     play sound "audio/notification_sound.ogg" 
     $renpy.pause(2)
@@ -118,7 +119,7 @@ label nihilism:
 
     If you truly feel this way, then you’re truly {color=#c0c0c0}Alone{/color}.
 
-    Many people sink into this {color=#c0c0c0}Emptiness{/color}, trapped in a hollow {color=#ff0000}existence{/color}.
+    Many people sink into this {color=#c0c0c0}Emptiness{/color}, trapped in a hollow {color=#ff0000}Existence{/color}.
 
     I have, too. Even now, I still struggle with it.
 

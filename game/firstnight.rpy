@@ -25,6 +25,8 @@ image nightmare_effect:
     linear 5 zoom 1.3 alpha 1 xpos 0.5 ypos 1.0
 
 label firstnight:
+    scene black
+    $renpy.pause(3)
     stop music
     $quick_menu = False
     show nightmare_effect with Fade(0.2, 0, 0, color="#fff")

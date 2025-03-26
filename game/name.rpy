@@ -101,7 +101,7 @@ label naming:
             god "Are you sure you don't want to {color=#ff0}Name{/color} yourself?"
             menu:
                "yes":
-                  "Don't you think a {color=#ff0}Name{/color}is important?"
+                  god "Don't you think a {color=#ff0}Name{/color}is important?"
                   with Fade(1.5, 0, 0, color="#fff")
                   $persistent.player_name = "Stranger"
                   $persistent.named = True
@@ -154,7 +154,7 @@ label naming:
                 "Yes":
                     with Fade(1.5, 0, 0, color="#fff")
                     $persistent.named = True
-                    jump start
+                    return
                 "No":
                     pass
 

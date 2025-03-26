@@ -4,49 +4,49 @@ translate vietnamese strings:
 
     # game/screens.rpy:147
     old "New"
-    new ""
+    new "Bắt đầu"
 
     # game/screens.rpy:149
     old "Save"
-    new ""
+    new "Lưu"
 
     # game/screens.rpy:151
     old "Load"
-    new ""
+    new "Tải"
 
     # game/screens.rpy:152
     old "Config"
-    new ""
+    new "Tùy chọn"
 
     # game/screens.rpy:153
     old "Gallery"
-    new ""
+    new "Thư viện"
 
     # game/screens.rpy:155
     old "End Replay"
-    new ""
+    new "Kết thúc xem lại"
 
     # game/screens.rpy:158
     old "Main Menu"
-    new ""
+    new "Giao diện chính"
 
     # game/screens.rpy:161
     old "Quit"
-    new ""
+    new "Thoát"
 
     # game/screens.rpy:216
     old "Skipping"
-    new ""
+    new "Đang bỏ qua"
 
     # game/screens.rpy:395
     old "Skip"
-    new ""
+    new "Bỏ qua"
 
     # game/screens.rpy:396
     old "Auto"
-    new ""
+    new "Tự động"
 
     # game/screens.rpy:397
     old "Menu"
-    new ""
+    new "Giao diện"
 

@@ -4,5 +4,5 @@ translate vietnamese strings:
 
     # game/options.rpy:15
     old "Moral - Abyss's Lullaby"
-    new ""
+    new "Đạo - Tiếng ru của vực thẳm"
 

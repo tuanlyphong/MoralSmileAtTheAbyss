@@ -38,7 +38,7 @@ label company:
 
 label splashscreen:
   if persistent.nihilism and persistent.nihilism2:
-    jump nihilism
+    return
   else:
     jump company
    
