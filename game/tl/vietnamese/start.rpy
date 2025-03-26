@@ -657,424 +657,424 @@ translate vietnamese optimistic_60765164:
 # game/start.rpy:1263
 translate vietnamese optimistic_46c93004:
 
-    y "\"But since we already exist, it doesn’t matter if we’re right or wrong.\""
+    y "\"Bởi vì ta tồn tại, không quan trọng rằng ta đúng hay sai.\""
     
 
 # game/start.rpy:1270
 translate vietnamese optimistic_a1b83bbf:
 
-    # y "\"What matters is whether we make a choice or not.\""
-    y ""
+    y "\"Quan trọng là bản thân ta có đưa ra lựa chọn hay không.\""
+
 
 # game/start.rpy:1277
 translate vietnamese optimistic_50869d86:
 
-    # y "\" We can choose to accept the absurdity of life.\""
-    y ""
+    y "\"Ta có thể chọn chấp nhận sự lố bịch của cuộc đời.\""
+  
 
 # game/start.rpy:1284
 translate vietnamese optimistic_a85d51ca:
 
-    # y "\"And by 'accept,' I mean to forgive life itself. Yuka believes there is one true freedom—the freedom to forgive.\""
-    y ""
+    y "\" 'Chấp nhận' với tui là tha thứ cho chính bản thân cuộc sống. Yuka tin rằng tồn tại sự tự do chân chính, sự tự do cho lòng vị tha.\""
+    
 
 # game/start.rpy:1291
 translate vietnamese optimistic_22005717:
 
-    # y "\"Fu… Life is full of dilemmas, but instead of staying home, isn’t it better to go to school?\""
-    y ""
+    y "\"Fu… Cuộc sống tồn tại nhiều tình huống, nơi mà mọi lựa chọn đều tệ, nhưng thay vì nằm ở nhà cả ngày, chẳng phải đến trường vẫn hơn sao?\""
+    
 
 # game/start.rpy:1296
 translate vietnamese optimistic_ca8c5b4f:
 
-    # f "…"
-    f ""
+  
+    f "..."
 
 # game/start.rpy:1301
 translate vietnamese optimistic_29ab235c:
 
-    # y "\"Besides, if you didn’t go to school, we never would have become friends."
-    y ""
+    y "\"Kể ra thì, Ông mà chưa từng tới trường, thì đã không có chuyện chúng ta là bạn."
+  
 
 # game/start.rpy:1308
 translate vietnamese optimistic_e5450142:
 
-    # y "\"And befriending someone as intelligent as me is a blessing!\""
-    y ""
+    y "\"Làm bạn với một người thông thái như tui đích thị là một phước lành!\""
+    
 
 # game/start.rpy:1316
 translate vietnamese optimistic_15227362:
 
-    # y "\"I can help you overcome your anger issues.\""
-    y ""
+    y "\"Gì chứ, bệnh dễ nổi cáu thì tôi chữa được mà.\""
+
+    
 
 # game/start.rpy:1323
 translate vietnamese optimistic_e2ff8cec:
 
-    # e "This girl, calling herself intelligent… Just how delusional is she?"
-    e ""
+    e "Nhỏ này, tự cho rằng mình thông thái… ngáo nặng rồi?"
+    
 
 # game/start.rpy:1323
 translate vietnamese optimistic_5ea5210e:
 
-    # e "And I don’t think my condition can be summarized as just ‘anger issues.’"
-    e ""
+    e "bệnh như vậy mà tóm lược lại thành 'bệnh dễ nổi cáu' "
+    
 
 # game/start.rpy:1332
 translate vietnamese optimistic_135d43b8:
 
-    # y "\"Mou! You can’t just leave me winking like this! Say something, Fu!\""
-    y ""
+    y "\" Nháy mắt mỏi thấy mồ à! Nói gì đi Fu!\""
+    
 
 # game/start.rpy:1337
 translate vietnamese optimistic_e9e0b9d1:
 
-    # f "\"…Thank you, I guess.\""
-    f ""
+    f "\"…À ừm, cảm ơn.\""
+    
 
 # game/start.rpy:1342
 translate vietnamese optimistic_0cd604ff:
 
-    # f "\"Besides, even though being friends with a beautiful childhood friend like Yuka is a dilemma…\""
-    f ""
+    f "\"Bên cạnh đó, mặc dù được làm bạn với người bạn xinh đẹp, thông minh như Yuka đây chưa hẳn là một điều tốt lành…\""
+    
 
 # game/start.rpy:1347
 translate vietnamese optimistic_13352637:
 
-    # f "\"it’s better than having no friends at all.\""
-    f ""
+    f "\"Vẫn hơn là không có một mống bạn bè.\""
+    
 
 # game/start.rpy:1354
 translate vietnamese optimistic_5d9ff54c:
 
-    # y "\"Mah!\""
-    y ""
+    y "\"Hứ!\""
+    
 
 # game/start.rpy:1362
 translate vietnamese optimistic_e092b9ce:
 
-    # y "\"Don’t praise me like that! It’s not like it makes me happy or anything…\""
-    y ""
+    y "\"Chỉ giỏi nịnh hót à! Không có làm tui vui đâu nha…\""
+    
 
 # game/start.rpy:1367
 translate vietnamese optimistic_cab5b45b:
 
-    # e "I still can’t tell if she’s smart or not… but her words are worth considering."
-    e ""
+    e "chẳng rõ mắm này khôn hay dốt nữa… nhưng quan điểm nhỏ đưa ra đáng để suy ngẫm."
+    
 
 # game/start.rpy:1372
 translate vietnamese optimistic_5da7887b:
 
-    # y "\"Stop overthinking things. Let’s go to school, okay?\""
-    y ""
+    y "\"Đững có suy nghĩ nhiều nữa. Cùng đến trường nào, được chứ?\""
+    
 
 # game/start.rpy:1376
 translate vietnamese optimistic_bac4cc21:
 
-    # f "\"…Okay.\""
-    f ""
+    f "\"…Ừ.\""
+    
 
 # game/start.rpy:1381
 translate vietnamese optimistic_b1bea93e:
 
-    # y "\"Mou, come on, we are gonna be late.\""
-    y ""
+    y "\"Nhanh lên nào, trễ học bây giờ.\""
+    
 
 # game/start.rpy:1388
 translate vietnamese optimistic_8c1b3043:
 
-    # y "\"Why would you offer me your bag? You stupid tsundere!.\""
-    y ""
+    y "\"Mắc gì đưa ba lô cho tôi? Thằng ngáo này!.\""
+    
 
 # game/start.rpy:1394
 translate vietnamese optimistic_31d91673:
 
-    # f "\"Fine!, let's go then.\""
-    f ""
+    f "\"Rồi!, nhanh lên nào.\""
+    
 
 # game/start.rpy:1398
 translate vietnamese optimistic_a7d8db1d:
 
-    # e "She has already embarrassing me by sleeping in front of the house"
-    e ""
+    e "Làm tôi xấu hổ, ngồi ngủ trước cửa nhà tôi."
+    
 
 # game/start.rpy:1398
 translate vietnamese optimistic_0c367716:
 
-    # e "procceed messing with my head and hit me a couple time along with it."
-    e ""
+    e "Còn làm loạn lên và đánh tôi vài phát nữa chứ."
+    
 
 # game/start.rpy:1398
 translate vietnamese optimistic_660f05e1:
 
-    # e "I don't want to get in any further headache,"
-    e ""
+    e "Đau đầu lắm rồi"
+    
 
 # game/start.rpy:1398
 translate vietnamese optimistic_147ef49f:
 
     # e "the best move here is just throw the tantrum and do whatever she want."
-    e ""
+    e "Nước đi tốt nhất là làm theo mọi yêu cầu quái ác mà nhỏ đưa ra."
 
 # game/start.rpy:1398
 translate vietnamese optimistic_49f4b70c:
 
     # e "I blindly grabbed one of her hand and drag her to school in a rush."
-    e ""
+    e "Tôi nhắm nghiền mắt, nắm lấy tay của nhỏ và chạy thẳng tới trường."
 
 # game/start.rpy:1413
 translate vietnamese optimistic_d1220231:
 
     # e "Most students went to school"
-    e ""
+    e "Hầu hết học sinh đều vào học cả rồi"
 
 # game/start.rpy:1413
 translate vietnamese optimistic_70a587e7:
 
     # e "so it's not likely I will be caught going school late"
-    e ""
+    e "Có lẽ mình sẽ không bị bắt gặp đi học muộn"
 
 # game/start.rpy:1413
 translate vietnamese optimistic_c7eb9600:
 
-    # e "hand in hand with a girl."
-    e ""
+    e "khi nắm tay với con gái."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_15e8e4bf:
 
-    # e "I tell her to go in first by saying lady first."
-    e ""
+    e "Mời quý cô vào trước, tôi nói với nhỏ."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_319df50a:
 
-    # e "Fortunately, She happily goes in"
-    e ""
+    e "May mắn là nhỏ vui vẻ hợp tác"
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_fb5e6965:
 
-    # e "which actually helps me get out of the trouble of being mistaken as a part of a delinquent couple."
-    e ""
+    e "Nếu không tôi sẽ không tránh khỏi bị coi là một phần của một cặp đôi cá biệt."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_a50a2e6c:
 
-    # e "I can already imagine her putting on this ridiculous expression for the whole day."
-    e ""
+    e "Quả là một bi kịch, theo tập tính thì chắc chắn nhỏ sẽ mang khuôn mặt lố bịch này cả ngày."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_863a51e5:
 
-    # e "This is the reason why I don’t like to take the L even if I just pretend to."
-    e ""
+    e "Đây là lý do mình không muốn chấp nhận thất bại kể cả có là giả vờ thua đi nữa."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_981e8757:
 
-    # e "People tend to think they are in control and standing on top of the world after they achive something."
-    e ""
+    e "Người ta luôn tự cho rằng họ kiểm soát được mọi thứ và là cái rốn của vũ trụ khi vừa đạt được thứ gì đó."
+    
 
 # game/start.rpy:1413
 translate vietnamese optimistic_8f11bfc4:
 
-    # e "I hate it so much to think that in the past I’m one of them."
-    e ""
+    e "Quá khứ thật đen tối khi là một trong số họ."
+    
 
 # game/start.rpy:1452
 translate vietnamese pessimistic_e4166e73:
 
-    # all "{color=#ff0000} \"Ψɧ@†? ₣น, ¥◎น—\"{/color}"
-    all ""
+    all "{color=#ff0000} \" ₣น? ◎นg!\"{/color}"
+    
 
 # game/start.rpy:1456
 translate vietnamese pessimistic_85925a3f:
 
-    # f "\" GET THE FUCK AWAY FROM ME!\""
-    f ""
+    f "\" CÚT RA KHỎI CUỘC ĐỜI TAO!\""
+    
 
 # game/start.rpy:1456
 translate vietnamese pessimistic_01491270:
 
-    # f "\" DON’T TOUCH ME!\""
-    f ""
+    f "\" ĐỪNG CHẠM VÀO TAO!\""
+    
 
 # game/start.rpy:1467
 translate vietnamese pessimistic_9dc55794:
 
-    # e "Fuck,no..."
-    e ""
+    e "Mẹ kiếp, không phải chứ..."
+    
 
 # game/start.rpy:1470
 translate vietnamese pessimistic_71a86863:
 
-    # y "..."
-    y ""
+    y "..."
 
 # game/start.rpy:1475
 translate vietnamese pessimistic_5996b079:
 
-    # y "You better go to school or I’m gonna beat you up!"
-    y ""
+    y "Ô-ông liệu hồn mà đến trường đấy, không đừng trách tui!"
+    
 
 # game/start.rpy:1482
 translate vietnamese pessimistic_859fc626:
 
-    # f "You don’t understand me, every single morning, like waking up in hell.."
-    f ""
+    f "Bà sao có thể hiểu tôi chứ, ngày nào cũng vậy, như thức dậy dưới địa ngục.."
+    
 
 # game/start.rpy:1485
 translate vietnamese pessimistic_6c52ba9d:
 
-    # f "House price is unreasonably high"
-    f ""
+    f "Giá nhà thì cao một cách vô lý"
+    
 
 # game/start.rpy:1485
 translate vietnamese pessimistic_3957ece8:
 
-    # f "If I work my entire life I still coundln’t afford one..."
-    f ""
+    f "Đi làm cả đời cũng chẳng mua được nhà..."
+    
 
 # game/start.rpy:1485
 translate vietnamese pessimistic_d9ca283a:
 
-    # f "Living with 5 other people in such a narrow space"
-    f ""
+    f "5 người sống trong một căn nhà chật hẹp."
+    
 
 # game/start.rpy:1485
 translate vietnamese pessimistic_e9d82c9b:
 
-    # f "No private room at this age…"
-    f ""
+    f "Đến tuổi cũng không có lấy một chút riêng tư…"
+    
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_fc94feee:
 
     # e "Why do I have to be so selfish…"
-    e ""
+    e "Tại sao mình lại ích kỷ đến vậy..."
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_95c6a935:
 
     # e "Children out there been missing"
-    e ""
+    e "Trẻ em bị bắt cóc mỗi ngày"
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_212495b9:
 
     # e "Perphaps being killed in most unimaginable ways"
-    e ""
+    e "Thậm chí còn bị giết hại một cách man rợ"
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_e225132a:
 
     # e "Everyone..."
-    e ""
+    e "Mọi người..."
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_2085765c:
 
     # e "Doesn’t matter race, age, gender"
-    e ""
+    e "Không kể chủng tộc, tuổi tác, giới tính"
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_42932184:
 
     # e "Suffer more than I can imagine"
-    e ""
+    e "Đều phải chịu nhiều đau khổ hơn cả tôi"
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_bde722b5:
 
     # e "And I’m standing here wining…"
-    e ""
+    e "Mà tôi lại đứng đây than vãn như này..."
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_72a33094:
 
     # e "..."
-    e ""
+    e "..."
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_05337e21:
 
     # e "I’m so worthless..."
-    e ""
+    e "Tôi thật vô dụng..."
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_14dba07c:
 
     # e "Why in such a world contains only suffering"
-    e ""
+    e "Tại sao thế giới này chỉ có đau khổ"
 
 # game/start.rpy:1496
 translate vietnamese pessimistic_d8900dd8:
 
     # e "Why people still forced to exist…"
-    e ""
+    e "Mà người ta vẫn bị cưỡng chế tồn tại..."
 
 # game/start.rpy:1522
 translate vietnamese pessimistic_19fe911d:
 
     # e "Why we are all born to addicted to something…"
-    e ""
+    e "Sao ta lại sinh ra chỉ để nghiện một thứ gì đó..."
 
 # game/start.rpy:1522
 translate vietnamese pessimistic_7c017b2b:
 
     # e "Addiction never been a good state"
-    e ""
+    e "Nghiện ngập chưa bao giờ là một thứ tốt đẹp"
 
 # game/start.rpy:1530
 translate vietnamese pessimistic_8a54b181:
 
     # e "I better go to school and apology"
-    e ""
+    e "Mình nên đến trường và xin lỗi"
 
 # game/start.rpy:1530
 translate vietnamese pessimistic_f6a41885:
 
     # e "After all relationships exist to pass pain to others."
-    e ""
+    e "Sau tất cả, mối quan hệ tồn tại là phương tiện san sẻ nỗi thống khổ."
 
 # game/start.rpy:1530
 translate vietnamese pessimistic_23a5fc46:
 
-    # e "I can endure my pain"
-    e ""
+    e "Tôi có thể chịu đựng nỗi khổ của bản thân"
+    
 
 # game/start.rpy:1530
 translate vietnamese pessimistic_b21b49b2:
 
-    # e "And perhaps the pain of others"
-    e ""
+    e "Thậm chí cả nỗi đau của người khác"
+    
 
 # game/start.rpy:1530
 translate vietnamese pessimistic_81a8500b:
 
-    # e "But I don't want to pass it on."
-    e ""
+    e "Nhưng tôi không bao giờ muốn mang lại nỗi đau cho ai cả."
+    
 
 # game/start.rpy:1545
 translate vietnamese pessimistic_208d7b28:
 
-    # e "Today will be the last day..."
-    e ""
+    e "Nay sẽ là ngày cuối cùng..."
+  
 
 # game/start.rpy:1545
 translate vietnamese pessimistic_d9d7886a:
 
-    # e "Welp, I'm out of medication anyway..."
-    e ""
+    e "Mình cũng sắp hết thuốc rồi..."
 
 translate vietnamese strings:
 
     # game/start.rpy:1066
     old "Try to {color=#00ffff}Calm{/color}"
-    new ""
+    new "Giữ {color=#00ffff}Bình tĩnh{/color}"
+
 
     # game/start.rpy:1066
     old "Forfeit to {color=#ff0000}Wrath{/color}"
-    new ""
+    new "Để {color=#ff0000}Phẫn nộ{/color} chiếm hữu"
 

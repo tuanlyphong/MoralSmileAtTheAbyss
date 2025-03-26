@@ -476,24 +476,23 @@ translate vietnamese strings:
 
     # renpy/common/00gui.rpy:448
     old "Are you sure?"
-    new ""
+    new "Bạn có chắc không?"
 
-    # renpy/common/00gui.rpy:449
+# renpy/common/00gui.rpy:449
     old "Are you sure you want to delete this save?"
-    new ""
+    new "Bạn có chắc muốn xóa tệp lưu này không?"
 
-    # renpy/common/00gui.rpy:450
+# renpy/common/00gui.rpy:450
     old "Are you sure you want to overwrite your save?"
-    new ""
+    new "Bạn có chắc muốn ghi đè tệp lưu không?"
 
-    # renpy/common/00gui.rpy:451
+# renpy/common/00gui.rpy:451
     old "Loading will lose unsaved progress.\nAre you sure you want to do this?"
-    new ""
+    new "Tải lại sẽ làm mất tiến trình chưa lưu.\nBạn có chắc muốn tiếp tục không?"
 
-    # renpy/common/00gui.rpy:452
+# renpy/common/00gui.rpy:452
     old "Are you sure you want to quit?"
-    new ""
-
+    new "Bạn muốn thoát game?"
     # renpy/common/00gui.rpy:453
     old "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
     new ""
@@ -844,11 +843,11 @@ translate vietnamese strings:
 
     # renpy/common/00sync.rpy:448
     old "Yes"
-    new ""
+    new "Có"
 
     # renpy/common/00sync.rpy:449
     old "No"
-    new ""
+    new "Không"
 
     # renpy/common/00sync.rpy:472
     old "Enter Sync ID"
@@ -872,7 +871,7 @@ translate vietnamese strings:
 
     # renpy/common/00sync.rpy:526
     old "Continue"
-    new ""
+    new "Tiếp tục"
 
     # renpy/common/00sync.rpy:551
     old "Sync Error"

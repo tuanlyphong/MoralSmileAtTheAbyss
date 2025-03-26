@@ -16,7 +16,7 @@ translate vietnamese strings:
 
     # game/screens.rpy:152
     old "Config"
-    new "Tùy chọn"
+    new "Chỉnh"
 
     # game/screens.rpy:153
     old "Gallery"

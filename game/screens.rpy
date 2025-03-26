@@ -185,7 +185,10 @@ screen main_menu():
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     add "gui/menuanimate/menu.png"
-    add "images/GameLogo.png" align (0.1, 0) at fade_in_with_delay(0.5, delay=1.3)
+    if _preferences.language == "vietnamese":
+        add "images/VnGameLogo.png" align (0.1, 0) at fade_in_with_delay(0.5, delay=1.3)
+    else:
+        add "images/GameLogo.png" align (0.1, 0) at fade_in_with_delay(0.5, delay=1.3)    
     use navigation
 
 

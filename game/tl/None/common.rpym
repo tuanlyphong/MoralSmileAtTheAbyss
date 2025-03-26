@@ -119,7 +119,7 @@ translate None strings:
 
     # renpy/common/00accessibility.rpy:220
     old "Voice Volume"
-    new "Voice Volume"
+    new "Âm lượng giọng"
 
     # renpy/common/00accessibility.rpy:228
     old "Self-Voicing Volume Drop"
@@ -131,7 +131,7 @@ translate None strings:
 
     # renpy/common/00accessibility.rpy:242
     old "Return"
-    new "Return"
+    new "Trở về"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Monday"
