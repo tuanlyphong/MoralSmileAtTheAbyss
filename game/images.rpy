@@ -117,8 +117,10 @@ image YukaProudTalking = "YukaProudTalking.png"
 image YukaOffer = "YukaOffer.png"
 image YukaPunch = "YukaPunch.png"
 image cg1 = "cg/cg1.png"
+image cg4 = "cg/cg4.png"
 image cg2 = "cg/cg2.png"
-
+image cg3 = "cg/cg3.png"
+image cg5 = "cg/cg5.png"
 
 ## gallery ############################################################
 ##
@@ -137,6 +139,9 @@ init python:
     g.button("cg3")
     g.image("cg3")
 
+    g.button("cg4")
+    g.image("cg4")
+
     # The transition used when switching images.
     g.transition = dissolve
 
@@ -154,7 +159,7 @@ screen gallery:
             yalign 0.5
             spacing gui.slot_spacing
 
-            for img_name in ["cg1", "cg2", "cg3"]:
+            for img_name in ["cg1", "cg2", "cg3", "cg4"]:
                 if getattr(persistent, img_name, False):  # Check if CG is unlocked
                     button:
                         action Show("full_image", image="cg/" + img_name + ".png")

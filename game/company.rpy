@@ -36,6 +36,82 @@ label company:
 label splashscreen:
   if persistent.nihilism and persistent.nihilism2:
     return
+  elif datetime.date.today().month == 12 and datetime.date.today().day == 24:
+    jump ChristmasEve
+  elif datetime.date.today().month == 12 and datetime.date.today().day == 25:
+    jump Christmas
   else:
     jump company
-   
+
+label ChristmasEve:
+    scene cg4 with Dissolve(2) 
+
+    y """
+    "Mmmh..."
+
+    "Unbelievable, I have to spend Christmas Eve eating fries."
+
+    "You didn't keep your promise."
+    """
+
+    f """
+    "Despite being forced to make that promise..."
+
+    "I still kept my word and brought you to a restaurant."
+
+    "Besides, you have terrible taste in clothing while you're clearly enjoying MY fries."
+    """
+
+    y """
+    "If I had money to buy new clothes, I’d be eating turkey and cake instead of fries."
+    """
+
+    f """
+    "Damn you, P. Why did you make us this poor?"
+    """
+
+    god """
+    "Shut up. I don't even have fries for Christmas. You motherfuckers are lucky."
+    """
+
+    god """
+    Whoever is playing this game on Christmas
+
+    Besides myself, of course
+
+    Donate, or I’ll make these two eat fries every Christmas."
+    """
+
+    fy """
+    "Great. Now we’ll never get any donations. Thanks, P."
+    """
+
+    god """
+    "Don't bully your creator!"
+    """
+
+
+    hide cg4 with Dissolve(2)
+
+    jump company
+
+
+label Christmas:
+    scene cg5 with Dissolve(2)
+    god """
+    "MERRY CHRISTMAS! You two... or more?"
+    """
+
+    f """
+    "Probably two. Who else would even be here besides you, anyway?"
+    """
+
+    god "..."
+
+    fy """
+    "Merry Christmas, P. And to anyone else... if you exist."
+    """
+
+    god "Thank you, I will never regret creating you."
+    hide scene cg5 with Dissolve(2)
+    jump company

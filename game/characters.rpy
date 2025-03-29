@@ -8,4 +8,5 @@ define y = Character("Yuka",window_style="window",who_color="#00ffff",ctc="ctc_a
 define e = Character(None, window_style="window", ctc="ctc_animation", ctc_position="fixed")
 define all =  Character("???",who_color="#fff", window_style="window",ctc="ctc_animation", ctc_position="fixed")
 image ctc_animation = Animation("gui/indicator0.png", 0.2,"gui/indicator1.png", 0.2, "gui/indicator2.png", 0.2, "gui/indicator3.png", 0.2, xpos=0.8, ypos=0.97, xanchor=1.0, yanchor=1.0)
+define fy = Character("Fu & Yuka",window_style="window",who_color="#000",ctc="ctc_animation", ctc_position="fixed")
 
