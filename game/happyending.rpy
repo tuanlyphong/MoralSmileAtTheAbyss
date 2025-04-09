@@ -8,9 +8,9 @@ label happyending:
 
     Just kidding, lol. I'm kinda out of money for instant noodles...
 
-    So, maybe consider donating? It might help with the remaining seven arcs.
+    So, maybe consider sharing? It might help with the remaining story.
 
-    It's kinda sad that the world revolves around money,  
+    It's kinda sad that the world revolves around clout,  
     but what else can I do?
 
     Anyway, see ya!
