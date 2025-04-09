@@ -145,12 +145,9 @@ screen navigation():
         # Add buttons with sequential fade-in delays
         if main_menu:
          if persistent.nihilism and persistent.nihilism2:
-            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
-            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.3) hover_sound hover_sound  # First button
-            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.6) hover_sound hover_sound  # First button
-            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound  # First button
-            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=1.1) hover_sound hover_sound  # First button
-            
+            textbutton _("Why did you even come back right after quitting?") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
+            textbutton _("Quit") action Quit(confirm=not main_menu) at fade_in_with_delay(0.5, delay=0.3) hover_sound hover_sound  # Final buttonstyle navigation_button is gui_button
+           
          else:
             textbutton _("New") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
 

@@ -17,7 +17,9 @@ translate vietnamese strings:
     # game/screens.rpy:152
     old "Config"
     new "Chỉnh"
-
+    
+    old "Why did you even come back right after quitting?"
+    new "Bạn quay trở lại lamg gì vậy?"
     # game/screens.rpy:153
     old "Gallery"
     new "Thư viện"
