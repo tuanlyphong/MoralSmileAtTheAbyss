@@ -144,21 +144,27 @@ screen navigation():
 
         # Add buttons with sequential fade-in delays
         if main_menu:
+         if persistent.nihilism and persistent.nihilism2:
+            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
+            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.3) hover_sound hover_sound  # First button
+            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.6) hover_sound hover_sound  # First button
+            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound  # First button
+            textbutton _("Continue") action Start() at fade_in_with_delay(0.5, delay=1.1) hover_sound hover_sound  # First button
+            
+         else:
             textbutton _("New") action Start() at fade_in_with_delay(0.5, delay=0.0) hover_sound hover_sound  # First button
-        else:
-            textbutton _("Save") action ShowMenu("save") hover_sound hover_sound
 
-        textbutton _("Load") action ShowMenu("load") at fade_in_with_delay(0.5, delay=0.3) hover_sound hover_sound  # Second button
-        textbutton _("Config") action ShowMenu("preferences") at fade_in_with_delay(0.5, delay=0.6) hover_sound hover_sound  # Third button
-        textbutton _("Gallery") action ShowMenu("gallery") at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound
-        if _in_replay:
-            textbutton _("End Replay") action EndReplay(confirm=True) hover_sound hover_sound
+            textbutton _("Load") action ShowMenu("load") at fade_in_with_delay(0.5, delay=0.3) hover_sound hover_sound  # Second button
+            textbutton _("Config") action ShowMenu("preferences") at fade_in_with_delay(0.5, delay=0.6) hover_sound hover_sound  # Third button
+            textbutton _("Gallery") action ShowMenu("gallery") at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound
+            if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True) hover_sound hover_sound
 
-        elif not main_menu:
-            textbutton _("Main Menu") action MainMenu() at fade_in_with_delay(0.5, delay=1.1) hover_sound hover_sound
+            elif not main_menu:
+                textbutton _("Main Menu") action MainMenu() at fade_in_with_delay(0.5, delay=1.1) hover_sound hover_sound
 
-        if renpy.variant("pc"):
-            textbutton _("Quit") action Quit(confirm=not main_menu) at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound  # Final buttonstyle navigation_button is gui_button
+            if renpy.variant("pc"):
+                textbutton _("Quit") action Quit(confirm=not main_menu) at fade_in_with_delay(0.5, delay=0.9) hover_sound hover_sound  # Final buttonstyle navigation_button is gui_button
 
 style navigation_button_text is gui_button_text
 
