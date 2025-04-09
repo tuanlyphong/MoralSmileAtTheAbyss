@@ -10,13 +10,13 @@ translate vietnamese happyending_2fe22fd6:
 translate vietnamese happyending_1fbfc168:
 
     # god "Just kidding, lol. I'm kinda out of money for instant noodles..."
-    god "Đùa thôi, haha. Tôi hết tiền mua mỳ gói rồi..."
+    god "Đùa thôi, haha."
 
 # game/happyending.rpy:6
 translate vietnamese happyending_e35a800f:
 
     # god "So, maybe consider donating? It might help with the remaining seven arcs."
-    god "Nên, bạn có thể xem xét ủng hộ? Có thể nó sẽ giúp tôi làm việc với 7 phần còn lại của câu chuyện."
+    god "Hãy xem xét chia sẻ? Có thể nó sẽ giúp tôi làm việc với phần còn lại của câu chuyện."
 
 # game/happyending.rpy:6
 translate vietnamese happyending_6e951987:
