@@ -1436,7 +1436,7 @@ label optimistic:
   scene black with Dissolve(3)
   $renpy.pause(1.5)
   stop music
-  jump happyending
+  jump scene2a
 label pessimistic:
   play sound "worm.ogg"
   show worms1 with Fade(0.3, 0, 0, color="#fff")
@@ -1550,6 +1550,6 @@ label pessimistic:
   scene black with Dissolve(3)
   $renpy.pause(1.5)
   stop music
-  jump badending
+  jump scene2b
 
 
