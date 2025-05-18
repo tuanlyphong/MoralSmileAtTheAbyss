@@ -94,6 +94,7 @@ label naming:
     $ persistent.player_name = " "  # Reset the name
     $renpy.pause(3)
     god "Hi Stranger!"
+    god "Don't you ever think that not being able to name yourself at birth is kind of unfair?"
     god "What should I call you?"
     while True:
         call screen virtual_keyboard
