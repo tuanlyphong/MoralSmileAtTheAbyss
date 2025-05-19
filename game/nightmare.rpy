@@ -1,3 +1,4 @@
+#they don't even care, they only want to have their fun (morse code) 
 ##init python:
 ##    import random
 ##
